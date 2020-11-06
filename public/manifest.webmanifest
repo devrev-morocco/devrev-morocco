@@ -1,0 +1,45 @@
+{
+    "name": "DevRev Morocco",
+    "short_name": "DevRev",
+    "lang": "en-US",
+    "description": "A weekly live show featuring conversations with great tech minds about software engineering, tech careers, and startups.",
+    "start_url": "/",
+    "scope": "https://devrev-morocco.vercel.app/",
+    "theme_color": "#fff",
+    "background_color": "#fff",
+    "display": "standalone",
+    "categories": ["education", "news"],
+    "icons": [{
+            "src": "/static/favicons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/favicons/android-chrome-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/favicons/gemo-logo-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "/static/favicons/maskable_icon.png",
+            "sizes": "421x421",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ],
+    "screenshots": [],
+    "shortcuts": [{
+        "name": "DevRev",
+        "url": "/",
+        "icons": [{
+            "src": "/static/favicons/favicon-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        }],
+        "description": "A weekly live show featuring conversations with great tech minds"
+    }]
+}
