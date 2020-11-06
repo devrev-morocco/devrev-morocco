@@ -6,7 +6,7 @@ module.exports = withOffline({
   images: {
     deviceSizes: [30, 60, 120, 320, 420, 768, 1024, 1200],
     iconSizes: [],
-    domains: ['127.0.0.1', process.env.PRIVATE_IP, 'devrev-morocco.vercel.app'],
+    domains: ['127.0.0.1', 'devrev-morocco.vercel.app'],
     path: '/_next/image',
     loader: 'default'
   },

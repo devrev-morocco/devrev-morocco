@@ -51,7 +51,8 @@ function App({ Component, pageProps }) {
           'https://www.facebook.com/devrevmorocco/',
           'https://www.youtube.com/channel/UCohUHFN_a54IJz2qVSEgf4g',
           'https://www.instagram.com/devrevmorocco/',
-          'https://twitter.com/DevRevMorocco',
+          'https://twitter.com/devrevmorocco',
+          'https://twitch.com/devrevmorocco',
           'http://www.linkedin.com/in/yourprofile',
           'http://plus.google.com/your_profile'
         ]}
