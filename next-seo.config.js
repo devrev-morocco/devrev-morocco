@@ -14,7 +14,7 @@ const SEO = {
     description,
     images: [
       {
-        url: 'https://devrev-morocco.vercel.app/static/images/devrev-bg.jpg',
+        url: 'https://devrev-morocco.vercel.app/static/images/devrev-bg.png',
         alt: title,
         width: 820,
         height: 312

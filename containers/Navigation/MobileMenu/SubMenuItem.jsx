@@ -49,6 +49,7 @@ const SubMenuItem = ({
             return (
               <Link href={item.url} passHref key={item.id}>
                 <Submenu_DropDown_wrap
+                  rel={item?.ExternalLink ? 'noreferrer' : ''}
                   target={`${item?.ExternalLink ? '_blank' : '_self'}`}
                 >
                   {item.label}
