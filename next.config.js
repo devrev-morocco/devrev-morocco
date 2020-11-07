@@ -39,13 +39,13 @@ module.exports = withOffline({
         destination: '/_next/static/service-worker.js'
       }
     ];
-  },
-
-  webpack: (config, { isServer }) => {
-    if (isServer) {
-      require('./scripts/generate-sitemap');
-    }
-
-    return config;
   }
+
+  // webpack: (config, { isServer }) => {
+  //   if (isServer) {
+  //     require('./scripts/generate-sitemap');
+  //   }
+
+  //   return config;
+  // }
 });

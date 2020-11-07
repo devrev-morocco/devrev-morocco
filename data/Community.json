@@ -1,0 +1,46 @@
+{
+  "community_categories": [
+    {
+      "id": "c1",
+      "label": "Facebook",
+      "url": "https://www.facebook.com/devrevmorocco/",
+      "separateLine": false,
+      "ExternalLink": true
+    },
+    {
+      "id": "c2",
+      "label": "YouTube",
+      "url": "https://www.youtube.com/channel/UCohUHFN_a54IJz2qVSEgf4g",
+      "separateLine": true,
+      "ExternalLink": true
+    },
+    {
+      "id": "c3",
+      "label": "Twitch",
+      "url": "https://twitch.com/devrevmorocco",
+      "separateLine": false,
+      "ExternalLink": true
+    },
+    {
+      "id": "c4",
+      "label": "Twitter",
+      "url": "https://twitter.com/devrevmorocco",
+      "separateLine": false,
+      "ExternalLink": true
+    },
+    {
+      "id": "c5",
+      "label": "Instagram",
+      "url": "https://www.instagram.com/devrevmorocco/",
+      "separateLine": true,
+      "ExternalLink": true
+    },
+    {
+      "id": "c6",
+      "label": "Want to get notified?",
+      "url": "https://gemography.us20.list-manage.com/track/click?u=505ace65daaf423bc75011765&id=1322f00d46&e=e050439c77",
+      "separateLine": false,
+      "ExternalLink": true
+    }
+  ]
+}

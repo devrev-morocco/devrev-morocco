@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { Gradients, Selectors } from './ClassNames';
+import { Selectors } from './ClassNames';
 import { ElementsCollection } from './Elements';
 import { RootVariables } from './Variables';
 
@@ -16,7 +16,6 @@ const GlobalStyle = createGlobalStyle`
     ${RootVariables}
     ${ElementsCollection}
     ${Selectors}
-    ${Gradients}
 `;
 
 export default GlobalStyle;

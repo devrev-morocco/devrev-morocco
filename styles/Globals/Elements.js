@@ -23,7 +23,7 @@ export const ElementsCollection = css`
     font-weight: 400;
     line-height: 1;
     letter-spacing: 0;
-    background: var(--general-bg2);
+    background: var(--general-bgc);
   }
 
   p {
@@ -41,11 +41,6 @@ export const ElementsCollection = css`
     max-height: none;
     max-width: 100%;
     border-radius: none;
-  }
-
-  mark {
-    background: #ffed75;
-    color: #000;
   }
 
   a,

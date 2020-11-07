@@ -1,19 +1,6 @@
-import styled, { keyframes } from 'styled-components';
-import { AbsolutePosition, Visible } from './index';
-
-// <---------- Triangle ---------->
-
-const FadeInTr = keyframes`
-0% {
-     transform: translateY(20px);
-     opacity: 0;
-   }
-
-100% {
-    transform: translateY(0px);
-    opacity: 1;
-    }
-`;
+import styled, { css } from 'styled-components';
+import { AbsolutePosition } from './index';
+import { FadeInTr } from './keyframes';
 
 export const Triangle = styled(AbsolutePosition)`
   display: none;
@@ -24,11 +11,15 @@ export const Triangle = styled(AbsolutePosition)`
   z-index: 3;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-bottom: 8px solid #ffffff;
+  border-bottom: 8px solid var(--DropMenu-bgc);
   animation: ${FadeInTr} 0.4s forwards;
   visibility: hidden;
 `;
 
+const ShowTriangle = css`
+  display: block;
+`;
+
 export const MenuTriangle = styled(Triangle)`
-  ${(props) => props.Enable && Visible}
+  ${(props) => props.Enable && ShowTriangle}
 `;

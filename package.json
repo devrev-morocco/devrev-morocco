@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start",
     "test": "jest",
-    "prettier": "prettier --write \"**/*.{js,jsx,scss,json,md,yml}\"",
+    "prettier": "prettier --write \"**/*.{js,jsx,json,md,yml}\"",
     "regenerate": "rm -rf .next && yarn build && yarn start"
   },
   "dependencies": {
@@ -20,6 +20,7 @@
     "prop-types": "^15.7.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-transition-group": "^4.4.1",
     "styled-components": "^5.2.1"
   },
   "resolutions": {

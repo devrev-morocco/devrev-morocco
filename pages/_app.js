@@ -6,37 +6,33 @@ import GoogleFonts from 'next-google-fonts';
 import {
   DefaultSeo,
   SocialProfileJsonLd,
-  LogoJsonLd,
-  BreadcrumbJsonLd
+  LogoJsonLd
+  // BreadcrumbJsonLd
 } from 'next-seo';
 import SEO from '../next-seo.config';
 import PropTypes from 'prop-types';
 
 function App({ Component, pageProps }) {
   //
-  const HandleKeyTab = (e) => {
-    const Class = 'user-is-tabbing';
-    const ClassExist = document.body.classList.contains(Class);
-    if (e.keyCode === 9 && e.key === 'Tab') {
-      document.body.classList.add(Class);
-      // window.removeEventListener('keydown', HandleKeyTab);
-    } else {
-      if (ClassExist) document.body.classList.remove(Class);
-    }
-  };
+  // const HandleKeyTab = (e) => {
+  //   const Class = 'user-is-tabbing';
+  //   const ClassExist = document.body.classList.contains(Class);
+  //   if (e.keyCode === 9 && e.key === 'Tab') {
+  //     document.body.classList.add(Class);
+  //     // window.removeEventListener('keydown', HandleKeyTab);
+  //   } else {
+  //     if (ClassExist) document.body.classList.remove(Class);
+  //   }
+  // };
 
   useEffect(() => {
     document.documentElement.lang = 'en';
-    window.addEventListener('keydown', HandleKeyTab);
+    // window.addEventListener('keydown', HandleKeyTab);
   }, []);
 
   return (
     <Fragment>
-      <GoogleFonts href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" />
-      {/* font-family: 'Roboto', sans-serif; */}
-      <GoogleFonts href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" />
-      {/* font-family: 'Oswald', sans-serif; */}
-
+      <GoogleFonts href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" />
       <GlobalStyle />
       <DefaultSeo {...SEO} />
       <LogoJsonLd
@@ -52,9 +48,9 @@ function App({ Component, pageProps }) {
           'https://www.youtube.com/channel/UCohUHFN_a54IJz2qVSEgf4g',
           'https://www.instagram.com/devrevmorocco/',
           'https://twitter.com/devrevmorocco',
-          'https://twitch.com/devrevmorocco',
-          'http://www.linkedin.com/in/yourprofile',
-          'http://plus.google.com/your_profile'
+          'https://twitch.com/devrevmorocco'
+          // 'http://www.linkedin.com/in/yourprofile',
+          // 'http://plus.google.com/your_profile'
         ]}
       />
       {/* <BreadcrumbJsonLd

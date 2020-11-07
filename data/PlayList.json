@@ -1,0 +1,18 @@
+{
+  "playlist_categories": [
+    {
+      "id": "p1",
+      "label": "List of all episodes",
+      "url": "/playlist?list=ALL",
+      "separateLine": false,
+      "ExternalLink": false
+    },
+    {
+      "id": "p2",
+      "label": "Watch Later",
+      "url": "/playlist?list=WL",
+      "separateLine": false,
+      "ExternalLink": false
+    }
+  ]
+}
