@@ -6,7 +6,11 @@ import {
   GoogleRippleEffect_circle
 } from './styles';
 
-const RippleEffect = ({ children, onClick = () => void 0 }) => {
+const RippleEffect = ({
+  children,
+  onClick = () => void 0,
+  noPadding = false
+}) => {
   const [{ y, x, show }, setRipple] = useState({
     y: 0,
     x: 0,
@@ -37,7 +41,11 @@ const RippleEffect = ({ children, onClick = () => void 0 }) => {
   }, []);
 
   return (
-    <GoogleRippleEffect onMouseDown={HandleRipple} onClick={onClick}>
+    <GoogleRippleEffect
+      style={{ padding: noPadding ? '0px' : null }}
+      onMouseDown={HandleRipple}
+      onClick={onClick}
+    >
       <GoogleRippleEffect_wrapper>
         {show && <GoogleRippleEffect_circle x={x} y={y} />}
       </GoogleRippleEffect_wrapper>
@@ -48,7 +56,8 @@ const RippleEffect = ({ children, onClick = () => void 0 }) => {
 
 RippleEffect.propTypes = {
   onClick: PropTypes.func,
-  children: PropTypes.element.isRequired
+  children: PropTypes.element.isRequired,
+  noPadding: PropTypes.bool
 };
 
 export default memo(RippleEffect);

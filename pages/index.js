@@ -1,9 +1,11 @@
-import { PageContainer } from '../styles/Pages/index';
+import { PageContainer, ComingSoon } from '../styles/Pages/index';
 
 export default function Home() {
   return (
     <PageContainer>
-      <div>DevRev Morocco</div> <div>On Progress...</div>
+      <ComingSoon>
+        <span>coming soon</span>
+      </ComingSoon>
     </PageContainer>
   );
 }

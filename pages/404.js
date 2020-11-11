@@ -1,9 +1,10 @@
 import React from 'react';
 import NextLink from 'next/link';
+import { PageContainer } from '../styles/Pages/index';
 
 const Error = () => {
   return (
-    <div style={{ margin: '100px' }}>
+    <PageContainer style={{ margin: '100px' }}>
       <div style={{ fontWeight: 'bold' }}>404 – Unavailable Page</div>
       <p style={{ marginBottom: '20px' }}>
         Why show a generic 404 when I can make it sound mysterious? It seems
@@ -23,7 +24,7 @@ const Error = () => {
           Return Home
         </a>
       </NextLink>
-    </div>
+    </PageContainer>
   );
 };
 

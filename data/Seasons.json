@@ -1,4 +1,193 @@
 {
-  "season 1": [],
-  "season 2": []
+  "seasons": {
+    "1": [
+      {
+        "ep": 1,
+        "tag": "DevRev #1",
+        "videoId": "7XjAtQbN-BQ",
+        "title": "Tech Careers in Morocco with Yassine El Kachchani",
+        "thumbnail": "/thumbnail/thumbnail-ep1.webp",
+        "duration": "1:20:54",
+        "description": [
+          "A casual live chat between Yassine (CEO at Gemography) and Zack (VPoE at Gemography) about developer career paths in Morocco.",
+          "__EMPTY_LINE__",
+          "They will be discussing:",
+          "+ The top skills developers need in 2020.",
+          "+ The Best Approach to develop those skills.",
+          "+ Why it takes more than technical skills to succeed.",
+          "+ How to get noticed and land your dream job.",
+          "+ Why you should (or shouldn't) join a tech startup."
+        ]
+      },
+      {
+        "ep": 2,
+        "tag": "DevRev #2",
+        "videoId": "ECROOdMKDGA",
+        "title": "Soft Skills for Developers with Serrah Menif",
+        "thumbnail": "/thumbnail/thumbnail-ep2.webp",
+        "duration": "1:22:51",
+        "description": [
+          "A casual live chat between Zack (VPoE at Gemography) and Serrah (Head of People Ops at Gemography) about the why and how behind soft-skills, specifically for software engineers.",
+          "__EMPTY_LINE__",
+          "They will be discussing:",
+          "+ What are soft-skills (and why developers should care).",
+          "+ How to learn and improve soft-skills.",
+          "+ What are the common mistakes to avoid.",
+          "+ How to showcase good soft-skills during job interviews."
+        ]
+      },
+      {
+        "ep": 3,
+        "tag": "DevRev #3",
+        "videoId": "qVHk5pBZb8g",
+        "title": "Startups, DevOps and Being a Senior Engineer",
+        "thumbnail": "/thumbnail/thumbnail-ep3.webp",
+        "duration": "1:08:50",
+        "description": [
+          "On this week's live episode of DevRev, Zack interviews Zakaria Boualaid, a Senior DevOps Engineer at Oracle. They discuss how he got into DevOps, his startup journey, how he ended up in Dubai and what it takes to be a senior engineer."
+        ]
+      },
+      {
+        "ep": 4,
+        "tag": "DevRev #4",
+        "videoId": "T8g310bUXYI",
+        "title": "Cracking the Technical Interview",
+        "thumbnail": "/thumbnail/thumbnail-ep4.webp",
+        "duration": "1:07:54",
+        "description": [
+          "A casual live chat between Adil (CTO at Gemography) and Zack (VPoE at Gemography) about the definitive guide to technical interviews regardless of where you're applying.",
+          "__EMPTY_LINE__",
+          "They will be discussing:",
+          "+ How to know you're ready for a technical interview.",
+          "+ What kind of questions to expect.",
+          "+ How to showcase your strengths.",
+          "+ What to do about your weaknesses.",
+          "+ Common mistakes to avoid.",
+          "__EMPTY_LINE__",
+          "Language: ",
+          "Arabic, English"
+        ]
+      },
+      {
+        "ep": 5,
+        "tag": "DevRev #5",
+        "videoId": "BTcOlxfkjDc",
+        "title": "Work From Home Without Going Crazy",
+        "thumbnail": "/thumbnail/thumbnail-ep5.webp",
+        "duration": "1:00:25",
+        "description": [
+          "Soukaina Chebihi, Head of Growth at Gemography and author of the definitive guide 'The Only Work From Home Resources You'll Need' joins the show this week to talk about working from home (WFH) without going crazy.",
+          "__EMPTY_LINE__",
+          "We'll be discussing primary:",
+          "+ Common WFH issues and how to deal with them.",
+          "+ Tips to implement to make the whole thing easier.",
+          "+ What it takes to have the perfect WFH setup.",
+          "+ The pros & cons of WFH from an employer and employee standpoint."
+        ]
+      },
+      {
+        "ep": 6,
+        "tag": "DevRev #6",
+        "videoId": "v7xhkVBC0zw",
+        "title": "The Road to Senior Fullstack Developer",
+        "thumbnail": "/thumbnail/thumbnail-ep6.webp",
+        "duration": "1:21:38",
+        "description": [
+          "Tune in for a new live episode of DevRev, this time about the journey to becoming a Senior Fullstack or Frontend Developer.",
+          "__EMPTY_LINE__",
+          "We'll be discussing:",
+          "+ The actual responsibilities of a Fullstack/Frontend developer.",
+          "+ The current tools and technologies they are using.",
+          "+ What skills are must-have or nice-to-have to get started.",
+          "+ What it takes to become a Senior Fullstack developer.",
+          "+ [YOUR OWN QUESTIONS]"
+        ]
+      },
+      {
+        "ep": 7,
+        "tag": "DevRev #7",
+        "videoId": "bQbAjNQgb1U",
+        "title": "Code editors and dev environments",
+        "thumbnail": "/thumbnail/thumbnail-ep7.webp",
+        "duration": "1:19:04",
+        "description": [
+          "This week I'll be joined by Othmane, Youness and Said to discuss their dev environments, code editor of choice, CLI settings, as well their favorite dev productivity tools."
+        ]
+      },
+      {
+        "ep": 8,
+        "tag": "DevRev #8",
+        "videoId": "MWyR9USrsUc",
+        "title": "Competitive Programming 101",
+        "thumbnail": "/thumbnail/thumbnail-ep8.webp",
+        "duration": "1:29:34",
+        "description": [
+          "This week I'll be joined by Diaa Alhak EL FALLOUS from MCPC and Omar Salim Moussa from Google to discuss competitive programming, what it is, why it's important and what it takes to be an MCPC champion."
+        ]
+      },
+      {
+        "ep": 9,
+        "tag": "DevRev #9",
+        "videoId": "YxEipaEo3qk",
+        "title": "Self-hosting, why and how?",
+        "thumbnail": "/thumbnail/thumbnail-ep9.webp",
+        "duration": "1:28:28",
+        "description": [
+          "This week, DevRev welcomes Yassine and Said to give us a tour of their self-hosted setup, tell us how they got started and address the fundamental question of 'why self-host'.",
+          "__EMPTY_LINE__",
+          "Said Dermoumi is a Software Engineer at Efficity, a France-based online real estate platform, part of the Foncia Group."
+        ]
+      },
+      {
+        "ep": 10,
+        "tag": "DevRev #10",
+        "videoId": "4oFOLIh0V3g",
+        "title": "The Journey of a Data Engineer",
+        "thumbnail": "/thumbnail/thumbnail-ep10.webp",
+        "duration": "56:04",
+        "description": [
+          "In this episode of DevRev, we interview Taha Sadiki, Data Engineer at Enigma (NY-based), who talks to us about his leap into his role as Data Engineer and how to best position yourself for a career in this field.",
+          "__EMPTY_LINE__",
+          "Enigma (raised $130 million) builds data infrastructure, developer-friendly APIs, and intelligent tools. They are based in New York."
+        ]
+      },
+      {
+        "ep": 11,
+        "tag": "DevRev #11",
+        "videoId": "ynAWha2kbfc",
+        "title": "How to Become a Senior iOS Developer",
+        "thumbnail": "/thumbnail/thumbnail-ep11.webp",
+        "duration": "1:04:36",
+        "description": [
+          "Being a Senior in any area of Software Engineering is always an obscure topic. Yes, it's about skills and not raw number of years of experience. But even then, there is no true universal definition. ",
+          "__EMPTY_LINE__",
+          "In this new live episode we'll give it a shot and try to break it down to skills and strengths. We'll also be going over how to keep learning and evolving, the obscure iOS topics to focus on and the common mistakes to avoid (including those Massive View Controllers ...)"
+        ]
+      }
+    ],
+    "2": [
+      {
+        "ep": 1,
+        "tag": "DevRev #12",
+        "videoId": "zjjKfqCgfTQ",
+        "title": "The Career Path of Director of Engineering",
+        "thumbnail": "/thumbnail/thumbnail-ep12.webp",
+        "duration": "1:21:15",
+        "description": [
+          "In this episode, Zack Braksa chats with special guest Oussama Zaki, Director of Engineering at Svea Solar about the role of 'Director of Engineering', his day-to-day, the skills required, and the career path to get there."
+        ]
+      },
+      {
+        "ep": 2,
+        "tag": "DevRev #13",
+        "videoId": "cRqjxlqWWY4",
+        "title": "Job Search in Morocco - Mistakes To Avoid",
+        "thumbnail": "/thumbnail/thumbnail-ep13.webp",
+        "duration": "1:21:15",
+        "description": [
+          "In this episode, Zack Braksa chats with special guests Naoufal El Hassnaoui & Diaa Alhak EL FALLOUS about the best way to look for a tech job in 2020. They'll be discussing the best practices to follow and the common mistakes to avoid."
+        ]
+      }
+    ]
+  }
 }

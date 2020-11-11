@@ -55,7 +55,6 @@ export const MenuContainer = styled(AbsolutePosition)`
   cursor: default;
   border-radius: var(--cart-radius);
   background: var(--DropMenu-bgc);
-  background: rgba(49, 49, 49, 0.8); // later
   border: 1px solid var(--border-color);
   border-top: none;
 

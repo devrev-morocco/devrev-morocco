@@ -1,5 +1,11 @@
-import { PageContainer } from '../styles/Pages';
+import { PageContainer, ComingSoon } from '../styles/Pages';
 
 export default function Playlist() {
-  return <PageContainer>DevRev Playlist</PageContainer>;
+  return (
+    <PageContainer>
+      <ComingSoon>
+        <span>coming soon</span>
+      </ComingSoon>
+    </PageContainer>
+  );
 }

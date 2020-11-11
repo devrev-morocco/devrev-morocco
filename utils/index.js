@@ -15,3 +15,14 @@ export const mobileCheck = () => {
   })(navigator.userAgent || navigator.vendor || window.opera);
   return check;
 };
+
+export const Timer = (time = 1000) => {
+  // eslint-disable-next-line no-undef
+  return new Promise((resolve) =>
+    setTimeout(() => {
+      resolve(true);
+    }, time)
+  );
+  // 1]- Timer().then(() => setLoading(false));
+  // 2]- async function fun() { return await Timer() }
+};

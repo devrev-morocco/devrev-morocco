@@ -11,7 +11,7 @@ import {
 } from 'next-seo';
 import SEO from '../next-seo.config';
 import PropTypes from 'prop-types';
-
+import 'simplebar/dist/simplebar.min.css';
 function App({ Component, pageProps }) {
   //
   // const HandleKeyTab = (e) => {

@@ -3,7 +3,8 @@ import React, {
   useReducer,
   useState,
   useCallback,
-  useEffect
+  useEffect,
+  useRef
 } from 'react';
 import {
   Nav,
@@ -19,8 +20,9 @@ import {
 import Link from 'next/link';
 import { useMediaQuery } from '../../hooks';
 import { DevRevLogo, Menuburger } from '../../components/svgs';
-import { LazyRender } from '../../components';
+import { LazyRender, LoadingBar } from '../../components';
 import dynamic from 'next/dynamic';
+import { useRouter } from 'next/router';
 
 const MenuMain = dynamic(() => import('./Menu/MenuMain'), {
   // eslint-disable-next-line react/display-name
@@ -82,6 +84,24 @@ const Navigation = () => {
 
   const mediaQueryMatches = useMediaQuery('max-width', 735);
 
+  const Router = useRouter();
+
+  const OpenedMenuCache = useRef(false);
+  OpenedMenuCache.current = ShowMenu || showPlaylistMenu || showCommunityMenu;
+
+  const ResetMenuOnRouteChange = () => {
+    // event callback cannot access the latest state.
+    // We can incorporate useRef to solve this problem.
+    if (OpenedMenuCache.current) {
+      dispatchMenu({ type: 'reset' });
+      let dropNode = document.getElementById('playlist-menu');
+      if (dropNode?.style.display === 'block') dropNode.style.display = 'none';
+    }
+  };
+
+  Router?.events?.on('routeChangeComplete', ResetMenuOnRouteChange);
+  Router?.events?.on('routeChangeError', ResetMenuOnRouteChange);
+
   useEffect(() => {
     // for menu
     if (!mediaQueryMatches) {
@@ -116,6 +136,7 @@ const Navigation = () => {
 
   return (
     <Nav menuIsOpen={ShowMenu}>
+      <LoadingBar></LoadingBar>
       <NavContainer>
         <MenuContainer
           onMouseEnter={HandleDisableTransition}

@@ -1,4 +1,3 @@
-/* eslint-disable no-irregular-whitespace */
 import styled, { css } from 'styled-components';
 import { DisFlex_AIC, DisFlex_AIC_JCC } from '../../../styles';
 import { ScaleOut } from '../../../styles/keyframes';
@@ -11,10 +10,13 @@ export const Nav = styled.nav`
   z-index: 60;
   height: 56px;
   width: 100%;
-  padding: 0 2%;
   color: #ccc;
   box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
+
+  @media screen and (max-width: 735px) {
+    padding: 0 2%;
+  }
 
   &::before {
     content: '';
@@ -27,6 +29,8 @@ export const Nav = styled.nav`
     transition: background 0.36s cubic-bezier(0.32, 0.08, 0.24, 1);
     background: url('/static/images/nav-bg.webp') repeat-x top center
       rgba(26, 26, 26, 0.9);
+    background: url('/static/images/nav-bg.webp') repeat-x top center
+      rgba(35, 35, 35, 0.9);
     z-index: -1;
 
     @media screen and (max-width: 735px) {
@@ -49,9 +53,17 @@ export const NavContainer = styled(DisFlex_AIC)`
   box-sizing: border-box;
   position: relative;
   padding-top: 3px;
-  max-width: 1060px;
   height: 56px;
-  margin: auto;
+  margin: 0 24px;
+
+  @media screen and (max-width: 735px) {
+    max-width: 100% !important;
+  }
+
+  @media screen and (max-width: 1050px) {
+    max-width: 90vw;
+    margin: auto;
+  }
 `;
 
 export const NavLogo = styled(DisFlex_AIC_JCC)`
@@ -75,7 +87,7 @@ export const NavLogo = styled(DisFlex_AIC_JCC)`
     left: 0;
     width: 60px;
     content: attr(data-content);
-    background: var(--hover-bgc);
+    background: var(--DropMenu-bgc);
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;

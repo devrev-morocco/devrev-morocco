@@ -13,6 +13,7 @@ export const ElementsCollection = css`
     font-weight: inherit;
     line-height: inherit;
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
 
   html,

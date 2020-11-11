@@ -22,8 +22,8 @@ const SEO = {
     ]
   },
   twitter: {
-    handle: '@LarbiSahli',
-    site: '@LarbiSahli',
+    handle: '@NSBraksa',
+    site: '@DevRevMorocco',
     cardType: 'summary_large_image'
   },
   facebook: {

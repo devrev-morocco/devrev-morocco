@@ -6,7 +6,7 @@ export const RootVariables = css`
     --fg-hover-color: #fff;
     --fg-color: #fafafa;
     --menu-fg-color: #dcdcdc;
-    --general-bgc: #292929;
+    --general-bgc: #18191a;
     --hover-bgc: #ffffff1a;
     --DropMenu-bgc: #333;
     --border-color: #505050;
