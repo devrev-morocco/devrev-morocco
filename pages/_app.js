@@ -11,6 +11,7 @@ import {
 } from 'next-seo';
 import SEO from '../next-seo.config';
 import PropTypes from 'prop-types';
+import { WLProvider } from '../context/WLContext';
 import 'simplebar/dist/simplebar.min.css';
 function App({ Component, pageProps }) {
   //
@@ -36,13 +37,13 @@ function App({ Component, pageProps }) {
       <GlobalStyle />
       <DefaultSeo {...SEO} />
       <LogoJsonLd
-        logo="http://www.devrev-morocco.vercel.app/static/images/devrev-logo_112x112.webp"
-        url="http://www.devrev-morocco.vercel.app"
+        logo="http://devrev.ma/static/images/devrev-logo_112x112.webp"
+        url="http://devrev.ma/"
       />
       <SocialProfileJsonLd
         type="WebPage"
         name="DevRev Morocco"
-        url="http://www.devrev-morocco.vercel.app"
+        url="http://devrev.ma/"
         sameAs={[
           'https://www.facebook.com/devrevmorocco/',
           'https://www.youtube.com/channel/UCohUHFN_a54IJz2qVSEgf4g',
@@ -62,19 +63,15 @@ function App({ Component, pageProps }) {
           },
           {
             position: 2,
-            name: 'Season',
-            item: 'http://www.devrev-morocco.vercel.app/season',
+            name: 'Season 1',
+            item: 'http://www.devrev-morocco.vercel.app/playlist/1',
           },
           {
             position: 3,
             name: 'Season 1',
-            item: 'http://www.devrev-morocco.vercel.app/season?s=1',
+            item: 'http://www.devrev-morocco.vercel.app/playlist/1?v',
           },
-          {
-            position: 4,
-            name: 'Episode 1',
-            item: 'http://www.devrev-morocco.vercel.app/season?s=1&ep=1&vid=qxu1bku4wN0',
-          }
+          
         ]}
       /> */}
       <Head>
@@ -105,8 +102,10 @@ function App({ Component, pageProps }) {
         <meta name="msapplication-TileColor" content="#2f2f2f" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <Navigation />
-      <Component {...pageProps} />
+      <WLProvider>
+        <Navigation />
+        <Component {...pageProps} />
+      </WLProvider>
     </Fragment>
   );
 }

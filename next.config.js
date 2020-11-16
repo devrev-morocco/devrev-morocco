@@ -6,7 +6,7 @@ module.exports = withOffline({
   images: {
     deviceSizes: [30, 60, 120, 320, 420, 768, 1024, 1200],
     iconSizes: [],
-    domains: ['127.0.0.1', 'devrev-morocco.vercel.app'],
+    domains: ['127.0.0.1', 'devrev-morocco.vercel.app', 'devrev.ma'],
     path: '/_next/image',
     loader: 'default'
   },
@@ -39,13 +39,12 @@ module.exports = withOffline({
         destination: '/_next/static/service-worker.js'
       }
     ];
+  },
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      require('./scripts/generate-sitemap');
+    }
+
+    return config;
   }
-
-  // webpack: (config, { isServer }) => {
-  //   if (isServer) {
-  //     require('./scripts/generate-sitemap');
-  //   }
-
-  //   return config;
-  // }
 });

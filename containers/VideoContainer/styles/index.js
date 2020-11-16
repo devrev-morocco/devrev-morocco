@@ -22,8 +22,7 @@ export const VideoThumbnailContainer = styled(RelativePosition)`
   width: 160px;
 
   ${Video_Container}:hover & {
-    box-shadow: 0px 0 6px 2px rgba(0, 0, 0, 0.3);
-    /* transform:translateY(3px); */
+    box-shadow: 0px 0 6px 3px rgba(0, 0, 0, 0.4);
   }
 
   @media screen and (max-width: 735px) {
@@ -93,10 +92,10 @@ export const VideoThumbnailContainer = styled(RelativePosition)`
 export const VideoThumbnailWrapper = styled.div`
   margin-right: 8px;
   width: 160px;
-  padding-bottom: 56%; // aspect ratio 16:9
+  padding-bottom: 56%; // HD video aspect ratio 16:9
   height: 0;
   overflow: hidden;
-  background-color: #555;
+  background-color: #383838;
 
   @media screen and (max-width: 735px) {
     width: 140px !important;
@@ -113,12 +112,8 @@ export const Inner_btn = styled(AbsolutePosition)`
   overflow: hidden;
   z-index: 1;
   display: flex;
-  align-items: center;
-
-  ${VideoWrapper}:hover & {
-    flex-direction: row-reverse;
-    overflow: visible;
-  }
+  flex-direction: row-reverse;
+  align-items: stretch;
 
   @media screen and (max-width: 735px) {
     font-size: 0.75rem;
@@ -155,14 +150,11 @@ export const Slider = styled(DisFlex_AIC_JCC)`
   z-index: 0;
   padding: 5px 6px;
   border-radius: 2px 0 0 2px;
+  transform: translateX(100px);
   font-size: 0.75em;
-  color: #000;
+  color: #fff;
   height: 24px;
-
-  ${VideoWrapper}:hover & {
-    transform: translateX(-23px);
-    color: #fff;
-  }
+  font-weight: bold;
 `;
 
 export const VideoContainer_body = styled.div`
@@ -202,7 +194,7 @@ export const VideoContainer_body_Title = styled.div`
 export const VideoContainer_body_Details = styled.div`
   display: block;
   max-width: 100%;
-  padding-top: 1px;
+  padding: 1px;
   font-size: 0.75rem;
   color: var(--Duration-Color);
   color: #aaa;

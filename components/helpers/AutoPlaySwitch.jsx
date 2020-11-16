@@ -8,8 +8,7 @@ import { Switch, Toggle, Switch_circle } from './styles';
 const AutoPlaySwitch = ({ autoPlay, handleCheckboxChange }) => {
   const [effect, setEffect] = useState(false);
 
-  // Handle Effect Click
-  const HundleEffectClick = () => {
+  const HandleEffect = () => {
     setEffect(true);
     Timer(300).then(() => {
       setEffect(false);
@@ -21,11 +20,19 @@ const AutoPlaySwitch = ({ autoPlay, handleCheckboxChange }) => {
       <Toggle
         as="input"
         type="checkbox"
+        id="autoplay"
         checked={autoPlay}
         onChange={handleCheckboxChange}
       />
-      <span role="button" className="switch__btn" onClick={HundleEffectClick}>
+      <span
+        aria-label="autoplay"
+        role="button"
+        className="switch__btn"
+        onClick={HandleEffect}
+      >
         <Switch_circle
+          as="label"
+          htmlFor="autoplay"
           className={effect ? (autoPlay ? 'on' : 'off') : ''}
         ></Switch_circle>
       </span>

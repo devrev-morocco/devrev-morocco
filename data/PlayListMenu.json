@@ -1,23 +1,23 @@
 {
   "playlist_categories": [
     {
-      "id": "pl-1",
+      "id": "g5sXHp1Q6M",
       "label": "Season 1",
-      "url": "/season/1?v=7XjAtQbN-BQ",
+      "url": "/playlist/1?v=7XjAtQbN-BQ",
       "separateLine": false,
       "ExternalLink": false
     },
     {
-      "id": "pl-2",
+      "id": "4pee6JS5kW",
       "label": "Season 2",
-      "url": "/season/2?v=zjjKfqCgfTQ",
+      "url": "/playlist/2?v=zjjKfqCgfTQ",
       "separateLine": true,
       "ExternalLink": false
     },
     {
-      "id": "pl-3",
+      "id": "MCKxxYwA62",
       "label": "Watch Later",
-      "url": "/playlist?list=WL",
+      "url": "/playlist/0?",
       "separateLine": false,
       "ExternalLink": false
     }

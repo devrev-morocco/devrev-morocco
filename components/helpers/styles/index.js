@@ -3,9 +3,12 @@ import {
   AbsolutePosition,
   DisFlex,
   DisFlex_AIC_JCC,
-  RelativePosition
+  RelativePosition,
+  TextOverflowHidden,
+  DisNone
 } from '../../../styles';
 import { GoogleRipple, LoadingBarProgress } from '../../../styles/keyframes';
+import { TextOverflowHiddenCSS } from '../../../styles/StyledComponents';
 
 export const GoogleRippleEffect = styled(RelativePosition)`
   &:active,
@@ -23,12 +26,13 @@ export const GoogleRippleEffect_wrapper = styled(AbsolutePosition)`
   height: 100%;
 `;
 
-export const GoogleRippleEffect_circle = styled.div.attrs((props) => {
-  return {
-    style: { top: `${props.y}px`, left: `${props.x}px` }
-  };
-})`
-  position: absolute;
+export const GoogleRippleEffect_circle = styled(AbsolutePosition).attrs(
+  (props) => {
+    return {
+      style: { top: `${props.y}px`, left: `${props.x}px` }
+    };
+  }
+)`
   border: 1px solid transparent;
   border-radius: 50%;
   pointer-events: none;
@@ -39,8 +43,7 @@ export const GoogleRippleEffect_circle = styled.div.attrs((props) => {
   transition: all 0.14s linear;
 `;
 
-export const LoadingBarContainer = styled.div`
-  display: none;
+export const LoadingBarContainer = styled(DisNone)`
   height: 3px;
   background: #27c4f5
     linear-gradient(to right, #27c4f5, #a307ba, #fd8d32, #70c050, #27c4f5);
@@ -60,8 +63,6 @@ export const LoadingBarContainer = styled.div`
       display: block;
     `}
 `;
-
-// --------------
 
 export const Switch = styled.label`
   width: 35px;
@@ -115,8 +116,8 @@ export const Switch = styled.label`
 
 export const Toggle = styled(AbsolutePosition)`
   opacity: 0;
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
 
   &:checked {
     + .switch__btn {
@@ -136,11 +137,8 @@ export const Switch_circle = styled(DisFlex_AIC_JCC)`
   border-radius: 50%;
 `;
 
-// ------------- dropdown --------------
-
-export const DD_Container = styled.div`
+export const DD_Container = styled(RelativePosition)`
   cursor: pointer;
-  position: relative;
 `;
 
 export const DD_wrapper = styled(DisFlex)`
@@ -154,13 +152,11 @@ export const DD_wrapper = styled(DisFlex)`
   align-items: stretch;
 `;
 
-export const DD_Label = styled.div`
+export const DD_Label = styled(TextOverflowHidden)`
   flex: 1;
   text-align: center;
   align-self: center;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  font-size: 0.95em;
 `;
 
 export const DD_Icon = styled(DisFlex_AIC_JCC)`
@@ -177,7 +173,8 @@ export const DropItems_Container = styled(AbsolutePosition)`
   transform-origin: 50% 0;
   letter-spacing: normal;
   cursor: default;
-  border-radius: var(--cart-radius);
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
   background: var(--DropMenu-bgc);
   border: 1px solid var(--border-color);
   border-top: none;
@@ -191,10 +188,14 @@ export const DropItems_Container = styled(AbsolutePosition)`
 export const DropItem = styled.div`
   padding: 10px 5px;
   cursor: pointer;
+  ${TextOverflowHiddenCSS}
   border-bottom: 1px solid #555;
+  font-size: 0.95em;
 
   &:last-child {
     border-bottom: 0;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
   }
 
   &:hover {

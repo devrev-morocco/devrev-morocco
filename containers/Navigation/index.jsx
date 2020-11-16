@@ -74,24 +74,29 @@ function reducer(state, action) {
 }
 
 const Navigation = () => {
+  const OpenedMenuCache = useRef(false);
+  const innerWidthCache = useRef(false);
+  const Router = useRouter();
+
   const [MenuState, dispatchMenu] = useReducer(reducer, initialState);
-
   const { ShowMenu, showPlaylistMenu, showCommunityMenu } = MenuState;
-
   const [disableTransition, setDisableTransition] = useState(false);
 
-  const show = showPlaylistMenu || showCommunityMenu; // || more dropMenu
+  const show = showPlaylistMenu || showCommunityMenu; // || more for dropMenu
+  OpenedMenuCache.current = ShowMenu || showPlaylistMenu || showCommunityMenu;
 
   const mediaQueryMatches = useMediaQuery('max-width', 735);
 
-  const Router = useRouter();
-
-  const OpenedMenuCache = useRef(false);
-  OpenedMenuCache.current = ShowMenu || showPlaylistMenu || showCommunityMenu;
+  useEffect(() => {
+    // for menu
+    if (!mediaQueryMatches) {
+      dispatchMenu({ type: 'reset' });
+    }
+  }, [mediaQueryMatches]);
 
   const ResetMenuOnRouteChange = () => {
     // event callback cannot access the latest state.
-    // We can incorporate useRef to solve this problem.
+    // Therefore, we can incorporate useRef to solve this problem.
     if (OpenedMenuCache.current) {
       dispatchMenu({ type: 'reset' });
       let dropNode = document.getElementById('playlist-menu');
@@ -101,13 +106,6 @@ const Navigation = () => {
 
   Router?.events?.on('routeChangeComplete', ResetMenuOnRouteChange);
   Router?.events?.on('routeChangeError', ResetMenuOnRouteChange);
-
-  useEffect(() => {
-    // for menu
-    if (!mediaQueryMatches) {
-      dispatchMenu({ type: 'reset' });
-    }
-  }, [mediaQueryMatches]);
 
   const HandleDisableTransition = () => {
     setDisableTransition(true);
@@ -128,11 +126,10 @@ const Navigation = () => {
   //   }
   // };
 
-  let innerWidth = false;
+  if (typeof window !== 'undefined')
+    innerWidthCache.current = window.innerWidth >= 735;
 
-  if (typeof window !== 'undefined') innerWidth = window.innerWidth >= 735;
-
-  const isMobileView = !(!mediaQueryMatches && innerWidth);
+  const isMobileView = !(!mediaQueryMatches && innerWidthCache.current);
 
   return (
     <Nav menuIsOpen={ShowMenu}>
@@ -143,7 +140,7 @@ const Navigation = () => {
           onMouseLeave={HandleEnableTransition}
         >
           <NavLogo data-content="Home">
-            <Link href="/">
+            <Link href="/" aria-label="home">
               <a>
                 <DevRevLogo />
               </a>

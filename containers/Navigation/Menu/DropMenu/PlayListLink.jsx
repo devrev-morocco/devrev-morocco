@@ -2,9 +2,9 @@ import React, { memo, forwardRef } from 'react';
 import MenuItemsList from '../MenuItemsList';
 import { MenuContainer } from '../styles';
 import PropTypes from 'prop-types';
-import { playlist_categories } from '../../../../data/PlayList.json';
+import { playlist_categories } from '../../../../data/PlayListMenu.json';
 
-const PlayList = forwardRef(({ Id }, ref) => {
+const PlayListLink = forwardRef(({ Id }, ref) => {
   return (
     <MenuContainer ref={ref} id={Id}>
       <MenuItemsList Categories={playlist_categories} />
@@ -12,10 +12,10 @@ const PlayList = forwardRef(({ Id }, ref) => {
   );
 });
 
-PlayList.displayName = 'PlayList';
+PlayListLink.displayName = 'PlayListLink';
 
-PlayList.propTypes = {
+PlayListLink.propTypes = {
   Id: PropTypes.string.isRequired
 };
 
-export default memo(PlayList);
+export default memo(PlayListLink);

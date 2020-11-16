@@ -62,7 +62,6 @@ export const BurgerXSpan = styled(XSpan)`
     }
   }}
 `;
-// --------- Arrow -----------
 
 const ArrowRotate = css`
   transform: rotate(-180deg);

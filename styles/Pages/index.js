@@ -7,6 +7,7 @@ export const PageContainer = styled.div`
 
 export const ComingSoon = styled(DisFlex_AIC_JCC)`
   position: absolute;
+  flex-direction: column;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -17,6 +18,7 @@ export const ComingSoon = styled(DisFlex_AIC_JCC)`
   text-align: center;
   box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
+  padding: 0 5px;
 
   & > span {
     color: #fafafa;

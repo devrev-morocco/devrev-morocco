@@ -9,8 +9,11 @@ const ActiveLink = ({ children, activeClassName, ...props }) => {
   const child = Children.only(children);
   const childClassName = child.props.className || '';
 
+  const inPlayList =
+    asPath.startsWith('/playlist/') && props.href.startsWith('/playlist/');
+
   const className =
-    asPath === props.href || asPath === props.as
+    asPath === props.href || asPath === props.as || inPlayList
       ? `${childClassName} ${activeClassName}`.trim()
       : childClassName;
 

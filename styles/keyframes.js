@@ -57,3 +57,34 @@ export const LoadingBarProgress = keyframes`
   100%
     {background-position: -200% 0%}
 `;
+
+export const RDash = keyframes`
+  0% {
+    transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+`;
+
+export const Opacity0to1 = keyframes`
+0%
+  { opacity:0;
+    color: transparent;
+  }
+100%
+  { opacity:1;
+    color: #fafafa;
+    }
+`;
+
+export const SmoothPopUpTransition = keyframes`
+0% {
+    transform: translate(-50%, 50%);
+    top:100%;
+  }
+	100% {
+    transform: translate(-50%, -50%);
+    top: 50%;
+	}
+`;

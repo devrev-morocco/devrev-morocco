@@ -23,3 +23,9 @@ const ShowTriangle = css`
 export const MenuTriangle = styled(Triangle)`
   ${(props) => props.Enable && ShowTriangle}
 `;
+
+export const TextOverflowHiddenCSS = css`
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+`;

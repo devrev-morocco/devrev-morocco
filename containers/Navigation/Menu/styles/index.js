@@ -2,13 +2,12 @@ import styled, { css } from 'styled-components';
 import {
   DisFlex_AIC,
   DisFlex_AIC_JCC,
-  DisFlex_JCC,
   AbsolutePosition,
   RelativePosition,
-  DisNone,
-  DisFlex
+  DisFlex,
+  TextOverflowHidden
 } from '../../../../styles';
-import { ScaleIn, ScaleOut, SectionMove } from '../../../../styles/keyframes';
+import { ScaleIn, ScaleOut } from '../../../../styles/keyframes';
 
 const Menu = styled(DisFlex_AIC)`
   visibility: visible;
@@ -38,8 +37,6 @@ export const MainMenu = styled(Menu)`
       visibility: hidden;
     `}
 `;
-
-// ------------- submenu ---------------
 
 export const MenuContainer = styled(AbsolutePosition)`
   display: none;
@@ -78,18 +75,31 @@ export const MenuContainer = styled(AbsolutePosition)`
 
 export const MenuItem = styled(DisFlex_AIC)`
   cursor: pointer;
+
+  ${(props) =>
+    props.Disable &&
+    css`
+      cursor: default;
+    `}
+
+  &:hover .disabled {
+    color: #555 !important;
+    background: #333 !important;
+  }
+
+  .disabled {
+    pointer-events: none;
+    color: #555;
+  }
 `;
 
-export const MenuItemLink = styled.a`
+export const MenuItemLink = styled(TextOverflowHidden)`
   padding: 6px 15px 6px 8px;
   margin: 0 8px;
   border-radius: var(--cart-radius);
   font-size: 0.95rem;
   color: var(--menu-fg-color);
   text-decoration: none;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   width: 100%;
 
   ${MenuItem}:hover & {
@@ -97,159 +107,6 @@ export const MenuItemLink = styled.a`
     background: var(--hover-bgc);
   }
 `;
-export const SubMenuSvg = styled(AbsolutePosition)`
-  right: 8px;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-
-  & > svg > g > g {
-    fill: transparent;
-  }
-`;
-
-const LayerContainer = styled(DisFlex_JCC)`
-  flex-direction: column;
-  position: absolute;
-  z-index: auto;
-  left: 100%;
-  top: 0;
-  width: 616px;
-  height: 100%;
-  min-height: 469px;
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: var(--cart-radius);
-  transition: all 0.3s ease-in-out;
-  /* animation: ${SectionMove} 300ms forwards; */
-  box-shadow: 5px 1px 15px 0px rgba(0, 0, 0, 0.05);
-
-  @media screen and (max-width: 1000px) {
-    width: 450px;
-  }
-
-  border-top-left-radius: 0;
-`;
-
-export const SectionLayerContainer = styled(LayerContainer)`
-  ${(props) => !props.showMore && DisNone}
-`;
-
-export const CategoryContainer = styled.div`
-  display: inline-block;
-  width: 100%;
-  padding: 0 48px;
-  padding-bottom: 10px;
-  font-weight: 400;
-  vertical-align: middle;
-  transition: background-image 0.8s ease-in-out;
-  box-sizing: border-box;
-`;
-
-export const CategoryTitle = styled.p`
-  margin-top: 0;
-  margin-bottom: 17px;
-  font-size: 1.25em;
-  text-transform: uppercase;
-  color: #000000cc;
-  font-weight: bold;
-`;
-
-export const CategoryProducts = styled(DisFlex)`
-  flex-flow: row wrap;
-  justify-content: space-between;
-`;
-
-export const CategoryCart = styled.a`
-  position: relative;
-  height: 160px;
-  width: 160px;
-  border: none;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-  box-sizing: border-box;
-  border-radius: var(--cart-radius);
-
-  @media screen and (min-width: 1000px) {
-    &:nth-child(1),
-    &:nth-child(2),
-    &:nth-child(3) {
-      margin-bottom: 16px;
-    }
-  }
-
-  @media screen and (max-width: 1000px) {
-    &:nth-child(1),
-    &:nth-child(2) {
-      margin-bottom: 16px;
-    }
-  }
-`;
-
-export const CategoryCartInner = styled(RelativePosition)`
-  overflow: hidden;
-  border-bottom-right-radius: 2px;
-  border-bottom-left-radius: 2px;
-  box-sizing: border-box;
-
-  /* placeholder image */
-  &::before {
-    display: block;
-    content: '';
-    z-index: -1;
-    width: 100%;
-    padding-top: 100%;
-  }
-`;
-
-export const CategoryCartImgWrap = styled(AbsolutePosition)`
-  top: 0;
-  right: 0;
-  overflow: hidden;
-  left: 0;
-`;
-
-export const CategoryCartDetails = styled(AbsolutePosition)`
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #e1e1e1;
-  color: #222;
-  text-align: center;
-  z-index: 5;
-`;
-
-export const CategoryCartDetails_title = styled.div`
-  padding: 5px;
-  width: 100%;
-  height: 2em;
-  font-size: 1em;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  font-weight: bold;
-  transition: background-color 400ms, color 400ms;
-
-  ${CategoryCart}:hover & {
-    color: #f1f1f1;
-    background: #232526;
-    background: linear-gradient(to left, #414345, #232526);
-    text-shadow: 1px 1px rgba(255, 255, 255, 0.1);
-  }
-`;
-
-export const CartSpinner = styled(DisFlex_AIC_JCC)`
-  position: absolute;
-  width: 100%;
-  height: 160px;
-  top: 0;
-  right: 0;
-  left: 0;
-  background-color: #dedede1a;
-`;
-
-// <------- MenuLink ------->
 
 export const NavLinkContainer = styled(RelativePosition)`
   font-size: 0.87em;

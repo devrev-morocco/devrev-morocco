@@ -1,5 +1,26 @@
 import styled, { css } from 'styled-components';
-import { AbsolutePosition, RelativePosition, DisFlex, DisFlex_AIC } from '../';
+import {
+  AbsolutePosition,
+  RelativePosition,
+  DisFlex,
+  DisFlex_AIC,
+  DisNone
+} from '../';
+
+export const Overlay = styled(DisNone)`
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 5;
+  transition: all 600ms cubic-bezier(0.2, 0.965, 0, 1.005);
+
+  ${(props) =>
+    props.Show &&
+    css`
+      display: block;
+    `}
+`;
 
 export const MainContainer = styled(DisFlex)`
   padding-top: 24px;
@@ -22,7 +43,7 @@ export const MainContainer = styled(DisFlex)`
 `;
 
 export const VideoPlayerContainer = styled(RelativePosition)`
-  padding-bottom: 56.25%; // aspect ratio 16:9
+  padding-bottom: 56.25%; // aspect ratio 16:9 => (100%*9)/16
   height: 0;
   overflow: hidden;
   border-radius: 8px;
@@ -61,7 +82,6 @@ export const VideoPlayerWrapper = styled(AbsolutePosition)`
 `;
 
 export const PrimaryContainer = styled(DisFlex)`
-  display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   margin: 0 24px !important;
@@ -124,53 +144,15 @@ export const Title = styled(DisFlex_AIC)`
   }
 `;
 
-const InfoDrop = styled.div`
-  position: relative;
-  color: #e1e1e1;
-  overflow: hidden;
-  display: none;
-  padding: 5px 0;
-`;
-
-export const InfoDrop_container = styled(InfoDrop)`
-  ${(props) => {
-    if (props.Show) {
-      return css`
-        visibility: visible;
-        display: block !important;
-      `;
-    }
-  }}
-`;
-
-export const InfoDrop_line = styled.div`
-  white-space: pre-wrap;
-  word-break: break-word;
-  line-height: 1.2em;
-  font-size: 0.9em;
-
-  &:first-child {
-    line-height: 1em;
-  }
-`;
-export const InfoDrop_space = styled.div`
-  padding: 5px 0;
-  height: 5px;
-  width: 100%;
-`;
-
 export const SecondaryContainer = styled(DisFlex)`
   flex: 1 1;
   margin-right: 24px;
-  margin-bottom: 24px;
-  width: 402px;
+  margin-bottom: 10px;
   width: 500px;
-  min-width: 370px;
   max-width: 500px;
   flex-direction: column;
   box-sizing: border-box;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-radius: 8px 8px 2px 2px;
   background-color: #242526;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 
@@ -186,91 +168,12 @@ export const SecondaryContainer = styled(DisFlex)`
   }
 `;
 
-export const InfoHeaderContainer = styled.div`
-  padding: 12px 10px 10px 10px;
-  padding-bottom: 10px;
-  background-color: #272829;
-  border-bottom: 1px solid #363636;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  position: relative;
-
-  @media screen and (max-width: 735px) {
-    border-radius: 0;
-    border-top: 1px solid #363636;
-  }
-`;
-
-export const VidTitleContainer = styled(DisFlex_AIC)`
-  justify-content: space-between;
-  padding-right: 5px;
-`;
-
-export const VidState = styled(DisFlex_AIC)`
-  font-size: 1em;
-  color: #fafafa;
-  color: #ebebeb;
-
-  .forward-slash-line {
-    height: 25px;
-    width: 2px;
-    margin: 0 16px;
-    background: #5a5a5a;
-
-    @media screen and (max-width: 735px) {
-      width: 1px;
-      margin: 0 10px;
-    }
-  }
-
-  @media screen and (max-width: 735px) {
-    font-size: 0.9em;
-  }
-`;
-
-export const AutoPlayContainer = styled(DisFlex_AIC)`
-  & > span {
-    font-size: 0.7em;
-    font-weight: bold;
-    color: #aaa;
-    margin-right: 8px;
-    text-transform: uppercase;
-  }
-`;
-
-export const VidDetailsContainer = styled.div`
-  padding-top: 8px;
-  margin-right: 8px;
-`;
-
-export const VidDisc = styled.div`
-  color: #ccc;
-  font-size: 0.9em;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  padding: 2px 0;
-  line-height: 1.05em;
-`;
-
-export const VidDisc_show_more = styled.div`
-  color: #aaa;
-  font-size: 0.8em;
-  padding: 5px 0;
-  cursor: pointer;
-  text-transform: uppercase;
-  text-decoration: underline;
-
-  &:hover {
-    color: #6fa0eb;
-  }
-`;
-
-// -----------------------------------
-
 export const SecondaryWrapper = styled.div`
-  padding-top: 8px;
+  padding-top: 5px;
   padding-left: 10px;
   overflow: hidden;
+
+  @media screen and (max-width: 735px) {
+    padding-top: 10px;
+  }
 `;

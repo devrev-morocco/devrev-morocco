@@ -33,6 +33,7 @@ const MenuLink = ({
     if (dropNode) dropNode.style.display = 'none';
   };
 
+  // For tablet users
   const handleClick = () => {
     // if(mobileCheck()){
     //   if(Show){

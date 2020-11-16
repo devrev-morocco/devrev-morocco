@@ -1,6 +1,6 @@
-import { PageContainer, ComingSoon } from '../styles/Pages';
+import { PageContainer, ComingSoon } from '../styles/Pages/index';
 
-export default function Playlist() {
+export default function About() {
   return (
     <PageContainer>
       <ComingSoon>

@@ -1,10 +1,11 @@
 import React, { memo, useRef } from 'react';
 import MenuTransition from './MenuTransition';
 import MenuLink from './MenuLink';
-import { PlayList, Community } from './DropMenu';
+import { PlayListLink, Community } from './DropMenu';
 import PropTypes from 'prop-types';
-import { MainMenu } from './styles';
+import { MainMenu, NavLinkContainer, LinkNav, LinkSpan } from './styles';
 import { MenuTriangle } from '../../../styles/StyledComponents';
+import { ActiveLink, RippleEffect } from '../../../components';
 
 const MenuMain = ({
   disTran = false,
@@ -22,12 +23,12 @@ const MenuMain = ({
         Show={Show}
         Type="playlist"
         Label="playlist"
-        Href="/playlist?list=ALL"
+        Href="/playlist/1?v=7XjAtQbN-BQ"
         Id="playlist-menu"
       >
         <MenuTriangle Enable={Show}></MenuTriangle>
         <MenuTransition ref={PlayListNodeRef} Show={Show} disTran={disTran}>
-          <PlayList ref={PlayListNodeRef} Id="playlist-menu" />
+          <PlayListLink ref={PlayListNodeRef} Id="playlist-menu" />
         </MenuTransition>
       </MenuLink>
       {/* ------- COMMUNITY ------- */}
@@ -44,6 +45,16 @@ const MenuMain = ({
           <Community ref={CommunityNodeRef} Id="community-menu" />
         </MenuTransition>
       </MenuLink>
+      {/* ------- ABOUT ------- */}
+      <NavLinkContainer>
+        <RippleEffect>
+          <ActiveLink href="/about" activeClassName="selected" passHref={true}>
+            <LinkNav as="a">
+              <LinkSpan as="span">about</LinkSpan>
+            </LinkNav>
+          </ActiveLink>
+        </RippleEffect>
+      </NavLinkContainer>
     </MainMenu>
   );
 };

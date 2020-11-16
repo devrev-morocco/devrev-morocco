@@ -1,7 +1,6 @@
 /* eslint-disable no-irregular-whitespace */
 import styled, { css } from 'styled-components';
 import { DisFlex_AIC, DisFlex_AIC_JCC } from '../../../../styles';
-// import { ScaleOut } from '../../../../styles/keyframes'
 
 const Menu_container = styled.div`
   position: fixed;
@@ -55,12 +54,12 @@ export const Menu_submenu_item = styled(DisFlex_AIC)`
 `;
 
 export const Menu_submenu_Arrow = styled(DisFlex_AIC_JCC)`
-  width: 30px;
+  width: 35px;
   height: 30px;
 
   &:hover {
     background-color: var(--hover-bgc);
-    border-radius: 50%;
+    border-radius: var(--cart-radius);
   }
 `;
 
@@ -92,7 +91,7 @@ export const Menu_submenu_DropDown = styled.div`
 export const Submenu_DropDown_wrap = styled.a`
   display: block;
   cursor: pointer;
-  padding: 5px 0;
+  padding: 10px 0;
   text-transform: capitalize;
   margin-bottom: 5px;
   padding-left: 15px;

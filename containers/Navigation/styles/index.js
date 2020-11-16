@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import { DisFlex_AIC, DisFlex_AIC_JCC } from '../../../styles';
 import { ScaleOut } from '../../../styles/keyframes';
+import { TextOverflowHiddenCSS } from '../../../styles/StyledComponents';
 
 export const Nav = styled.nav`
   position: fixed;
@@ -27,8 +28,6 @@ export const Nav = styled.nav`
     width: 100%;
     height: 56px;
     transition: background 0.36s cubic-bezier(0.32, 0.08, 0.24, 1);
-    background: url('/static/images/nav-bg.webp') repeat-x top center
-      rgba(26, 26, 26, 0.9);
     background: url('/static/images/nav-bg.webp') repeat-x top center
       rgba(35, 35, 35, 0.9);
     z-index: -1;
@@ -71,9 +70,9 @@ export const NavLogo = styled(DisFlex_AIC_JCC)`
   margin-right: 30px;
   height: 40px;
   width: 40px;
-  border-radius: 50%;
-  background-color: #fff; // logo need fix text is transparent
   box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 50%;
 
   &::before {
     position: absolute;
@@ -88,9 +87,7 @@ export const NavLogo = styled(DisFlex_AIC_JCC)`
     width: 60px;
     content: attr(data-content);
     background: var(--DropMenu-bgc);
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    ${TextOverflowHiddenCSS}
   }
 
   &:hover::before {

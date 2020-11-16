@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useMemo } from 'react';
 import {
   Video_Container,
   VideoWrapper,
@@ -14,19 +14,78 @@ import {
 } from './styles';
 import PropTypes from 'prop-types';
 import { Checked, Clock } from '../../components/svgs';
-import { useMediaQuery } from '../../hooks';
+import { useMediaQuery, useWL } from '../../hooks';
 import Link from 'next/link';
+import Image from 'next/image';
+import { Timer } from '../../utils';
+import { useRouter } from 'next/router';
 
 const VideoContainer = ({ Episode, Season, CurrentVidId, PlayingState }) => {
+  const Router = useRouter();
+
   const mediaQueryMatches = useMediaQuery('max-width', 735);
 
-  const IswatchLater = false;
-
-  const HandleLink = () => {};
+  const HandleLink = () => {
+    Router.push({
+      pathname: `/playlist/[season]`,
+      query: { season: Season, v: Episode.videoId }
+    });
+    window?.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const isPlaying = PlayingState === 1;
 
-  console.log('isPlaying :>> ', isPlaying);
+  const HandleHoverIn = () => {
+    const slider = document.getElementById(`wl-${Episode?.videoId}`);
+
+    if (slider) {
+      slider.style.position = 'relative';
+      slider.style.zIndex = '1';
+      slider.style.transform = 'translateX(0)';
+    }
+  };
+
+  const HandleHoverOut = () => {
+    const slider = document.getElementById(`wl-${Episode?.videoId}`);
+
+    if (slider) {
+      slider.style.zIndex = '0';
+      slider.style.transform = 'translateX(135px)';
+
+      Timer(350).then(() => {
+        slider.style.position = 'absolute';
+      });
+    }
+  };
+
+  const [StoredValue, setLocalStorage] = useWL();
+
+  const Check = () => {
+    const isVidId = StoredValue?.wl?.filter((ep) => {
+      if (ep?.videoId === Episode?.videoId) return true;
+      return false;
+    });
+
+    return isVidId?.length === 0 ?? true;
+  };
+
+  const EpCheck = useMemo(() => Check(), [StoredValue]);
+
+  const HandleWLClick = () => {
+    const item = window?.localStorage.getItem('devrev-wl');
+    const LocalStorageValue = JSON.parse(item);
+
+    if (EpCheck)
+      setLocalStorage({ wl: [...(LocalStorageValue?.wl ?? []), Episode] });
+    else {
+      const RemoveValue = LocalStorageValue?.wl.filter((ep) => {
+        return ep?.videoId !== Episode?.videoId;
+      });
+      setLocalStorage({ wl: [...(RemoveValue ?? [])] });
+    }
+  };
+
+  const IswatchLater = !EpCheck;
 
   return (
     <Video_Container>
@@ -36,41 +95,26 @@ const VideoContainer = ({ Episode, Season, CurrentVidId, PlayingState }) => {
           isPlaying={isPlaying}
         >
           <VideoThumbnailWrapper onClick={HandleLink}>
-            <img
-              width={mediaQueryMatches ? '140' : '160'}
+            <Image
               src={Episode?.thumbnail}
-              alt=""
+              width={mediaQueryMatches ? '140' : '160'}
+              // To calculate the height use (w/h)=(16/9) => h=(w.9)/16
+              height={mediaQueryMatches ? (140 * 9) / 16 : (160 * 9) / 16}
+              quality={95}
             />
           </VideoThumbnailWrapper>
-          {/* -------------head svg-------------- */}
           {Episode?.duration && (
             <Inner_btn className="inner_btn--duration">
               {Episode?.duration}
             </Inner_btn>
           )}
           <Inner_btn
-            //   onClick={() =>
-            //     PopularVideo
-            //       ? HandleWLClick(
-            //           PopularVideo.title,
-            //           PopularVideo.duration,
-            //           PopularVideo.videoId,
-            //           PopularVideo.channelTitle,
-            //           PopularVideo.channelId,
-            //           PopularVideo.thumbnail,
-            //           IswatchLater
-            //         )
-            //       : null
-            //   }
-
+            onMouseEnter={HandleHoverIn}
+            onMouseLeave={HandleHoverOut}
+            onClick={HandleWLClick}
             className="inner_btn--clock"
           >
-            <Icon_btn
-
-            // onMouseEnter={() => HandleHoverIn("wl")}
-            // onMouseLeave={() => HandleHoverOut("wl")}
-            // className={styles.icon_btn}
-            >
+            <Icon_btn>
               {IswatchLater ? (
                 <div className="icon_btn__check">
                   <Checked />
@@ -87,20 +131,17 @@ const VideoContainer = ({ Episode, Season, CurrentVidId, PlayingState }) => {
               )}
             </Slider>
           </Inner_btn>
-          {/* -------------body-------------- */}
         </VideoThumbnailContainer>
         <Link
           href={{
-            pathname: `/season/[season]`,
-            query: { season: Season, v: Episode.videoId }
+            pathname: '/playlist/[season]',
+            query: { season: Season, v: Episode?.videoId }
           }}
           passHref
         >
           <VideoContainer_body as="a">
             <VideoContainer_Body_wrap>
-              <VideoContainer_body_Title
-              // onClick={HandleLink}
-              >
+              <VideoContainer_body_Title>
                 {Episode?.title}
               </VideoContainer_body_Title>
               <VideoContainer_body_Details>
