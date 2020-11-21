@@ -117,18 +117,18 @@ function Playlist({ Episodes, CurrentPlayingEp }) {
           title: title,
           description: description[0],
           // url: `https://devrev.ma/playlist/${ep}/${stringUrl}`,
-          url: `https://devrev-morocco-f71zqsttt.vercel.app/playlist/${ep}/${stringUrl}`,
+          url: `https://devrev-morocco-git-playlist.larbisahli.vercel.app/playlist/${ep}/${stringUrl}`,
           images: [
             {
               // url: `https://devrev.ma${thumbnail}`,
-              url: `https://devrev-morocco-f71zqsttt.vercel.app${thumbnail}`,
+              url: `https://devrev-morocco-git-playlist.larbisahli.vercel.app${thumbnail}`,
               width: 720,
               height: 404,
               alt: `DevRev #${epTag}`
             }
           ],
           // site_name: 'https://devrev.ma/'
-          site_name: 'https://devrev-morocco-f71zqsttt.vercel.app'
+          site_name: 'https://devrev-morocco-git-playlist.larbisahli.vercel.app'
         }}
       />
       <BreadcrumbJsonLd
