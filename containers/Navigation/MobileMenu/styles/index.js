@@ -56,6 +56,7 @@ export const Menu_submenu_item = styled(DisFlex_AIC)`
 export const Menu_submenu_Arrow = styled(DisFlex_AIC_JCC)`
   width: 35px;
   height: 30px;
+  outline: none;
 
   &:hover {
     background-color: var(--hover-bgc);
@@ -67,9 +68,19 @@ export const Menu_submenu_Link = styled(DisFlex_AIC)`
   flex: 1;
   height: 100%;
   text-transform: capitalize;
+  outline: none;
 
   ${Menu_submenu_item}:hover & {
     color: #fff;
+  }
+
+  body:not(.user-is-tabbing) &:focus {
+    background-color: transparent !important;
+  }
+
+  &:focus {
+    color: #fff;
+    background-color: var(--hover-bgc);
   }
 `;
 
@@ -96,8 +107,14 @@ export const Submenu_DropDown_wrap = styled.a`
   margin-bottom: 5px;
   padding-left: 15px;
   border-radius: var(--cart-radius);
+  outline: none;
 
   &:hover {
+    color: var(--blue-primary-300);
+    background-color: var(--hover-bgc);
+  }
+
+  &:focus {
     color: var(--blue-primary-300);
     background-color: var(--hover-bgc);
   }

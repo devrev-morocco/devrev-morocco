@@ -11,8 +11,8 @@ const { seasons } = require('../data/Seasons.json');
       for (let i in seasons[key]) {
         Arr.push(
           `<url>
-            <loc>${`https://devrev.ma/playlist/${key}?v=${seasons[key][i].videoId}`}</loc>
-          </url>`
+             <loc>${`https://devrev.ma/playlist/${key}/${seasons[key][i].stringUrl}`}</loc>
+           </url>`
         );
       }
     }
@@ -28,7 +28,7 @@ const { seasons } = require('../data/Seasons.json');
         <url>
           <loc>https://devrev.ma/about</loc>
         </url>
-            ${PlayListMap().join('')}
+        ${PlayListMap().join('')}
         </urlset>
     `;
 
@@ -39,5 +39,3 @@ const { seasons } = require('../data/Seasons.json');
 
   fs.writeFileSync('public/sitemap.xml', formatted);
 })();
-
-// This file runs only on build time.

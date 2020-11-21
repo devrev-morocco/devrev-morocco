@@ -8,7 +8,9 @@ import {
 import {
   RDash,
   Opacity0to1,
-  SmoothPopUpTransition
+  PopUpTransition450,
+  PopUpTransition400,
+  PopUpTransition90vw
 } from '../../../styles/keyframes';
 import { TextOverflowHiddenCSS } from '../../../styles/StyledComponents';
 
@@ -45,6 +47,10 @@ export const VidState = styled(DisFlex_AIC)`
       width: 1px;
       margin: 0 10px;
     }
+  }
+
+  @media screen and (max-width: 1150px) {
+    font-size: 0.95em;
   }
 
   @media screen and (max-width: 735px) {
@@ -137,14 +143,30 @@ export const ParticipantsContainer = styled(DisFlex_AIC)`
   height: 55px;
 `;
 
-export const ParticipantContainer = styled(AbsolutePosition)`
+export const ParticipantContainer = styled(RelativePosition)`
+  height: 40px;
+
+  ${(props) => {
+    if (props.SetMargin) {
+      return css`
+        left: ${props.Index * 60}px;
+      `;
+    }
+  }}
+`;
+
+export const ParticipantWrapper = styled(AbsolutePosition)`
   cursor: pointer;
   color: #fff;
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  transition: all 600ms cubic-bezier(0.2, 0.965, 0, 1.005);
-  will-change: transform;
+  transition: all 300ms cubic-bezier(0.2, 0.965, 0, 1.005);
+  transform: translateY(-50%);
+  will-change: transform, opacity;
+  /* it's a bad practice to animate using top and left */
+  top: 50%;
+  left: 50%;
 
   ${(props) => {
     if (props.ShowMore) {
@@ -153,15 +175,10 @@ export const ParticipantContainer = styled(AbsolutePosition)`
         justify-content: center;
         cursor: default;
         position: fixed;
-
-        width: 450px;
         height: auto;
         box-shadow: 0 25px 35px 0 rgba(0, 0, 0, 0.4);
         z-index: 999;
-        animation: ${SmoothPopUpTransition} 0.25s linear;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        animation: ${PopUpTransition450} 200ms forwards;
         border-radius: 5px;
         background-image: linear-gradient(#222, #222),
           linear-gradient(
@@ -176,19 +193,14 @@ export const ParticipantContainer = styled(AbsolutePosition)`
         padding: 2px;
         background-clip: content-box, border-box;
 
-        @media screen and (max-width: 1050px) {
-          animation: ${SmoothPopUpTransition} 0.2s linear;
-        }
-
         @media screen and (max-width: 735px) {
           transition: all 400ms cubic-bezier(0.2, 0.965, 0, 1.005);
-          width: 400px;
+          animation: ${PopUpTransition400} 150ms forwards;
           padding: 1px;
         }
 
         @media screen and (max-width: 600px) {
-          animation: ${SmoothPopUpTransition} 0.05s linear;
-          width: 90vw;
+          animation: ${PopUpTransition90vw} 100ms forwards;
         }
       `;
     }
@@ -229,13 +241,13 @@ export const ParticipantThumbnail = styled(RelativePosition)`
   &:before {
     position: absolute;
     content: '';
-    height: 40px;
-    width: 40px;
-    top: -1px;
-    left: -1px;
+    height: 41px;
+    width: 41px;
+    top: -1.5px;
+    left: -1.5px;
     border: 1px dashed #fff;
     animation: ${RDash} 10s infinite linear;
-    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4);
     border-image: linear-gradient(
       to right,
       #27c4f5,
@@ -260,13 +272,13 @@ export const ParticipantThumbnail = styled(RelativePosition)`
       case 0:
         return css`
           &:before {
-            border-image: linear-gradient(to right, #fafafa, #ff4b14);
+            border-image: linear-gradient(to right, #70c050, #27c4f5);
           }
         `;
       case 1:
         return css`
           &:before {
-            border-image: linear-gradient(to right, #70c050, #27c4f5);
+            border-image: linear-gradient(to right, #fafafa, #ff4b14);
           }
         `;
       case 2:
@@ -355,7 +367,7 @@ export const ParticipantDetailsAbout = styled.div`
   text-overflow: wrap;
   padding: 0 20px;
   color: #fafafa;
-  animation: ${Opacity0to1} 1.5s 1;
+  animation: ${Opacity0to1} 200ms 1;
   margin-bottom: 45px;
   margin-top: 10px;
   line-height: 1.08em;

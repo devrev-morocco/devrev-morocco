@@ -3,43 +3,47 @@ import { Navigation } from '../containers';
 import GlobalStyle from '../styles/Globals';
 import Head from 'next/head';
 import GoogleFonts from 'next-google-fonts';
-import {
-  DefaultSeo,
-  SocialProfileJsonLd,
-  LogoJsonLd
-  // BreadcrumbJsonLd
-} from 'next-seo';
+import { DefaultSeo, SocialProfileJsonLd } from 'next-seo';
 import SEO from '../next-seo.config';
 import PropTypes from 'prop-types';
 import { WLProvider } from '../context/WLContext';
 import 'simplebar/dist/simplebar.min.css';
+import { useRouter } from 'next/router';
+import * as gtag from '../lib/gtag';
+import '../utils';
 function App({ Component, pageProps }) {
-  //
-  // const HandleKeyTab = (e) => {
-  //   const Class = 'user-is-tabbing';
-  //   const ClassExist = document.body.classList.contains(Class);
-  //   if (e.keyCode === 9 && e.key === 'Tab') {
-  //     document.body.classList.add(Class);
-  //     // window.removeEventListener('keydown', HandleKeyTab);
-  //   } else {
-  //     if (ClassExist) document.body.classList.remove(Class);
-  //   }
-  // };
+  const router = useRouter();
+
+  const HandleKeyTab = (e) => {
+    const Class = 'user-is-tabbing';
+    const ClassExist = document.body.classList.contains(Class);
+    if (e.keyCode === 9 && e.key === 'Tab') {
+      document.body.classList.add(Class);
+    } else {
+      if (ClassExist) document.body.classList.remove(Class);
+    }
+  };
 
   useEffect(() => {
     document.documentElement.lang = 'en';
-    // window.addEventListener('keydown', HandleKeyTab);
+    window.addEventListener('keydown', HandleKeyTab);
   }, []);
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url);
+    };
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
     <Fragment>
       <GoogleFonts href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" />
       <GlobalStyle />
       <DefaultSeo {...SEO} />
-      <LogoJsonLd
-        logo="http://devrev.ma/static/images/devrev-logo_112x112.webp"
-        url="http://devrev.ma/"
-      />
       <SocialProfileJsonLd
         type="WebPage"
         name="DevRev Morocco"
@@ -50,30 +54,8 @@ function App({ Component, pageProps }) {
           'https://www.instagram.com/devrevmorocco/',
           'https://twitter.com/devrevmorocco',
           'https://twitch.com/devrevmorocco'
-          // 'http://www.linkedin.com/in/yourprofile',
-          // 'http://plus.google.com/your_profile'
         ]}
       />
-      {/* <BreadcrumbJsonLd
-        itemListElements={[
-          {
-            position: 1,
-            name: 'DevRev-Morocco',
-            item: 'http://www.devrev-morocco.vercel.app',
-          },
-          {
-            position: 2,
-            name: 'Season 1',
-            item: 'http://www.devrev-morocco.vercel.app/playlist/1',
-          },
-          {
-            position: 3,
-            name: 'Season 1',
-            item: 'http://www.devrev-morocco.vercel.app/playlist/1?v',
-          },
-          
-        ]}
-      /> */}
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link

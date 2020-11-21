@@ -12,19 +12,19 @@ import {
 } from './styles';
 import MenuTransition from '../../containers/Navigation/Menu/MenuTransition';
 import { useRouter } from 'next/router';
-import { useWL } from '../../hooks';
 
 const DropDown = ({ SelectedSeason, setSelectedSeason }) => {
   const DropNodeRef = useRef(null);
   const displayCache = useRef(false);
   const Router = useRouter();
-  const [display, setDisplay] = useState(false);
-  displayCache.current = display;
 
   const [playlistData, setPlaylistData] = useState({});
+  const [display, setDisplay] = useState(false);
+
+  displayCache.current = display;
 
   useEffect(() => {
-    fetch('/api/playlistdrop')
+    fetch('/api/playlistkeys')
       .then((res) => res.json())
       .then(
         (data) => {
@@ -37,11 +37,11 @@ const DropDown = ({ SelectedSeason, setSelectedSeason }) => {
   }, []);
 
   const CloseDropMenu = (e) => {
+    const target = e.target;
     const dropNode = document.getElementById('dropdown-menu');
     const dropItemsNode = document.getElementById(
       'dropdown-menu-items-container'
     );
-    const target = e.target;
 
     if (!dropNode?.contains(target) || dropItemsNode?.contains(target)) {
       OnExit();
@@ -70,18 +70,10 @@ const DropDown = ({ SelectedSeason, setSelectedSeason }) => {
     OnExit();
     setDisplay(false);
     setSelectedSeason({ season: season_ });
-
-    if (season_ === 'WL') {
-      Router.push({
-        pathname: `/playlist/[season]`,
-        query: { season: 0 }
-      });
-    } else {
-      Router.push({
-        pathname: `/playlist/[season]`,
-        query: { season: season_, v: playlistData[season_] }
-      });
-    }
+    Router.push({
+      pathname: `/playlist/[season]/[episode]`,
+      query: { season: season_, episode: playlistData[season_] }
+    });
     window?.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -89,21 +81,11 @@ const DropDown = ({ SelectedSeason, setSelectedSeason }) => {
     playlistData
   ]);
 
-  const [StoredValue] = useWL();
-
-  const IsWatchLater = StoredValue?.wl.length > 0;
-
-  console.log('DropDown', StoredValue);
-
   return (
     <DD_Container id="dropdown-menu">
       <RippleEffect noPadding onClick={HandleClick}>
         <DD_wrapper>
-          <DD_Label as="span">{`${
-            SelectedSeason === 'WL'
-              ? 'Watch Later'
-              : `Season ${SelectedSeason ?? ''}`
-          }`}</DD_Label>
+          <DD_Label as="span">{`Season ${SelectedSeason ?? ''}`}</DD_Label>
           <DD_Icon>
             <DropArrow Rotate={display} />
           </DD_Icon>
@@ -130,13 +112,6 @@ const DropDown = ({ SelectedSeason, setSelectedSeason }) => {
                 >{`Season ${season_}`}</DropItem>
               );
             })}
-          {IsWatchLater && (
-            <DropItem
-              pass
-              className={`${SelectedSeason === 'WL' ? 'dd-active' : ''}`}
-              onClick={() => HandleSelect('WL')}
-            >{`Watch Later`}</DropItem>
-          )}
         </DropItems_Container>
       </MenuTransition>
     </DD_Container>

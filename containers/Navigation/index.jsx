@@ -15,14 +15,20 @@ import {
   MenuBurgerContainer,
   Burger,
   BurgerTxt,
-  RightContainer
+  RightContainer,
+  WatchLaterContainer,
+  ClockIconContainer,
+  WLCounter
 } from './styles';
+import { WLMenuTriangle } from '../../styles/StyledComponents';
 import Link from 'next/link';
-import { useMediaQuery } from '../../hooks';
-import { DevRevLogo, Menuburger } from '../../components/svgs';
+import { useMediaQuery, useWL } from '../../hooks';
+import { DevRevLogo, Menuburger, Clock } from '../../components/svgs';
 import { LazyRender, LoadingBar } from '../../components';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
+import { Timer } from '../../utils';
+import WatchLaterDrop from './WatchLaterDrop';
 
 const MenuMain = dynamic(() => import('./Menu/MenuMain'), {
   // eslint-disable-next-line react/display-name
@@ -48,25 +54,36 @@ function reducer(state, action) {
       return {
         showPlaylistMenu: true,
         showCommunityMenu: false,
-        ShowMenu: false
+        ShowMenu: false,
+        ShowWatchLater: false
       };
     case 'community':
       return {
         showPlaylistMenu: false,
         showCommunityMenu: true,
-        ShowMenu: false
+        ShowMenu: false,
+        ShowWatchLater: false
       };
     case 'menu':
       return {
         showPlaylistMenu: false,
         showCommunityMenu: false,
-        ShowMenu: true
+        ShowMenu: true,
+        ShowWatchLater: false
+      };
+    case 'wl':
+      return {
+        showPlaylistMenu: false,
+        showCommunityMenu: false,
+        ShowMenu: false,
+        ShowWatchLater: true
       };
     case 'reset':
       return {
         showPlaylistMenu: false,
         showCommunityMenu: false,
-        ShowMenu: false
+        ShowMenu: false,
+        ShowWatchLater: false
       };
     default:
       return state;
@@ -79,13 +96,22 @@ const Navigation = () => {
   const Router = useRouter();
 
   const [MenuState, dispatchMenu] = useReducer(reducer, initialState);
-  const { ShowMenu, showPlaylistMenu, showCommunityMenu } = MenuState;
+  const {
+    ShowMenu,
+    showPlaylistMenu,
+    showCommunityMenu,
+    ShowWatchLater
+  } = MenuState;
   const [disableTransition, setDisableTransition] = useState(false);
 
-  const show = showPlaylistMenu || showCommunityMenu; // || more for dropMenu
+  const show = showPlaylistMenu || showCommunityMenu; // || more dropMenus
   OpenedMenuCache.current = ShowMenu || showPlaylistMenu || showCommunityMenu;
 
   const mediaQueryMatches = useMediaQuery('max-width', 735);
+
+  const [StoredValue] = useWL();
+
+  const IsWatchLater = StoredValue?.wl.length > 0;
 
   useEffect(() => {
     // for menu
@@ -120,16 +146,75 @@ const Navigation = () => {
     dispatchMenu({ type: ShowMenu ? 'reset' : 'menu' });
   }, [ShowMenu]);
 
-  // const HandleKeyPressMenu = (e) => {
-  //   if (e.key === 'Enter' || e.which === 13) {
-  //     dispatchMenu({ type: ShowMenu ? 'reset' : 'menu' });
-  //   }
-  // };
+  const HandleKeyPressMenu = (e) => {
+    if (e.key === 'Enter' || e.which === 13) {
+      dispatchMenu({ type: ShowMenu ? 'reset' : 'menu' });
+    }
+  };
+
+  // -------------------------------------------------------
+
+  const CartInterval = useRef(null);
+
+  const WlCartEvent = (e) => {
+    const target = e.target;
+    const WLCart = document.getElementById('watch-later-cart');
+    const WLClock = document.getElementById('wl-clock');
+
+    console.log('target');
+
+    if (!WLCart?.contains(target) && !WLClock.contains(target)) {
+      clearInterval(CartInterval.current);
+      dispatchMenu({ type: 'reset' });
+      document.removeEventListener('click', WlCartEvent);
+    }
+  };
+
+  const HandleWatchLaterCart = useCallback(() => {
+    // HandleUserTabAction();
+
+    if (ShowWatchLater) {
+      dispatchMenu({ type: 'reset' });
+    } else {
+      dispatchMenu({ type: 'wl' });
+      document.addEventListener('click', WlCartEvent);
+    }
+  }, [ShowWatchLater]);
+
+  const HandleKeyPressWlCart = (e) => {
+    if (e.key === 'Enter' || e.which === 13) HandleWatchLaterCart();
+  };
+
+  const WlCartMouseIn = useCallback(() => {
+    if (CartInterval.current) clearInterval(CartInterval.current);
+  }, [CartInterval.current]);
+
+  const WlCartMouseLeave = useCallback(() => {
+    if (ShowWatchLater) {
+      CartInterval.current = setInterval(() => {
+        clearInterval(CartInterval.current);
+        dispatchMenu({ type: 'reset' });
+      }, 900);
+    }
+  }, [CartInterval.current, ShowWatchLater]);
+
+  // -------------------------------------------------------
 
   if (typeof window !== 'undefined')
     innerWidthCache.current = window.innerWidth >= 735;
 
   const isMobileView = !(!mediaQueryMatches && innerWidthCache.current);
+
+  const [WlPulseTrigger, setWlPulseTrigger] = useState(false);
+
+  useEffect(() => {
+    if (IsWatchLater) {
+      setWlPulseTrigger(true);
+      Timer(500).then(() => {
+        setWlPulseTrigger(false);
+      });
+    }
+  }, [StoredValue]);
 
   return (
     <Nav menuIsOpen={ShowMenu}>
@@ -140,8 +225,8 @@ const Navigation = () => {
           onMouseLeave={HandleEnableTransition}
         >
           <NavLogo data-content="Home">
-            <Link href="/" aria-label="home">
-              <a>
+            <Link href="/">
+              <a aria-label="home">
                 <DevRevLogo />
               </a>
             </Link>
@@ -155,15 +240,40 @@ const Navigation = () => {
           </LazyRender>
         </MenuContainer>
         <RightContainer>
-          <MenuBurgerContainer
-            tabIndex="0"
-            onClick={HandleMenu}
-            // onKeyPress={HandleKeyPressMenu}
+          <WatchLaterContainer
+            onClick={HandleWatchLaterCart}
+            id="wl-clock"
+            tabIndex={0}
+            onKeyPress={HandleKeyPressWlCart}
+            onMouseEnter={WlCartMouseIn}
+            onMouseLeave={WlCartMouseLeave}
           >
-            <Burger>
+            <ClockIconContainer>
+              <Clock />
+            </ClockIconContainer>
+            <WLCounter as="span" Trigger={WlPulseTrigger}>
+              <span>{StoredValue?.wl.length ?? 0}</span>
+            </WLCounter>
+            <WLMenuTriangle
+              style={{ bottom: '-3px', right: '20%' }}
+              Enable={ShowWatchLater}
+            ></WLMenuTriangle>
+          </WatchLaterContainer>
+          <WatchLaterDrop
+            Show={ShowWatchLater}
+            dispatchMenu={dispatchMenu}
+            ShoppingCartMouseIn={WlCartMouseIn}
+            ShoppingCartMouseLeave={WlCartMouseLeave}
+          />
+          <MenuBurgerContainer
+            onClick={HandleMenu}
+            onKeyPress={HandleKeyPressMenu}
+            tabIndex={-1}
+          >
+            <Burger tabIndex={-1}>
               <Menuburger menuIsOpen={ShowMenu} />
             </Burger>
-            <BurgerTxt>menu</BurgerTxt>
+            <BurgerTxt tabIndex={0}>menu</BurgerTxt>
           </MenuBurgerContainer>
           <LazyRender render={isMobileView} Suspense={null}>
             <MobileMenu ShowMenu={ShowMenu} />
@@ -177,6 +287,7 @@ const Navigation = () => {
 const MenuPlaceHolder = () => {
   return (
     <MenuMainPlaceholder>
+      <div></div>
       <div></div>
       <div></div>
     </MenuMainPlaceholder>

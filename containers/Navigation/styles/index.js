@@ -1,6 +1,10 @@
 import styled, { css } from 'styled-components';
-import { DisFlex_AIC, DisFlex_AIC_JCC } from '../../../styles';
-import { ScaleOut } from '../../../styles/keyframes';
+import {
+  AbsolutePosition,
+  DisFlex_AIC,
+  DisFlex_AIC_JCC
+} from '../../../styles';
+import { ScaleOut, WlCounterPulse } from '../../../styles/keyframes';
 import { TextOverflowHiddenCSS } from '../../../styles/StyledComponents';
 
 export const Nav = styled.nav`
@@ -133,10 +137,6 @@ export const MenuBurgerContainer = styled.div`
   cursor: pointer;
   animation: ${ScaleOut} var(--Nav-animation-duration) forwards;
 
-  body:not(.user-is-tabbing) &:focus {
-    outline: none;
-  }
-
   @media screen and (max-width: 735px) {
     display: flex;
     align-items: center;
@@ -148,6 +148,7 @@ export const Burger = styled(DisFlex_AIC_JCC)`
   height: 25px;
   margin-right: 5px;
   padding-bottom: 1px;
+  outline: none;
 `;
 
 export const BurgerTxt = styled.div`
@@ -157,6 +158,10 @@ export const BurgerTxt = styled.div`
   font-weight: bold;
   cursor: auto;
   cursor: pointer;
+
+  body:not(.user-is-tabbing) &:focus {
+    outline: none;
+  }
 `;
 
 export const RightContainer = styled(DisFlex_AIC)`
@@ -164,4 +169,67 @@ export const RightContainer = styled(DisFlex_AIC)`
   box-sizing: border-box;
   padding-top: 3px;
   height: 100%;
+`;
+
+///////////////--------------------------
+
+export const WatchLaterContainer = styled(DisFlex_AIC_JCC)`
+  position: relative;
+  cursor: pointer;
+  height: 100%;
+
+  body:not(.user-is-tabbing) &:focus {
+    outline: none;
+  }
+`;
+
+export const ClockIconContainer = styled.div`
+  cursor: pointer;
+  width: 30px;
+
+  & > svg > path {
+    fill: #fafafa;
+  }
+
+  &:hover > svg > path {
+    fill: #fff;
+  }
+`;
+
+const CounterContainer = styled(AbsolutePosition)`
+  font-size: 0.7em;
+  font-weight: bold;
+  padding: 0px 3px;
+  border-radius: 2px;
+  top: 3px;
+  right: -6px;
+  color: #fff;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -35px 0 0 -35px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 0 35px #6ebbfd;
+  }
+`;
+
+export const WLCounter = styled(CounterContainer)`
+  ${(props) =>
+    props.Trigger &&
+    css`
+      &:before {
+        animation: ${WlCounterPulse} var(--Wl-pulse-animation-duration) ease-out
+          forwards;
+      }
+    `}
 `;

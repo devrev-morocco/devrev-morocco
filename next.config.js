@@ -11,7 +11,7 @@ module.exports = withOffline({
     loader: 'default'
   },
   workboxOpts: {
-    maximumFileSizeToCacheInBytes: 5000000,
+    maximumFileSizeToCacheInBytes: 6000000,
     swDest: process.env.NEXT_EXPORT
       ? 'service-worker.js'
       : 'static/service-worker.js',

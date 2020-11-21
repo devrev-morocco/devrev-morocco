@@ -17,14 +17,18 @@ const SubMenuItem = ({
   HandleSubMenu
 }) => {
   const SubLength = Categories?.length ?? 0;
-
+  console.log('SubMenuIsOpen :>> ');
   return (
     <Fragment>
       <Menu_submenu_item>
-        <Menu_submenu_Link onClick={() => HandleSubMenu(label)}>
+        <Menu_submenu_Link
+          tabIndex={0}
+          onKeyPress={() => HandleSubMenu(label)}
+          onClick={() => HandleSubMenu(label)}
+        >
           {label}
         </Menu_submenu_Link>
-        <Menu_submenu_Arrow onClick={() => HandleSubMenu(label)}>
+        <Menu_submenu_Arrow tabIndex={-1} onClick={() => HandleSubMenu(label)}>
           <DropArrow Rotate={SubMenuIsOpen === label} />
         </Menu_submenu_Arrow>
       </Menu_submenu_item>
@@ -37,6 +41,7 @@ const SubMenuItem = ({
             return (
               <Link href={item.url} passHref key={item.id}>
                 <Submenu_DropDown_wrap
+                  tabIndex={SubMenuIsOpen === label ? 0 : -1}
                   rel={item?.ExternalLink ? 'noreferrer' : ''}
                   target={`${item?.ExternalLink ? '_blank' : '_self'}`}
                 >

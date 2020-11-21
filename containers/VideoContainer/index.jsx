@@ -25,15 +25,16 @@ const VideoContainer = ({ Episode, Season, CurrentVidId, PlayingState }) => {
 
   const mediaQueryMatches = useMediaQuery('max-width', 735);
 
-  const HandleLink = () => {
+  const HandleThumbnailLink = () => {
     Router.push({
-      pathname: `/playlist/[season]`,
-      query: { season: Season, v: Episode.videoId }
+      pathname: `/playlist/[season]/[episode]`,
+      query: { season: Season, episode: Episode.stringUrl }
     });
+
     window?.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const isPlaying = PlayingState === 1;
+  const thisPlaying = PlayingState === 1;
 
   const HandleHoverIn = () => {
     const slider = document.getElementById(`wl-${Episode?.videoId}`);
@@ -75,8 +76,20 @@ const VideoContainer = ({ Episode, Season, CurrentVidId, PlayingState }) => {
     const item = window?.localStorage.getItem('devrev-wl');
     const LocalStorageValue = JSON.parse(item);
 
+    const AddNewWlVideo = {
+      description: Episode?.description[0],
+      title: Episode?.title,
+      thumbnail: Episode?.thumbnail,
+      season: Episode?.season,
+      stringUrl: Episode?.stringUrl,
+      duration: Episode?.duration,
+      videoId: Episode?.videoId
+    };
+
     if (EpCheck)
-      setLocalStorage({ wl: [...(LocalStorageValue?.wl ?? []), Episode] });
+      setLocalStorage({
+        wl: [...(LocalStorageValue?.wl ?? []), AddNewWlVideo]
+      });
     else {
       const RemoveValue = LocalStorageValue?.wl.filter((ep) => {
         return ep?.videoId !== Episode?.videoId;
@@ -91,13 +104,17 @@ const VideoContainer = ({ Episode, Season, CurrentVidId, PlayingState }) => {
     <Video_Container>
       <VideoWrapper>
         <VideoThumbnailContainer
+          Width={mediaQueryMatches ? 140 : 160}
           isVid={Episode?.videoId === CurrentVidId}
-          isPlaying={isPlaying}
+          isPlaying={thisPlaying}
         >
-          <VideoThumbnailWrapper onClick={HandleLink}>
+          <VideoThumbnailWrapper
+            Width={mediaQueryMatches ? 140 : 160}
+            onClick={HandleThumbnailLink}
+          >
             <Image
               src={Episode?.thumbnail}
-              width={mediaQueryMatches ? '140' : '160'}
+              width={mediaQueryMatches ? 140 : 160}
               // To calculate the height use (w/h)=(16/9) => h=(w.9)/16
               height={mediaQueryMatches ? (140 * 9) / 16 : (160 * 9) / 16}
               quality={95}
@@ -105,7 +122,7 @@ const VideoContainer = ({ Episode, Season, CurrentVidId, PlayingState }) => {
           </VideoThumbnailWrapper>
           {Episode?.duration && (
             <Inner_btn className="inner_btn--duration">
-              {Episode?.duration}
+              {Episode?.duration?.toHHMMSS() ?? ''}
             </Inner_btn>
           )}
           <Inner_btn
@@ -134,8 +151,11 @@ const VideoContainer = ({ Episode, Season, CurrentVidId, PlayingState }) => {
         </VideoThumbnailContainer>
         <Link
           href={{
-            pathname: '/playlist/[season]',
-            query: { season: Season, v: Episode?.videoId }
+            pathname: '/playlist/[season]/[episode]',
+            query: {
+              season: Season,
+              episode: Episode?.stringUrl
+            }
           }}
           passHref
         >
@@ -160,7 +180,9 @@ VideoContainer.propTypes = {
   CurrentVidId: PropTypes.string,
   PlayingState: PropTypes.number,
   Episode: PropTypes.shape({
-    ep: PropTypes.number,
+    ep: PropTypes.number.isRequired,
+    season: PropTypes.number.isRequired,
+    stringUrl: PropTypes.string.isRequired,
     videoId: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     thumbnail: PropTypes.string.isRequired,

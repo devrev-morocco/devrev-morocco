@@ -132,6 +132,7 @@ export const LinkSpan = styled(RelativePosition)`
   text-transform: uppercase;
   color: inherit;
   letter-spacing: 0.25px;
+  outline: none;
 
   ${NavLinkContainer}:hover & {
     color: var(--fg-hover-color) !important;

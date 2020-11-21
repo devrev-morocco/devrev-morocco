@@ -12,5 +12,6 @@ export const RootVariables = css`
     --border-color: #505050;
     --Nav-animation-duration: 0.2s;
     --blue-primary-300: #84a9ff;
+    --Wl-pulse-animation-duration: 0.5s;
   }
 `;

@@ -8,7 +8,8 @@ import {
   ParticipantDetailsThumbnail,
   ParticipantDetailsAbout,
   ParticipantDetailsName,
-  ParticipantDetailsThumbnailContainer
+  ParticipantDetailsThumbnailContainer,
+  ParticipantWrapper
 } from './styles';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
@@ -45,44 +46,42 @@ const Profile = ({
   };
 
   return (
-    <ParticipantContainer
-      style={{ marginLeft: !IsParticipant && `${Index * 55}px` }}
-      onClick={HandleClick}
-      ShowMore={IsParticipant}
-    >
-      <ParticipantThumbnail
-        DeferIndex={Index}
-        data-content={Name}
-        id={`participant-${Id}`}
-        ShowMore={IsParticipant}
-      >
-        <Image quality={100} width={40} height={40} src={imageUrl} alt="" />
-      </ParticipantThumbnail>
-      <ParticipantDetails ShowMore={IsParticipant}>
-        <ParticipantDetailsX>
-          <X />
-        </ParticipantDetailsX>
-        <ParticipantDetailsThumbnailContainer>
-          <ParticipantDetailsThumbnail>
-            <Image
-              quality={100}
-              width={110}
-              height={110}
-              src={imageUrl}
-              alt=""
-            />
-          </ParticipantDetailsThumbnail>
-          <ParticipantDetailsName>{Name}</ParticipantDetailsName>
-        </ParticipantDetailsThumbnailContainer>
-        <ParticipantDetailsAbout>{About}</ParticipantDetailsAbout>
-        <ParticipantDetailsLinkedIn>
-          <Link href={linkedIn} passHref>
-            <a target="_blank" rel="noopener noreferrer">
-              <LinkedIn />
-            </a>
-          </Link>
-        </ParticipantDetailsLinkedIn>
-      </ParticipantDetails>
+    <ParticipantContainer SetMargin={!IsParticipant} Index={Index}>
+      <ParticipantWrapper onClick={HandleClick} ShowMore={IsParticipant}>
+        <ParticipantThumbnail
+          DeferIndex={Index}
+          data-content={Name}
+          id={`participant-${Id}`}
+          ShowMore={IsParticipant}
+        >
+          <Image quality={100} width={40} height={40} src={imageUrl} alt="" />
+        </ParticipantThumbnail>
+        <ParticipantDetails ShowMore={IsParticipant}>
+          <ParticipantDetailsX>
+            <X />
+          </ParticipantDetailsX>
+          <ParticipantDetailsThumbnailContainer>
+            <ParticipantDetailsThumbnail>
+              <Image
+                quality={100}
+                width={110}
+                height={110}
+                src={imageUrl}
+                alt=""
+              />
+            </ParticipantDetailsThumbnail>
+            <ParticipantDetailsName>{Name}</ParticipantDetailsName>
+          </ParticipantDetailsThumbnailContainer>
+          <ParticipantDetailsAbout>{About}</ParticipantDetailsAbout>
+          <ParticipantDetailsLinkedIn>
+            <Link href={linkedIn} passHref>
+              <a target="_blank" rel="noopener noreferrer">
+                <LinkedIn />
+              </a>
+            </Link>
+          </ParticipantDetailsLinkedIn>
+        </ParticipantDetails>
+      </ParticipantWrapper>
     </ParticipantContainer>
   );
 };

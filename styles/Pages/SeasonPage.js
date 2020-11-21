@@ -30,7 +30,7 @@ export const MainContainer = styled(DisFlex)`
   height: calc(100vh - 56px);
   width: 100%;
 
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: 1150px) {
     flex-flow: column nowrap;
     max-width: 90vw;
     height: 100%;
@@ -87,7 +87,7 @@ export const PrimaryContainer = styled(DisFlex)`
   margin: 0 24px !important;
   flex: 2 1;
 
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: 1150px) {
     margin: 0 !important;
   }
 `;
@@ -95,9 +95,9 @@ export const PrimaryContainer = styled(DisFlex)`
 export const Title = styled(DisFlex_AIC)`
   color: var(--fg-color);
   font-size: 1.2em;
-  padding: 20px 0;
+  padding: 20px 0 5px 0;
 
-  .ep-num {
+  .ep-tag {
     font-size: 1.15em;
     white-space: nowrap;
     font-weight: bold;
@@ -110,7 +110,7 @@ export const Title = styled(DisFlex_AIC)`
     background: #5a5a5a;
   }
 
-  .ac-title {
+  .ep-title {
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -120,16 +120,17 @@ export const Title = styled(DisFlex_AIC)`
 
   @media screen and (max-width: 735px) {
     padding: 15px 10px;
-    padding-bottom: 25px;
+    padding-bottom: 5px;
     margin-bottom: 0;
     font-size: 0.8em;
 
-    .ep-num {
+    .ep-tag {
       font-size: 0.9em;
     }
 
     .vertical-line {
       width: 1px;
+      height: 25px;
       margin: 0 10px;
       background: #5a5a5a;
     }
@@ -139,8 +140,20 @@ export const Title = styled(DisFlex_AIC)`
     font-size: 1em;
   }
 
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: 1150px) {
     border: 0;
+  }
+`;
+
+export const PublishedAtContainer = styled.div`
+  color: #888;
+  font-weight: bold;
+  font-size: 0.8em;
+  padding-bottom: 15px;
+
+  @media screen and (max-width: 735px) {
+    font-size: 0.7em;
+    padding: 0px 0 10px 10px;
   }
 `;
 
@@ -156,7 +169,7 @@ export const SecondaryContainer = styled(DisFlex)`
   background-color: #242526;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: 1150px) {
     min-width: 100% !important;
     margin-right: 0;
     width: 100%;
@@ -169,8 +182,7 @@ export const SecondaryContainer = styled(DisFlex)`
 `;
 
 export const SecondaryWrapper = styled.div`
-  padding-top: 5px;
-  padding-left: 10px;
+  padding: 5px 0 2px 10px;
   overflow: hidden;
 
   @media screen and (max-width: 735px) {

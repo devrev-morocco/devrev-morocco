@@ -23,7 +23,7 @@ const MenuMain = ({
         Show={Show}
         Type="playlist"
         Label="playlist"
-        Href="/playlist/1?v=7XjAtQbN-BQ"
+        Href="/playlist/1/devrev-1"
         Id="playlist-menu"
       >
         <MenuTriangle Enable={Show}></MenuTriangle>
