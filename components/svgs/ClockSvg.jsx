@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-function Clock(props) {
+function ClockSvg(props) {
   return (
     <svg viewBox="0 0 24 24" {...props}>
       <path
@@ -11,4 +11,4 @@ function Clock(props) {
   );
 }
 
-export default Clock;
+export default ClockSvg;

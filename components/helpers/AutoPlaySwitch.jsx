@@ -16,11 +16,11 @@ const AutoPlaySwitch = ({ autoPlay, handleCheckboxChange }) => {
   };
 
   return (
-    <Switch autoPlay={autoPlay}>
+    <Switch as="label" autoPlay={autoPlay}>
       <Toggle
         as="input"
         type="checkbox"
-        id="autoplay"
+        id="autoplay_btn"
         checked={autoPlay}
         onChange={handleCheckboxChange}
       />
@@ -32,7 +32,7 @@ const AutoPlaySwitch = ({ autoPlay, handleCheckboxChange }) => {
       >
         <Switch_circle
           as="label"
-          htmlFor="autoplay"
+          htmlFor="autoplay_btn"
           className={effect ? (autoPlay ? 'on' : 'off') : ''}
         ></Switch_circle>
       </span>

@@ -8,10 +8,10 @@ afterEach(cleanup);
 jest.mock('next/router', () => ({
   useRouter() {
     return {
-      route: '/playlist/1?v=7XjAtQbN-BQ',
+      route: '/playlist/1/devrev-1',
       pathname: '',
       query: '',
-      asPath: '/playlist/1?v=7XjAtQbN-BQ'
+      asPath: '/playlist/1/devrev-1'
     };
   }
 }));
@@ -19,7 +19,7 @@ jest.mock('next/router', () => ({
 describe('render ActiveLink:', () => {
   it('Has Href', () => {
     const { container } = render(
-      <ActiveLink href={'/playlist/1?v=7XjAtQbN-BQ'} activeClassName="selected">
+      <ActiveLink href={'/playlist/1/devrev-1'} activeClassName="selected">
         <a className="foo">
           <span>playlist</span>
         </a>
@@ -27,12 +27,12 @@ describe('render ActiveLink:', () => {
     );
 
     const A_node = container.querySelector('A');
-    expect(A_node).toHaveAttribute('href', '/playlist/1?v=7XjAtQbN-BQ');
+    expect(A_node).toHaveAttribute('href', '/playlist/1/devrev-1');
   });
 
   it('Has `selected` className', () => {
     const { container } = render(
-      <ActiveLink href={'/playlist/1?v=7XjAtQbN-BQ'} activeClassName="selected">
+      <ActiveLink href={'/playlist/1/devrev-1'} activeClassName="selected">
         <a className="foo">
           <span>playlist</span>
         </a>
@@ -46,7 +46,7 @@ describe('render ActiveLink:', () => {
 
   it('Has not `selected` className', () => {
     render(
-      <ActiveLink href={'/playlist/1?v=7XjAtQbN-BQ'} activeClassName="selected">
+      <ActiveLink href={'/playlist/1/devrev-1'} activeClassName="selected">
         <a className={'foo'}>
           <span>playlist</span>
         </a>

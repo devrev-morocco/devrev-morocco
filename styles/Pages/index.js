@@ -40,7 +40,7 @@ export const ComingSoon = styled(DisFlex_AIC_JCC)`
   }
 
   @media screen and (max-width: 735px) {
-    width: 70%;
+    width: 80%;
     height: 40%;
   }
 `;

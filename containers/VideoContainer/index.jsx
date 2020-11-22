@@ -13,7 +13,7 @@ import {
   Slider
 } from './styles';
 import PropTypes from 'prop-types';
-import { Checked, Clock } from '../../components/svgs';
+import { CheckedSvg, ClockSvg } from '../../components/svgs';
 import { useMediaQuery, useWL } from '../../hooks';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -24,11 +24,12 @@ const VideoContainer = ({ Episode, Season, CurrentVidId, PlayingState }) => {
   const Router = useRouter();
 
   const mediaQueryMatches = useMediaQuery('max-width', 735);
+  const [StoredValue, setLocalStorage] = useWL();
 
   const HandleThumbnailLink = () => {
     Router.push({
       pathname: `/playlist/[season]/[episode]`,
-      query: { season: Season, episode: Episode.stringUrl }
+      query: { season: Season, episode: Episode?.stringUrl }
     });
 
     window?.scrollTo({ top: 0, behavior: 'smooth' });
@@ -59,18 +60,15 @@ const VideoContainer = ({ Episode, Season, CurrentVidId, PlayingState }) => {
     }
   };
 
-  const [StoredValue, setLocalStorage] = useWL();
-
   const Check = () => {
-    const isVidId = StoredValue?.wl?.filter((ep) => {
+    const isVidId = StoredValue?.wl?.find((ep) => {
       if (ep?.videoId === Episode?.videoId) return true;
       return false;
     });
-
-    return isVidId?.length === 0 ?? true;
+    return Boolean(isVidId);
   };
 
-  const EpCheck = useMemo(() => Check(), [StoredValue]);
+  const IswatchLater = useMemo(() => Check(), [StoredValue]);
 
   const HandleWLClick = () => {
     const item = window?.localStorage.getItem('devrev-wl');
@@ -86,19 +84,17 @@ const VideoContainer = ({ Episode, Season, CurrentVidId, PlayingState }) => {
       videoId: Episode?.videoId
     };
 
-    if (EpCheck)
+    if (IswatchLater) {
+      const NewWlList = LocalStorageValue?.wl.filter((ep) => {
+        return ep?.videoId !== Episode?.videoId;
+      });
+      setLocalStorage({ wl: [...(NewWlList ?? [])] });
+    } else {
       setLocalStorage({
         wl: [...(LocalStorageValue?.wl ?? []), AddNewWlVideo]
       });
-    else {
-      const RemoveValue = LocalStorageValue?.wl.filter((ep) => {
-        return ep?.videoId !== Episode?.videoId;
-      });
-      setLocalStorage({ wl: [...(RemoveValue ?? [])] });
     }
   };
-
-  const IswatchLater = !EpCheck;
 
   return (
     <Video_Container>
@@ -134,10 +130,10 @@ const VideoContainer = ({ Episode, Season, CurrentVidId, PlayingState }) => {
             <Icon_btn>
               {IswatchLater ? (
                 <div className="icon_btn__check">
-                  <Checked />
+                  <CheckedSvg />
                 </div>
               ) : (
-                <Clock />
+                <ClockSvg />
               )}
             </Icon_btn>
             <Slider id={`wl-${Episode?.videoId}`}>

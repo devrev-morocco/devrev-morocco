@@ -49,7 +49,6 @@ export const ElementsCollection = css`
   a:focus,
   a:active {
     text-decoration: none;
-    /* color: inherit; */
   }
 
   button {

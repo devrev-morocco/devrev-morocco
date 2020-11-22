@@ -44,9 +44,6 @@ export const VTContainer = styled(RelativePosition)`
     top: 0;
   }
 
-  .icon_btn__check {
-  }
-
   .switch__btn {
     height: 100%;
     display: grid;
@@ -115,7 +112,8 @@ export const VideoThumbnailWrapper = styled(VTWrapper)`
     `}
 `;
 
-export const Inner_btn = styled(AbsolutePosition)`
+export const Inner_btn = styled(DisFlex)`
+  position: absolute;
   right: 0;
   margin: 2px;
   color: #fff;
@@ -124,7 +122,6 @@ export const Inner_btn = styled(AbsolutePosition)`
   font-size: 0.8rem;
   overflow: hidden;
   z-index: 1;
-  display: flex;
   flex-direction: row-reverse;
   align-items: stretch;
 

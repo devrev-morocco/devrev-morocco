@@ -34,7 +34,7 @@ export const ErrorContainer = styled(DisFlex_AIC_JCC)`
   }
 
   @media screen and (max-width: 735px) {
-    width: 50%;
+    width: 85%;
     height: 45%;
   }
 `;

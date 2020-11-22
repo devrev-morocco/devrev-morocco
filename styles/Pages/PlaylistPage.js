@@ -103,7 +103,7 @@ export const Title = styled(DisFlex_AIC)`
     font-weight: bold;
   }
 
-  .vertical-line {
+  .title-vertical-line {
     height: 32px;
     width: 2px;
     margin: 0 16px;

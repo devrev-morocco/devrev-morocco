@@ -1,7 +1,7 @@
 import React, { useState, memo, useRef, useEffect, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import RippleEffect from './RippleEffect';
-import { DropArrow } from '../svgs';
+import { ArrowSvg } from '../svgs';
 import {
   DD_Container,
   DD_Label,
@@ -87,7 +87,7 @@ const DropDown = ({ SelectedSeason, setSelectedSeason }) => {
         <DD_wrapper>
           <DD_Label as="span">{`Season ${SelectedSeason ?? ''}`}</DD_Label>
           <DD_Icon>
-            <DropArrow Rotate={display} />
+            <ArrowSvg Rotate={display} />
           </DD_Icon>
         </DD_wrapper>
       </RippleEffect>
@@ -102,13 +102,13 @@ const DropDown = ({ SelectedSeason, setSelectedSeason }) => {
           id="dropdown-menu-items-container"
         >
           {Seasons &&
-            Seasons.map((season_, i) => {
+            Seasons.map((season_, idx) => {
               return (
                 <DropItem
                   pass
                   className={`${SelectedSeason === season_ ? 'dd-active' : ''}`}
                   onClick={() => HandleSelect(season_)}
-                  key={i}
+                  key={idx}
                 >{`Season ${season_}`}</DropItem>
               );
             })}

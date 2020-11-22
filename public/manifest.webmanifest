@@ -34,10 +34,10 @@
     "screenshots": [],
     "shortcuts": [{
         "name": "DevRev season 1",
-        "url": "playlist/1?v=7XjAtQbN-BQ",
+        "url": "playlist/1/devrev-1",
         "icons": [{
-            "src": "/static/favicons/favicon-96x96.png",
-            "sizes": "96x96",
+            "src": "/static/favicons/favicon-192x192.png",
+            "sizes": "192x192",
             "type": "image/png"
         }],
         "description": "A weekly live show featuring conversations with great tech minds"

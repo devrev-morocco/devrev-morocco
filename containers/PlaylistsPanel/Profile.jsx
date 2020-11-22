@@ -14,7 +14,7 @@ import {
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import { LinkedIn, X } from '../../components/svgs';
+import { LinkedInSvg, XSvg } from '../../components/svgs';
 
 const Profile = ({
   Id,
@@ -58,7 +58,7 @@ const Profile = ({
         </ParticipantThumbnail>
         <ParticipantDetails ShowMore={IsParticipant}>
           <ParticipantDetailsX>
-            <X />
+            <XSvg />
           </ParticipantDetailsX>
           <ParticipantDetailsThumbnailContainer>
             <ParticipantDetailsThumbnail>
@@ -76,7 +76,7 @@ const Profile = ({
           <ParticipantDetailsLinkedIn>
             <Link href={linkedIn} passHref>
               <a target="_blank" rel="noopener noreferrer">
-                <LinkedIn />
+                <LinkedInSvg />
               </a>
             </Link>
           </ParticipantDetailsLinkedIn>

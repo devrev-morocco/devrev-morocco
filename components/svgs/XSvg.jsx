@@ -1,6 +1,6 @@
 import React from 'react';
 
-function X(props) {
+function XSvg(props) {
   return (
     <svg width={24} height={24} viewBox="0 0 24 24" {...props}>
       <path
@@ -11,4 +11,4 @@ function X(props) {
   );
 }
 
-export default X;
+export default XSvg;

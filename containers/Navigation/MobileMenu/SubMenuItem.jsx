@@ -6,7 +6,7 @@ import {
   Menu_submenu_DropDown,
   Submenu_DropDown_wrap
 } from './styles';
-import { DropArrow } from '../../../components/svgs';
+import { ArrowSvg } from '../../../components/svgs';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 
@@ -17,7 +17,6 @@ const SubMenuItem = ({
   HandleSubMenu
 }) => {
   const SubLength = Categories?.length ?? 0;
-  console.log('SubMenuIsOpen :>> ');
   return (
     <Fragment>
       <Menu_submenu_item>
@@ -29,7 +28,7 @@ const SubMenuItem = ({
           {label}
         </Menu_submenu_Link>
         <Menu_submenu_Arrow tabIndex={-1} onClick={() => HandleSubMenu(label)}>
-          <DropArrow Rotate={SubMenuIsOpen === label} />
+          <ArrowSvg Rotate={SubMenuIsOpen === label} />
         </Menu_submenu_Arrow>
       </Menu_submenu_item>
       <Menu_submenu_DropDown

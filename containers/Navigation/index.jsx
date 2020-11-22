@@ -22,10 +22,10 @@ import {
 } from './styles';
 import { WLMenuTriangle } from '../../styles/StyledComponents';
 import Link from 'next/link';
-import { useMediaQuery, useWL } from '../../hooks';
-import { DevRevLogo, Menuburger, Clock } from '../../components/svgs';
-import { LazyRender, LoadingBar } from '../../components';
 import dynamic from 'next/dynamic';
+import { useMediaQuery, useWL } from '../../hooks';
+import { DevRevSvg, MenuburgerSvg, ClockSvg } from '../../components/svgs';
+import { LazyRender, LoadingBar } from '../../components';
 import { useRouter } from 'next/router';
 import { Timer } from '../../utils';
 import WatchLaterDrop from './WatchLaterDrop';
@@ -45,6 +45,7 @@ const MobileMenu = dynamic(() => import('./MobileMenu'), {
 const initialState = {
   showPlaylistMenu: false,
   showCommunityMenu: false,
+  ShowWatchLater: false,
   ShowMenu: false
 };
 
@@ -54,36 +55,36 @@ function reducer(state, action) {
       return {
         showPlaylistMenu: true,
         showCommunityMenu: false,
-        ShowMenu: false,
-        ShowWatchLater: false
+        ShowWatchLater: false,
+        ShowMenu: false
       };
     case 'community':
       return {
         showPlaylistMenu: false,
         showCommunityMenu: true,
-        ShowMenu: false,
-        ShowWatchLater: false
+        ShowWatchLater: false,
+        ShowMenu: false
       };
     case 'menu':
       return {
         showPlaylistMenu: false,
         showCommunityMenu: false,
-        ShowMenu: true,
-        ShowWatchLater: false
+        ShowWatchLater: false,
+        ShowMenu: true
       };
     case 'wl':
       return {
         showPlaylistMenu: false,
         showCommunityMenu: false,
-        ShowMenu: false,
-        ShowWatchLater: true
+        ShowWatchLater: true,
+        ShowMenu: false
       };
     case 'reset':
       return {
         showPlaylistMenu: false,
         showCommunityMenu: false,
-        ShowMenu: false,
-        ShowWatchLater: false
+        ShowWatchLater: false,
+        ShowMenu: false
       };
     default:
       return state;
@@ -93,6 +94,7 @@ function reducer(state, action) {
 const Navigation = () => {
   const OpenedMenuCache = useRef(false);
   const innerWidthCache = useRef(false);
+  const WLCartInterval = useRef(null);
   const Router = useRouter();
 
   const [MenuState, dispatchMenu] = useReducer(reducer, initialState);
@@ -103,22 +105,31 @@ const Navigation = () => {
     ShowWatchLater
   } = MenuState;
   const [disableTransition, setDisableTransition] = useState(false);
-
-  const show = showPlaylistMenu || showCommunityMenu; // || more dropMenus
-  OpenedMenuCache.current = ShowMenu || showPlaylistMenu || showCommunityMenu;
+  const [WlPulseTrigger, setWlPulseTrigger] = useState(false);
 
   const mediaQueryMatches = useMediaQuery('max-width', 735);
-
   const [StoredValue] = useWL();
 
+  const show = showPlaylistMenu || showCommunityMenu; // || more dropMenus
+  const isMobileView = !(!mediaQueryMatches && innerWidthCache.current);
   const IsWatchLater = StoredValue?.wl.length > 0;
 
+  OpenedMenuCache.current = ShowMenu || show || ShowWatchLater;
+
   useEffect(() => {
-    // for menu
     if (!mediaQueryMatches) {
       dispatchMenu({ type: 'reset' });
     }
   }, [mediaQueryMatches]);
+
+  useEffect(() => {
+    if (IsWatchLater) {
+      setWlPulseTrigger(true);
+      Timer(500).then(() => {
+        setWlPulseTrigger(false);
+      });
+    }
+  }, [StoredValue]);
 
   const ResetMenuOnRouteChange = () => {
     // event callback cannot access the latest state.
@@ -141,8 +152,14 @@ const Navigation = () => {
     setDisableTransition(false);
   };
 
+  const HandleUserTabAction = () => {
+    const TabClass = 'user-is-tabbing';
+    const BodyClass = document.body.classList;
+    if (BodyClass.contains(TabClass)) BodyClass.remove(TabClass);
+  };
+
   const HandleMenu = useCallback(() => {
-    // HandleUserTabAction();
+    HandleUserTabAction();
     dispatchMenu({ type: ShowMenu ? 'reset' : 'menu' });
   }, [ShowMenu]);
 
@@ -152,27 +169,20 @@ const Navigation = () => {
     }
   };
 
-  // -------------------------------------------------------
-
-  const CartInterval = useRef(null);
-
   const WlCartEvent = (e) => {
     const target = e.target;
     const WLCart = document.getElementById('watch-later-cart');
     const WLClock = document.getElementById('wl-clock');
 
-    console.log('target');
-
     if (!WLCart?.contains(target) && !WLClock.contains(target)) {
-      clearInterval(CartInterval.current);
+      clearInterval(WLCartInterval.current);
       dispatchMenu({ type: 'reset' });
       document.removeEventListener('click', WlCartEvent);
     }
   };
 
   const HandleWatchLaterCart = useCallback(() => {
-    // HandleUserTabAction();
-
+    HandleUserTabAction();
     if (ShowWatchLater) {
       dispatchMenu({ type: 'reset' });
     } else {
@@ -186,35 +196,20 @@ const Navigation = () => {
   };
 
   const WlCartMouseIn = useCallback(() => {
-    if (CartInterval.current) clearInterval(CartInterval.current);
-  }, [CartInterval.current]);
+    if (WLCartInterval.current) clearInterval(WLCartInterval.current);
+  }, [WLCartInterval.current]);
 
   const WlCartMouseLeave = useCallback(() => {
     if (ShowWatchLater) {
-      CartInterval.current = setInterval(() => {
-        clearInterval(CartInterval.current);
+      WLCartInterval.current = setInterval(() => {
+        clearInterval(WLCartInterval.current);
         dispatchMenu({ type: 'reset' });
       }, 900);
     }
-  }, [CartInterval.current, ShowWatchLater]);
-
-  // -------------------------------------------------------
+  }, [WLCartInterval.current, ShowWatchLater]);
 
   if (typeof window !== 'undefined')
     innerWidthCache.current = window.innerWidth >= 735;
-
-  const isMobileView = !(!mediaQueryMatches && innerWidthCache.current);
-
-  const [WlPulseTrigger, setWlPulseTrigger] = useState(false);
-
-  useEffect(() => {
-    if (IsWatchLater) {
-      setWlPulseTrigger(true);
-      Timer(500).then(() => {
-        setWlPulseTrigger(false);
-      });
-    }
-  }, [StoredValue]);
 
   return (
     <Nav menuIsOpen={ShowMenu}>
@@ -227,7 +222,7 @@ const Navigation = () => {
           <NavLogo data-content="Home">
             <Link href="/">
               <a aria-label="home">
-                <DevRevLogo />
+                <DevRevSvg />
               </a>
             </Link>
           </NavLogo>
@@ -243,13 +238,14 @@ const Navigation = () => {
           <WatchLaterContainer
             onClick={HandleWatchLaterCart}
             id="wl-clock"
+            aria-label="watch later"
             tabIndex={0}
             onKeyPress={HandleKeyPressWlCart}
             onMouseEnter={WlCartMouseIn}
             onMouseLeave={WlCartMouseLeave}
           >
             <ClockIconContainer>
-              <Clock />
+              <ClockSvg />
             </ClockIconContainer>
             <WLCounter as="span" Trigger={WlPulseTrigger}>
               <span>{StoredValue?.wl.length ?? 0}</span>
@@ -261,17 +257,15 @@ const Navigation = () => {
           </WatchLaterContainer>
           <WatchLaterDrop
             Show={ShowWatchLater}
-            dispatchMenu={dispatchMenu}
             ShoppingCartMouseIn={WlCartMouseIn}
             ShoppingCartMouseLeave={WlCartMouseLeave}
           />
           <MenuBurgerContainer
             onClick={HandleMenu}
             onKeyPress={HandleKeyPressMenu}
-            tabIndex={-1}
           >
-            <Burger tabIndex={-1}>
-              <Menuburger menuIsOpen={ShowMenu} />
+            <Burger>
+              <MenuburgerSvg menuIsOpen={ShowMenu} />
             </Burger>
             <BurgerTxt tabIndex={0}>menu</BurgerTxt>
           </MenuBurgerContainer>

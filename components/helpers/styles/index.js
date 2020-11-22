@@ -64,12 +64,11 @@ export const LoadingBarContainer = styled(DisNone)`
     `}
 `;
 
-export const Switch = styled.label`
+export const Switch = styled(RelativePosition)`
   width: 35px;
   height: 15px;
   border-radius: 50px;
   background: #444;
-  position: relative;
 
   .switch__btn {
     height: 100%;

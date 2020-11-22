@@ -16,7 +16,7 @@ const Menu = styled(DisFlex_AIC)`
   transition-property: opacity, visibility;
   transition-delay: 0;
   animation: ${ScaleOut} var(--Nav-animation-duration) forwards;
-  will-change: transform, opacity;
+  will-change: transform, opacity, visibility;
 
   @media screen and (max-width: 735px) {
     display: none;
@@ -75,22 +75,6 @@ export const MenuContainer = styled(AbsolutePosition)`
 
 export const MenuItem = styled(DisFlex_AIC)`
   cursor: pointer;
-
-  ${(props) =>
-    props.Disable &&
-    css`
-      cursor: default;
-    `}
-
-  &:hover .disabled {
-    color: #555 !important;
-    background: #333 !important;
-  }
-
-  .disabled {
-    pointer-events: none;
-    color: #555;
-  }
 `;
 
 export const MenuItemLink = styled(TextOverflowHidden)`
@@ -109,7 +93,7 @@ export const MenuItemLink = styled(TextOverflowHidden)`
 `;
 
 export const NavLinkContainer = styled(RelativePosition)`
-  font-size: 0.87em;
+  font-size: 0.84em;
   font-weight: bold;
   line-height: 52px;
   cursor: pointer;

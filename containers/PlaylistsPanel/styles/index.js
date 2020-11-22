@@ -37,7 +37,7 @@ export const VidState = styled(DisFlex_AIC)`
   font-size: 0.9em;
   color: #ebebeb;
 
-  .forward-slash-line {
+  .vertical-line {
     height: 25px;
     width: 2px;
     margin: 0 16px;
@@ -131,8 +131,6 @@ export const InfoDrop_space = styled.div`
   width: 100%;
 `;
 
-// ----------- Profile ----------
-
 export const ParticipantsContainer = styled(DisFlex_AIC)`
   position: relative;
   flex-flow: row wrap;
@@ -161,10 +159,10 @@ export const ParticipantWrapper = styled(AbsolutePosition)`
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  transition: all 300ms cubic-bezier(0.2, 0.965, 0, 1.005);
+  transition: all 200ms cubic-bezier(0.2, 0.965, 0, 1.005);
   transform: translateY(-50%);
   will-change: transform, opacity;
-  /* it's a bad practice to animate using top and left */
+  /* it's a bad practice to animate using top, left */
   top: 50%;
   left: 50%;
 
@@ -238,7 +236,7 @@ export const ParticipantThumbnail = styled(RelativePosition)`
     display: inline-block;
   }
 
-  &:before {
+  &::before {
     position: absolute;
     content: '';
     height: 41px;
@@ -271,31 +269,31 @@ export const ParticipantThumbnail = styled(RelativePosition)`
     switch (props.DeferIndex) {
       case 0:
         return css`
-          &:before {
+          &::before {
             border-image: linear-gradient(to right, #70c050, #27c4f5);
           }
         `;
       case 1:
         return css`
-          &:before {
+          &::before {
             border-image: linear-gradient(to right, #fafafa, #ff4b14);
           }
         `;
       case 2:
         return css`
-          &:before {
+          &::before {
             border-image: linear-gradient(to right, #fd6132, #ff0000);
           }
         `;
       case 3:
         return css`
-          &:before {
+          &::before {
             border-image: linear-gradient(to right, #27c4f5, #0000ff);
           }
         `;
       default:
         return css`
-          &:before {
+          &::before {
             border-image: linear-gradient(
               to right,
               #27c4f5,
@@ -342,7 +340,7 @@ export const ParticipantDetailsThumbnail = styled(RelativePosition)`
     border-radius: 50%;
   }
 
-  &:before {
+  &::before {
     position: absolute;
     content: '';
     height: 111px;
@@ -366,7 +364,7 @@ export const ParticipantDetailsAbout = styled.div`
   text-align: center;
   text-overflow: wrap;
   padding: 0 20px;
-  color: #fafafa;
+  color: #ebebeb;
   animation: ${Opacity0to1} 200ms 1;
   margin-bottom: 45px;
   margin-top: 10px;

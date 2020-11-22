@@ -37,7 +37,7 @@ const PlaylistsPanel = ({
             SelectedSeason={SelectedSeason}
             setSelectedSeason={setSelectedSeason}
           ></DropDown>
-          <div className="forward-slash-line"></div>
+          <div className="vertical-line"></div>
           <span>{`Episode ${CurrentPlayingVideo}`.trim()}</span>
         </VidState>
         <AutoPlayContainer>

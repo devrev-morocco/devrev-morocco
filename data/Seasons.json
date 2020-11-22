@@ -38,7 +38,7 @@
         ],
         "quetions": [
           {
-            "question": "this is my question",
+            "question": "",
             "seekTo": "number: timestamp in seconds"
           }
         ]
@@ -76,6 +76,12 @@
             "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
             "linkedin": "https://www.linkedin.com/in/serrahmenif/"
           }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
+          }
         ]
       },
       {
@@ -104,6 +110,12 @@
             "image": "/static/images/profiles/zakaria-boualaid.webp",
             "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
             "linkedin": "https://www.linkedin.com/in/zakaria-boualaid-19b57065/"
+          }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
           }
         ]
       },
@@ -144,6 +156,12 @@
             "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
             "linkedin": "https://www.linkedin.com/in/adil-haizoune-18436616/"
           }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
+          }
         ]
       },
       {
@@ -178,6 +196,12 @@
             "image": "/static/images/profiles/soukaina-chebihi.webp",
             "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
             "linkedin": "https://www.linkedin.com/in/soukaina-c-2060a413b/"
+          }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
           }
         ]
       },
@@ -222,6 +246,12 @@
             "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
             "linkedin": "https://www.linkedin.com/in/youness-fkhach/"
           }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
+          }
         ]
       },
       {
@@ -265,6 +295,12 @@
             "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
             "linkedin": "https://www.linkedin.com/in/sa%C3%AFd-d-51011413b/"
           }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
+          }
         ]
       },
       {
@@ -300,6 +336,12 @@
             "image": "/static/images/profiles/omar-salim-moussa.webp",
             "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
             "linkedin": "https://www.linkedin.com/in/omar-salim-moussa-92632113b/"
+          }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
           }
         ]
       },
@@ -341,6 +383,12 @@
             "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
             "linkedin": "https://www.facebook.com/m4tt72"
           }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
+          }
         ]
       },
       {
@@ -371,6 +419,12 @@
             "image": "/static/images/profiles/taha-sadiki.webp",
             "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
             "linkedin": "https://www.linkedin.com/in/taha-sadiki/"
+          }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
           }
         ]
       },
@@ -403,6 +457,12 @@
             "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
             "linkedin": "https://www.linkedin.com/in/salim-braksa-175941b6/"
           }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
+          }
         ]
       }
     ],
@@ -433,6 +493,12 @@
             "image": "/static/images/profiles/oussama-zaki.webp",
             "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
             "linkedin": "https://www.linkedin.com/in/zakioussama/"
+          }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
           }
         ]
       },
@@ -470,6 +536,12 @@
             "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
             "linkedin": "https://www.linkedin.com/in/naoufalelh/"
           }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
+          }
         ]
       },
       {
@@ -498,6 +570,12 @@
             "image": "/static/images/profiles/faissal-sabouh.webp",
             "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
             "linkedin": "https://www.linkedin.com/in/faissal-sabouh-031823121/"
+          }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
           }
         ]
       }

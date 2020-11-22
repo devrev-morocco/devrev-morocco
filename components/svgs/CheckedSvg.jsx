@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-function Checked(props) {
+function CheckedSvg(props) {
   return (
     <svg viewBox="0 0 24 24" {...props}>
       <path
@@ -11,4 +11,4 @@ function Checked(props) {
   );
 }
 
-export default Checked;
+export default CheckedSvg;

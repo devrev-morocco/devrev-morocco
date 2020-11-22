@@ -2,7 +2,8 @@ import styled, { css } from 'styled-components';
 import {
   AbsolutePosition,
   DisFlex_AIC,
-  DisFlex_AIC_JCC
+  DisFlex_AIC_JCC,
+  DisNone
 } from '../../../styles';
 import { ScaleOut, WlCounterPulse } from '../../../styles/keyframes';
 import { TextOverflowHiddenCSS } from '../../../styles/StyledComponents';
@@ -131,8 +132,7 @@ export const MenuMainPlaceholder = styled(DisFlex_AIC_JCC)`
   }
 `;
 
-export const MenuBurgerContainer = styled.div`
-  display: none;
+export const MenuBurgerContainer = styled(DisNone)`
   margin-left: 20px;
   cursor: pointer;
   animation: ${ScaleOut} var(--Nav-animation-duration) forwards;
@@ -171,8 +171,6 @@ export const RightContainer = styled(DisFlex_AIC)`
   height: 100%;
 `;
 
-///////////////--------------------------
-
 export const WatchLaterContainer = styled(DisFlex_AIC_JCC)`
   position: relative;
   cursor: pointer;
@@ -207,7 +205,7 @@ const CounterContainer = styled(AbsolutePosition)`
   text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
 
-  &:before {
+  &::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -227,7 +225,7 @@ export const WLCounter = styled(CounterContainer)`
   ${(props) =>
     props.Trigger &&
     css`
-      &:before {
+      &::before {
         animation: ${WlCounterPulse} var(--Wl-pulse-animation-duration) ease-out
           forwards;
       }

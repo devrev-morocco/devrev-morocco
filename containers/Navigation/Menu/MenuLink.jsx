@@ -1,7 +1,7 @@
 import React, { useState, memo } from 'react';
 import { ActiveLink, RippleEffect } from '../../../components';
 import PropTypes from 'prop-types';
-import { DropArrow } from '../../../components/svgs';
+import { ArrowSvg } from '../../../components/svgs';
 import { NavLinkContainer, LinkNav, LinkSpan, LinkIcon } from './styles';
 import { mobileCheck } from '../../../utils';
 
@@ -12,44 +12,22 @@ const MenuLink = ({
   preventDefault = false,
   Type,
   Id,
-  // Show,
   dispatchMenu
 }) => {
-  //
   const [rotate, setRotate] = useState(false);
 
-  const handleEnter = () => {
+  const HandleEnter = () => {
     setRotate(true);
     dispatchMenu({ type: Type });
     let dropNode = document.getElementById(Id);
     if (dropNode) dropNode.style.display = 'block';
   };
-  const handleLeave = () => {
-    // if(!mobileCheck())
 
+  const HandleLeave = () => {
     setRotate(false);
     dispatchMenu({ type: 'reset' });
     let dropNode = document.getElementById(Id);
     if (dropNode) dropNode.style.display = 'none';
-  };
-
-  // For tablet users
-  const handleClick = () => {
-    // if(mobileCheck()){
-    //   if(Show){
-    //     setRotate(false);
-    //     dispatchMenu({ type: 'reset' });
-    //     let dropNode = document.getElementById(Id);
-    //     if (dropNode) dropNode.style.display = 'none';
-    //   }
-    //   else {
-    //     setRotate(true);
-    //     dispatchMenu({ type: 'reset' });
-    //     dispatchMenu({ type: Type });
-    //     let dropNode = document.getElementById(Id);
-    //     if (dropNode) dropNode.style.display = 'block';
-    //   }
-    // }
   };
 
   const HandleLinkClick = (e) => {
@@ -61,17 +39,13 @@ const MenuLink = ({
   };
 
   return (
-    <NavLinkContainer
-      onClick={handleClick}
-      onMouseEnter={handleEnter}
-      onMouseLeave={handleLeave}
-    >
+    <NavLinkContainer onMouseEnter={HandleEnter} onMouseLeave={HandleLeave}>
       <RippleEffect>
         <ActiveLink href={Href} activeClassName="selected" passHref={true}>
           <LinkNav as="a" onClick={HandleLinkClick}>
             <LinkSpan as="span">{Label}</LinkSpan>
             <LinkIcon>
-              <DropArrow Rotate={rotate} />
+              <ArrowSvg Rotate={rotate} />
             </LinkIcon>
           </LinkNav>
         </ActiveLink>
@@ -88,8 +62,7 @@ MenuLink.propTypes = {
   Type: PropTypes.string.isRequired,
   Id: PropTypes.string.isRequired,
   dispatchMenu: PropTypes.func,
-  preventDefault: PropTypes.bool,
-  Show: PropTypes.bool.isRequired
+  preventDefault: PropTypes.bool
 };
 
 export default memo(MenuLink);

@@ -47,7 +47,7 @@ function App({ Component, pageProps }) {
       <SocialProfileJsonLd
         type="WebPage"
         name="DevRev Morocco"
-        url="http://devrev.ma/"
+        url="https://devrev.ma/"
         sameAs={[
           'https://www.facebook.com/devrevmorocco/',
           'https://www.youtube.com/channel/UCohUHFN_a54IJz2qVSEgf4g',

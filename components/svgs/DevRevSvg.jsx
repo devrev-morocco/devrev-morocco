@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-function DevRevLogo(props) {
+function DevRevSvg(props) {
   return (
     <svg fill="#000" width={40} height={40} viewBox="0 0 500 500" {...props}>
       <path d="M35 1.9c-8.1 2.6-13.7 6.2-20.6 13.3C7.1 22.8 4.4 27 1.9 35.3.1 41.3 0 48.4 0 250s.1 208.7 1.9 214.7c2.5 8.3 5.2 12.5 12.5 20.1 7.1 7.3 12.5 10.8 21 13.3 5.8 1.8 14.7 1.9 214.6 1.9s208.8-.1 214.6-1.9c8.5-2.5 13.9-6 21-13.3 7.3-7.6 10-11.8 12.5-20.1 1.8-6 1.9-13.1 1.9-214.7 0-199.9-.1-208.8-1.9-214.6-2.5-8.5-6-13.9-13.3-21-7.6-7.3-11.8-10-20.1-12.5C458.7.1 451.8 0 249.5.1 53.6.2 40.2.3 35 1.9zM384 250v134H116V116h268v134z" />
@@ -10,4 +10,4 @@ function DevRevLogo(props) {
   );
 }
 
-export default DevRevLogo;
+export default DevRevSvg;

@@ -5,6 +5,7 @@ import {
   GoogleRippleEffect_wrapper,
   GoogleRippleEffect_circle
 } from './styles';
+import { Timer } from '../../utils';
 
 const RippleEffect = ({
   children,
@@ -31,13 +32,13 @@ const RippleEffect = ({
       show: true
     });
 
-    setTimeout(() => {
+    Timer(400).then(() => {
       setRipple({
         y: 0,
         x: 0,
         show: false
       });
-    }, 400);
+    });
   }, []);
 
   return (
@@ -49,7 +50,7 @@ const RippleEffect = ({
       <GoogleRippleEffect_wrapper>
         {show && <GoogleRippleEffect_circle x={x} y={y} />}
       </GoogleRippleEffect_wrapper>
-      {React.Children.map(children, (child) => React.cloneElement(child))}
+      {children}
     </GoogleRippleEffect>
   );
 };

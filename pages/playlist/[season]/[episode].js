@@ -12,16 +12,20 @@ import {
   SecondaryWrapper,
   Overlay,
   PublishedAtContainer
-} from '../../../styles/Pages/SeasonPage';
+} from '../../../styles/Pages/PlaylistPage';
 import YouTube from 'react-youtube';
 import {
   VideoContainer,
   PlaylistsPanel,
   MiniFooter
 } from '../../../containers';
-import SimpleBarReact from 'simplebar-react';
 import { NextSeo, BreadcrumbJsonLd, VideoJsonLd } from 'next-seo';
+import dynamic from 'next/dynamic';
 
+const SimpleBarReact = dynamic(() => import('simplebar-react'), {
+  // eslint-disable-next-line react/display-name
+  loading: () => <div></div>
+});
 function Playlist({ Episodes, CurrentPlayingEp }) {
   const autoPlayCache = useRef(null);
   const CurrentPlayingVideoCache = useRef(null);
@@ -116,19 +120,16 @@ function Playlist({ Episodes, CurrentPlayingEp }) {
         openGraph={{
           title: title,
           description: description[0],
-          // url: `https://devrev.ma/playlist/${ep}/${stringUrl}`,
-          url: `https://devrev-morocco-git-playlist.larbisahli.vercel.app/playlist/${ep}/${stringUrl}`,
+          url: `https://devrev.ma/playlist/${ep}/${stringUrl}`,
           images: [
             {
-              // url: `https://devrev.ma${thumbnail}`,
-              url: `https://devrev-morocco-git-playlist.larbisahli.vercel.app${thumbnail}`,
+              url: `https://devrev.ma${thumbnail}`,
               width: 720,
               height: 404,
               alt: `DevRev #${epTag}`
             }
           ],
-          // site_name: 'https://devrev.ma/'
-          site_name: 'https://devrev-morocco-git-playlist.larbisahli.vercel.app'
+          site_name: 'https://devrev.ma/'
         }}
       />
       <BreadcrumbJsonLd
@@ -136,17 +137,17 @@ function Playlist({ Episodes, CurrentPlayingEp }) {
           {
             position: 1,
             name: 'DevRev',
-            item: 'http://www.devrev.ma/'
+            item: 'https://www.devrev.ma/'
           },
           {
             position: 2,
             name: `season ${season}`,
-            item: `http://www.devrev.ma/playlist/${season}/`
+            item: `https://www.devrev.ma/playlist/${season}/`
           },
           {
             position: 3,
             name: `episode ${ep}`,
-            item: `http://www.devrev.ma/playlist/${season}/${stringUrl}`
+            item: `https://www.devrev.ma/playlist/${season}/${stringUrl}`
           }
         ]}
       />
@@ -177,7 +178,7 @@ function Playlist({ Episodes, CurrentPlayingEp }) {
           </VideoPlayerContainer>
           <Title>
             <div className="ep-tag">{`DevRev #${epTag}`}</div>
-            <div className="vertical-line"></div>
+            <div className="title-vertical-line"></div>
             <div className="ep-title">{title}</div>
           </Title>
           <PublishedAtContainer>
@@ -224,9 +225,9 @@ const PlayListUrlMap = () => {
   const { seasons } = require('../../../data/Seasons.json');
 
   const Arr = [];
-  for (let key in seasons) {
-    for (let i in seasons[key]) {
-      Arr.push({ params: { season: key, episode: seasons[key][i].stringUrl } });
+  for (let season in seasons) {
+    for (let i in seasons[season]) {
+      Arr.push({ params: { season, episode: seasons[season][i].stringUrl } });
     }
   }
   return Arr;

@@ -11,8 +11,7 @@ import PropTypes from 'prop-types';
 const WatchLaterDrop = ({
   Show,
   ShoppingCartMouseIn,
-  ShoppingCartMouseLeave,
-  dispatchMenu
+  ShoppingCartMouseLeave
 }) => {
   const CartNodeRef = useRef(null);
   const [IsMobile, setIsMobile] = useState(false);
@@ -57,6 +56,7 @@ const WatchLaterDrop = ({
           {IsWatchLater && (
             <Fragment>
               <div className="wl-tt">Watch later</div>
+              <div className="wl_line"></div>
               <div className="wl-ss">{`${
                 WlLength > 1 ? `${WlLength} videos` : `1 video`
               }`}</div>
@@ -67,11 +67,7 @@ const WatchLaterDrop = ({
           isMobileMode={mediaQueryMatches}
           isMobile={IsMobile}
         >
-          {IsWatchLater ? (
-            <WlContent dispatchMenu={dispatchMenu} />
-          ) : (
-            <NoWlContent />
-          )}
+          {IsWatchLater ? <WlContent /> : <NoWlContent />}
         </WLCartContainerWrap>
       </WLCart_Container>
     </MenuTransition>
@@ -81,8 +77,7 @@ const WatchLaterDrop = ({
 WatchLaterDrop.propTypes = {
   Show: PropTypes.bool,
   ShoppingCartMouseIn: PropTypes.func,
-  ShoppingCartMouseLeave: PropTypes.func,
-  dispatchMenu: PropTypes.func
+  ShoppingCartMouseLeave: PropTypes.func
 };
 
 export default memo(WatchLaterDrop);

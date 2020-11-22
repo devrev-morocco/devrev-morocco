@@ -5,7 +5,6 @@ export const Mini_Footer = styled(DisFlex_JCC)`
   margin: 0 auto;
   width: 100%;
   font-size: 12px;
-  line-height: 1.5;
   color: #8a8f98;
   z-index: 2;
 `;
@@ -17,7 +16,8 @@ export const Mini_Footer_wrapper = styled(DisFlex_AIC)`
   padding: 10px 16px;
 
   @media screen and (max-width: 735px) {
-    padding: 10px;
+    padding: 5px;
+    flex-direction: column;
   }
 `;
 

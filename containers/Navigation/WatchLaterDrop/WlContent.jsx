@@ -14,7 +14,6 @@ import {
   VideoContainer_body_Title
 } from '../../VideoContainer/styles';
 import { useWL } from '../../../hooks';
-import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
 
 const SimpleBarReact = dynamic(() => import('simplebar-react'), {
@@ -22,7 +21,7 @@ const SimpleBarReact = dynamic(() => import('simplebar-react'), {
   loading: () => <div></div>
 });
 
-const WlContent = ({ dispatchMenu }) => {
+const WlContent = () => {
   const Router = useRouter();
 
   const [AnimationActiveIn, setAnimationActiveIn] = useState(null);
@@ -41,12 +40,10 @@ const WlContent = ({ dispatchMenu }) => {
   };
 
   const HandleClick = (e, season, episode, videoId) => {
-    console.log('object :>> ', e.target.id);
     if (e.target.id === 'wl-del-btn') {
       HandleRemove(videoId);
       return null;
     } else {
-      dispatchMenu({ type: 'reset' });
       window?.scrollTo({ top: 0, behavior: 'smooth' });
       Router.push({
         pathname: `/playlist/[season]/[episode]`,
@@ -119,10 +116,6 @@ const WlContent = ({ dispatchMenu }) => {
       })}
     </SimpleBarReact>
   );
-};
-
-WlContent.propTypes = {
-  dispatchMenu: PropTypes.func.isRequired
 };
 
 export default WlContent;

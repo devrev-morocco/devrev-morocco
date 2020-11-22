@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import { MenuburgerContainer, BurgerXSpan } from './styles';
 import PropTypes from 'prop-types';
 
-function Menuburger({ menuIsOpen = false }) {
+function MenuburgerSvg({ menuIsOpen = false }) {
   return (
     <MenuburgerContainer>
       <BurgerXSpan menuIsOpen={menuIsOpen}></BurgerXSpan>
@@ -12,8 +12,8 @@ function Menuburger({ menuIsOpen = false }) {
   );
 }
 
-Menuburger.propTypes = {
+MenuburgerSvg.propTypes = {
   menuIsOpen: PropTypes.bool
 };
 
-export default memo(Menuburger);
+export default memo(MenuburgerSvg);

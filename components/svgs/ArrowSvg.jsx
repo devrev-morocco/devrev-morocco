@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { NavArrow } from './styles';
 
-function DropArrow({ Rotate = false, fill = '#fff' }) {
+function ArrowSvg({ Rotate = false, fill = '#fff' }) {
   return (
     <NavArrow
       Rotate={Rotate}
@@ -18,9 +18,9 @@ function DropArrow({ Rotate = false, fill = '#fff' }) {
   );
 }
 
-DropArrow.propTypes = {
+ArrowSvg.propTypes = {
   Rotate: PropTypes.bool,
   fill: PropTypes.string
 };
 
-export default DropArrow;
+export default ArrowSvg;

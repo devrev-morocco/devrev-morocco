@@ -6,17 +6,17 @@ const { seasons } = require('../data/Seasons.json');
   const prettierConfig = await prettier.resolveConfig('./.prettierrc.js');
 
   const PlayListMap = () => {
-    const Arr = [];
-    for (let key in seasons) {
-      for (let i in seasons[key]) {
-        Arr.push(
+    const UrlMap = [];
+    for (let season in seasons) {
+      for (let i in seasons[season]) {
+        UrlMap.push(
           `<url>
-             <loc>${`https://devrev.ma/playlist/${key}/${seasons[key][i].stringUrl}`}</loc>
+             <loc>${`https://devrev.ma/playlist/${season}/${seasons[season][i].stringUrl}`}</loc>
            </url>`
         );
       }
     }
-    return Arr;
+    return UrlMap;
   };
 
   const sitemap = `

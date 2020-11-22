@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import {
   AbsolutePosition,
+  DisFlex_AIC,
   DisFlex_AIC_JCC,
   RelativePosition
 } from '../../../../styles';
@@ -20,7 +21,7 @@ const Cart_Container = styled(AbsolutePosition)`
   color: #4c4c4c;
   z-index: 999;
 
-  &:before {
+  &::before {
     content: '';
     position: absolute;
     left: 0;
@@ -70,7 +71,7 @@ export const WLCartContainerWrap = styled(RelativePosition)`
   }}
 `;
 
-export const WLCartHeader = styled.div`
+export const WLCartHeader = styled(DisFlex_AIC)`
   box-sizing: border-box;
   position: relative;
   padding: 5px 5px;
@@ -82,12 +83,19 @@ export const WLCartHeader = styled.div`
 
   .wl-tt {
     color: #fafafa;
-    padding-bottom: 3px;
+    font-size: 0.9em;
   }
 
   .wl-ss {
     color: #999;
-    font-size: 0.8em;
+    font-size: 0.77em;
+  }
+
+  .wl_line {
+    margin: 0 8px;
+    height: 20px;
+    width: 1px;
+    background-color: #8a8f98;
   }
 
   @media screen and (max-width: 635px) {

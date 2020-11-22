@@ -20,7 +20,6 @@ const MenuMain = ({
       {/* ------- PLAYLIST ------- */}
       <MenuLink
         dispatchMenu={dispatchMenu}
-        Show={Show}
         Type="playlist"
         Label="playlist"
         Href="/playlist/1/devrev-1"
@@ -34,7 +33,6 @@ const MenuMain = ({
       {/* ------- COMMUNITY ------- */}
       <MenuLink
         dispatchMenu={dispatchMenu}
-        Show={Show}
         preventDefault={true}
         Type="community"
         Label="community"
