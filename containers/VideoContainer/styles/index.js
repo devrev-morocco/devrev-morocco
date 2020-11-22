@@ -7,7 +7,16 @@ import {
 } from '../../../styles';
 
 export const Video_Container = styled.div`
-  padding-bottom: 8px;
+  margin-bottom: 8px;
+  outline: none;
+
+  body:not(.user-is-tabbing) &:focus {
+    background-color: transparent !important;
+  }
+
+  &:focus {
+    background-color: #222;
+  }
 `;
 
 export const VideoWrapper = styled(DisFlex)`
@@ -16,22 +25,16 @@ export const VideoWrapper = styled(DisFlex)`
   }
 `;
 
-export const VideoThumbnailContainer = styled(RelativePosition)`
+export const VTContainer = styled(RelativePosition)`
   cursor: pointer;
   margin-right: 8px;
-  width: 160px;
 
   ${Video_Container}:hover & {
-    box-shadow: 0px 0 6px 2px rgba(0, 0, 0, 0.3);
-    /* transform:translateY(3px); */
-  }
-
-  @media screen and (max-width: 735px) {
-    width: 140px !important;
+    box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.4);
   }
 
   .inner_btn--duration {
-    bottom: 0px;
+    bottom: 0;
     background-color: rgba(0, 0, 0, 0.8);
     padding: 2px 4px;
     line-height: 0.9rem;
@@ -39,9 +42,6 @@ export const VideoThumbnailContainer = styled(RelativePosition)`
 
   .inner_btn--clock {
     top: 0;
-  }
-
-  .icon_btn__check {
   }
 
   .switch__btn {
@@ -66,6 +66,13 @@ export const VideoThumbnailContainer = styled(RelativePosition)`
     z-index: 1;
     background-size: 100% 100%;
   }
+`;
+
+export const VideoThumbnailContainer = styled(VTContainer)`
+  ${(props) =>
+    css`
+      width: ${props.Width}px;
+    `}
 
   ${(props) => {
     if (props.isVid) {
@@ -90,20 +97,23 @@ export const VideoThumbnailContainer = styled(RelativePosition)`
   }}
 `;
 
-export const VideoThumbnailWrapper = styled.div`
+export const VTWrapper = styled.div`
   margin-right: 8px;
-  width: 160px;
-  padding-bottom: 56%; // aspect ratio 16:9
+  padding-bottom: 56%; // HD video aspect ratio 16:9
   height: 0;
   overflow: hidden;
-  background-color: #555;
-
-  @media screen and (max-width: 735px) {
-    width: 140px !important;
-  }
+  background-color: #383838;
 `;
 
-export const Inner_btn = styled(AbsolutePosition)`
+export const VideoThumbnailWrapper = styled(VTWrapper)`
+  ${(props) =>
+    css`
+      width: ${props.Width}px;
+    `}
+`;
+
+export const Inner_btn = styled(DisFlex)`
+  position: absolute;
   right: 0;
   margin: 2px;
   color: #fff;
@@ -112,13 +122,8 @@ export const Inner_btn = styled(AbsolutePosition)`
   font-size: 0.8rem;
   overflow: hidden;
   z-index: 1;
-  display: flex;
-  align-items: center;
-
-  ${VideoWrapper}:hover & {
-    flex-direction: row-reverse;
-    overflow: visible;
-  }
+  flex-direction: row-reverse;
+  align-items: stretch;
 
   @media screen and (max-width: 735px) {
     font-size: 0.75rem;
@@ -137,14 +142,8 @@ export const Icon_btn = styled.div`
   background-color: #000;
   z-index: 2;
   padding: 1px;
-  border-radius: 2px;
   height: 24px;
   width: 24px;
-
-  ${VideoWrapper}:hover & {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
 `;
 
 export const Slider = styled(DisFlex_AIC_JCC)`
@@ -155,25 +154,23 @@ export const Slider = styled(DisFlex_AIC_JCC)`
   z-index: 0;
   padding: 5px 6px;
   border-radius: 2px 0 0 2px;
+  transform: translateX(100px);
   font-size: 0.75em;
-  color: #000;
+  color: #fff;
   height: 24px;
-
-  ${VideoWrapper}:hover & {
-    transform: translateX(-23px);
-    color: #fff;
-  }
+  font-weight: bold;
 `;
 
-export const VideoContainer_body = styled.div`
-  width: 100%;
-  min-width: 0;
+export const VideoContainer_body = styled.a`
+  margin: 5px;
+  margin-left: 0;
+  margin-top: 0;
 `;
 
 export const VideoContainer_Body_wrap = styled(DisFlex)`
   min-width: 0;
   width: 100%;
-  padding-right: 10px;
+  padding-right: 5px;
   box-sizing: border-box;
   flex-direction: column;
 `;
@@ -181,14 +178,14 @@ export const VideoContainer_Body_wrap = styled(DisFlex)`
 export const VideoContainer_body_Title = styled.div`
   font-size: 0.91rem;
   cursor: pointer;
-  margin: 0 0 4px 0;
+  margin: 0 0 3px 0;
   max-height: 3.2rem;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   color: #fafafa;
-  padding: 2px;
+  padding: 1px;
 
   @media screen and (max-width: 1050px) {
     font-size: 1rem;
@@ -202,7 +199,7 @@ export const VideoContainer_body_Title = styled.div`
 export const VideoContainer_body_Details = styled.div`
   display: block;
   max-width: 100%;
-  padding-top: 1px;
+  padding: 1px;
   font-size: 0.75rem;
   color: var(--Duration-Color);
   color: #aaa;

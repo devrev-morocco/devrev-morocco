@@ -4,9 +4,9 @@
     "lang": "en-US",
     "description": "A weekly live show featuring conversations with great tech minds about software engineering, tech careers, and startups.",
     "start_url": "/",
-    "scope": "https://devrev-morocco.vercel.app/",
-    "theme_color": "#fff",
-    "background_color": "#fff",
+    "scope": "https://devrev.ma/",
+    "theme_color": "#222",
+    "background_color": "#000",
     "display": "standalone",
     "categories": ["education", "news"],
     "icons": [{
@@ -33,11 +33,11 @@
     ],
     "screenshots": [],
     "shortcuts": [{
-        "name": "DevRev",
-        "url": "/",
+        "name": "DevRev season 1",
+        "url": "playlist/1/devrev-1",
         "icons": [{
-            "src": "/static/favicons/favicon-96x96.png",
-            "sizes": "96x96",
+            "src": "/static/favicons/favicon-192x192.png",
+            "sizes": "192x192",
             "type": "image/png"
         }],
         "description": "A weekly live show featuring conversations with great tech minds"

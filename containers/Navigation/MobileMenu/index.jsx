@@ -1,9 +1,14 @@
 import React, { memo, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Mobile_Menu_container } from './styles';
+import {
+  Mobile_Menu_container,
+  Menu_submenu_item,
+  Menu_submenu_Link
+} from './styles';
+import Link from 'next/link';
 import SubMenuItem from './SubMenuItem';
-import { community_categories } from '../../../data/Community.json';
-import { playlist_categories } from '../../../data/PlayList.json';
+import { community_categories } from '../../../data/CommunityMenu.json';
+import { playlist_categories } from '../../../data/PlayListMenu.json';
 
 const MobileMenu = ({ ShowMenu }) => {
   const [{ SubMenuIsOpen }, setSubMenuIsOpen] = useState({
@@ -22,20 +27,22 @@ const MobileMenu = ({ ShowMenu }) => {
   return (
     <Mobile_Menu_container Show={ShowMenu}>
       <SubMenuItem
-        Href="/playlist?list=ALL"
         label="playlist"
         Categories={playlist_categories}
         SubMenuIsOpen={SubMenuIsOpen}
         HandleSubMenu={HandleSubMenu}
       />
       <SubMenuItem
-        Href="/"
         label="community"
-        preventDefault={true}
         Categories={community_categories}
         SubMenuIsOpen={SubMenuIsOpen}
         HandleSubMenu={HandleSubMenu}
       />
+      <Menu_submenu_item>
+        <Link href="/about" passHref>
+          <Menu_submenu_Link as="a">about</Menu_submenu_Link>
+        </Link>
+      </Menu_submenu_item>
     </Mobile_Menu_container>
   );
 };

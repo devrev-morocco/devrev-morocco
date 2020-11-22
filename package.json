@@ -1,6 +1,6 @@
 {
   "name": "devrev-morocco",
-  "version": "0.1.0",
+  "version": "0.5.0",
   "description": "A weekly live show featuring conversations with great tech minds",
   "license": "MIT",
   "private": true,
@@ -32,6 +32,7 @@
     "@babel/core": "^7.12.3",
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.1",
+    "axios": "^0.21.0",
     "babel-jest": "^26.6.3",
     "babel-loader": "^8.1.0",
     "eslint": "^7.12.1",

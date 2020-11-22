@@ -1,0 +1,18 @@
+{
+  "playlist_categories": [
+    {
+      "id": "g5sXHp1Q6M",
+      "label": "Season 1",
+      "url": "/playlist/1/devrev-1",
+      "separateLine": false,
+      "ExternalLink": false
+    },
+    {
+      "id": "4pee6JS5kW",
+      "label": "Season 2",
+      "url": "/playlist/2/devrev-12",
+      "separateLine": false,
+      "ExternalLink": false
+    }
+  ]
+}

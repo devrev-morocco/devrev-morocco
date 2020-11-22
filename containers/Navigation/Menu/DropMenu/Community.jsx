@@ -2,7 +2,7 @@ import React, { memo, forwardRef } from 'react';
 import MenuItemsList from '../MenuItemsList';
 import { MenuContainer } from '../styles';
 import PropTypes from 'prop-types';
-import { community_categories } from '../../../../data/Community.json';
+import { community_categories } from '../../../../data/CommunityMenu.json';
 
 const Community = forwardRef(({ Id }, ref) => {
   return (

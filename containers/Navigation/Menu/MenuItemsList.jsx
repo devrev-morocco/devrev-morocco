@@ -12,6 +12,7 @@ const MenuItemsList = ({ Categories }) => {
           <MenuItem>
             <Link href={category?.url} passHref>
               <MenuItemLink
+                as="a"
                 rel={category?.ExternalLink ? 'noreferrer' : ''}
                 target={`${category?.ExternalLink ? '_blank' : '_self'}`}
               >

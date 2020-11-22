@@ -1,6 +1,12 @@
 import styled, { css } from 'styled-components';
-import { DisFlex_AIC, DisFlex_AIC_JCC } from '../../../styles';
-import { ScaleOut } from '../../../styles/keyframes';
+import {
+  AbsolutePosition,
+  DisFlex_AIC,
+  DisFlex_AIC_JCC,
+  DisNone
+} from '../../../styles';
+import { ScaleOut, WlCounterPulse } from '../../../styles/keyframes';
+import { TextOverflowHiddenCSS } from '../../../styles/StyledComponents';
 
 export const Nav = styled.nav`
   position: fixed;
@@ -27,8 +33,6 @@ export const Nav = styled.nav`
     width: 100%;
     height: 56px;
     transition: background 0.36s cubic-bezier(0.32, 0.08, 0.24, 1);
-    background: url('/static/images/nav-bg.webp') repeat-x top center
-      rgba(26, 26, 26, 0.9);
     background: url('/static/images/nav-bg.webp') repeat-x top center
       rgba(35, 35, 35, 0.9);
     z-index: -1;
@@ -71,9 +75,9 @@ export const NavLogo = styled(DisFlex_AIC_JCC)`
   margin-right: 30px;
   height: 40px;
   width: 40px;
-  border-radius: 50%;
-  background-color: #fff; // logo need fix text is transparent
   box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 50%;
 
   &::before {
     position: absolute;
@@ -88,9 +92,7 @@ export const NavLogo = styled(DisFlex_AIC_JCC)`
     width: 60px;
     content: attr(data-content);
     background: var(--DropMenu-bgc);
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    ${TextOverflowHiddenCSS}
   }
 
   &:hover::before {
@@ -130,15 +132,10 @@ export const MenuMainPlaceholder = styled(DisFlex_AIC_JCC)`
   }
 `;
 
-export const MenuBurgerContainer = styled.div`
-  display: none;
+export const MenuBurgerContainer = styled(DisNone)`
   margin-left: 20px;
   cursor: pointer;
   animation: ${ScaleOut} var(--Nav-animation-duration) forwards;
-
-  body:not(.user-is-tabbing) &:focus {
-    outline: none;
-  }
 
   @media screen and (max-width: 735px) {
     display: flex;
@@ -151,6 +148,7 @@ export const Burger = styled(DisFlex_AIC_JCC)`
   height: 25px;
   margin-right: 5px;
   padding-bottom: 1px;
+  outline: none;
 `;
 
 export const BurgerTxt = styled.div`
@@ -160,6 +158,10 @@ export const BurgerTxt = styled.div`
   font-weight: bold;
   cursor: auto;
   cursor: pointer;
+
+  body:not(.user-is-tabbing) &:focus {
+    outline: none;
+  }
 `;
 
 export const RightContainer = styled(DisFlex_AIC)`
@@ -167,4 +169,65 @@ export const RightContainer = styled(DisFlex_AIC)`
   box-sizing: border-box;
   padding-top: 3px;
   height: 100%;
+`;
+
+export const WatchLaterContainer = styled(DisFlex_AIC_JCC)`
+  position: relative;
+  cursor: pointer;
+  height: 100%;
+
+  body:not(.user-is-tabbing) &:focus {
+    outline: none;
+  }
+`;
+
+export const ClockIconContainer = styled.div`
+  cursor: pointer;
+  width: 30px;
+
+  & > svg > path {
+    fill: #fafafa;
+  }
+
+  &:hover > svg > path {
+    fill: #fff;
+  }
+`;
+
+const CounterContainer = styled(AbsolutePosition)`
+  font-size: 0.7em;
+  font-weight: bold;
+  padding: 0px 3px;
+  border-radius: 2px;
+  top: 3px;
+  right: -6px;
+  color: #fff;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -35px 0 0 -35px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 0 35px #6ebbfd;
+  }
+`;
+
+export const WLCounter = styled(CounterContainer)`
+  ${(props) =>
+    props.Trigger &&
+    css`
+      &::before {
+        animation: ${WlCounterPulse} var(--Wl-pulse-animation-duration) ease-out
+          forwards;
+      }
+    `}
 `;

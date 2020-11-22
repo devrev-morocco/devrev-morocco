@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { Selectors } from './ClassNames';
-import { ElementsCollection } from './Elements';
+import { ElementsCollection } from './Reset';
 import { RootVariables } from './Variables';
 
 const GlobalStyle = createGlobalStyle`

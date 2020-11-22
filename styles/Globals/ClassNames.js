@@ -1,4 +1,5 @@
 import { css } from 'styled-components';
+import { scale_removal } from '../keyframes';
 
 export const Selectors = css`
   .selected {
@@ -57,5 +58,9 @@ export const Selectors = css`
 
   .simplebar-scrollbar::before {
     background-color: #838383 !important;
+  }
+
+  .slide-removal {
+    animation: ${scale_removal} 400ms;
   }
 `;

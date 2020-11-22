@@ -26,11 +26,17 @@ export const DisFlex_AIC_JCC = styled.div`
   justify-content: center;
 `;
 
-// <------- CSS --------->
+export const TextOverflowHidden = styled.div`
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+`;
 
-export const DisNone = css`
+export const DisNone = styled.div`
   display: none;
 `;
+
+// <------- CSS --------->
 
 export const Visible = css`
   visibility: visible;

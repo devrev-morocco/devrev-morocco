@@ -3,11 +3,13 @@
     "1": [
       {
         "ep": 1,
-        "tag": "DevRev #1",
+        "season": 1,
+        "stringUrl": "devrev-1",
         "videoId": "7XjAtQbN-BQ",
         "title": "Tech Careers in Morocco with Yassine El Kachchani",
-        "thumbnail": "/thumbnail/thumbnail-ep1.webp",
-        "duration": "1:20:54",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep1.webp",
+        "duration": "PT1H20M54S",
+        "publishedAt": "2020-05-07T15:59:39Z",
         "description": [
           "A casual live chat between Yassine (CEO at Gemography) and Zack (VPoE at Gemography) about developer career paths in Morocco.",
           "__EMPTY_LINE__",
@@ -17,15 +19,39 @@
           "+ Why it takes more than technical skills to succeed.",
           "+ How to get noticed and land your dream job.",
           "+ Why you should (or shouldn't) join a tech startup."
+        ],
+        "participants": [
+          {
+            "id": "uKjACmjLYd",
+            "name": "Zack Braksa",
+            "image": "/static/images/profiles/zack-braksa.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/braksa/"
+          },
+          {
+            "id": "TCil4qK7KL",
+            "name": "Yassine El Kachchani",
+            "image": "/static/images/profiles/yassine-el-kachchani.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/yassine-el-kachchani-96142332/"
+          }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
+          }
         ]
       },
       {
         "ep": 2,
-        "tag": "DevRev #2",
+        "season": 1,
+        "stringUrl": "devrev-2",
         "videoId": "ECROOdMKDGA",
         "title": "Soft Skills for Developers with Serrah Menif",
-        "thumbnail": "/thumbnail/thumbnail-ep2.webp",
-        "duration": "1:22:51",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep2.webp",
+        "duration": "PT1H22M51S",
+        "publishedAt": "2020-05-14T13:43:28Z",
         "description": [
           "A casual live chat between Zack (VPoE at Gemography) and Serrah (Head of People Ops at Gemography) about the why and how behind soft-skills, specifically for software engineers.",
           "__EMPTY_LINE__",
@@ -34,26 +60,74 @@
           "+ How to learn and improve soft-skills.",
           "+ What are the common mistakes to avoid.",
           "+ How to showcase good soft-skills during job interviews."
+        ],
+        "participants": [
+          {
+            "id": "uKjACmjLYd",
+            "name": "Zack Braksa",
+            "image": "/static/images/profiles/zack-braksa.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/braksa/"
+          },
+          {
+            "id": "8h2fKKvAeF",
+            "name": "Serrah Menif",
+            "image": "/static/images/profiles/serrah-menif.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/serrahmenif/"
+          }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
+          }
         ]
       },
       {
         "ep": 3,
-        "tag": "DevRev #3",
+        "season": 1,
+        "stringUrl": "devrev-3",
         "videoId": "qVHk5pBZb8g",
         "title": "Startups, DevOps and Being a Senior Engineer",
-        "thumbnail": "/thumbnail/thumbnail-ep3.webp",
-        "duration": "1:08:50",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep3.webp",
+        "duration": "PT1H8M51S",
+        "publishedAt": "2020-05-21T06:44:34Z",
         "description": [
           "On this week's live episode of DevRev, Zack interviews Zakaria Boualaid, a Senior DevOps Engineer at Oracle. They discuss how he got into DevOps, his startup journey, how he ended up in Dubai and what it takes to be a senior engineer."
+        ],
+        "participants": [
+          {
+            "id": "uKjACmjLYd",
+            "name": "Zack Braksa",
+            "image": "/static/images/profiles/zack-braksa.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/braksa/"
+          },
+          {
+            "id": "b9T5q1ymNw",
+            "name": "Zakaria Boualaid",
+            "image": "/static/images/profiles/zakaria-boualaid.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/zakaria-boualaid-19b57065/"
+          }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
+          }
         ]
       },
       {
         "ep": 4,
-        "tag": "DevRev #4",
+        "season": 1,
+        "stringUrl": "devrev-4",
         "videoId": "T8g310bUXYI",
         "title": "Cracking the Technical Interview",
-        "thumbnail": "/thumbnail/thumbnail-ep4.webp",
-        "duration": "1:07:54",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep4.webp",
+        "duration": "PT1H7M55S",
+        "publishedAt": "2020-05-28T09:13:44Z",
         "description": [
           "A casual live chat between Adil (CTO at Gemography) and Zack (VPoE at Gemography) about the definitive guide to technical interviews regardless of where you're applying.",
           "__EMPTY_LINE__",
@@ -66,15 +140,39 @@
           "__EMPTY_LINE__",
           "Language: ",
           "Arabic, English"
+        ],
+        "participants": [
+          {
+            "id": "uKjACmjLYd",
+            "name": "Zack Braksa",
+            "image": "/static/images/profiles/zack-braksa.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/braksa/"
+          },
+          {
+            "id": "VZnU7oD9lu",
+            "name": "Adil Haizoune",
+            "image": "/static/images/profiles/adil-haizoune.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/adil-haizoune-18436616/"
+          }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
+          }
         ]
       },
       {
         "ep": 5,
-        "tag": "DevRev #5",
+        "season": 1,
+        "stringUrl": "devrev-5",
         "videoId": "BTcOlxfkjDc",
         "title": "Work From Home Without Going Crazy",
-        "thumbnail": "/thumbnail/thumbnail-ep5.webp",
-        "duration": "1:00:25",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep5.webp",
+        "duration": "PT1H26S",
+        "publishedAt": "2020-06-04T08:05:45Z",
         "description": [
           "Soukaina Chebihi, Head of Growth at Gemography and author of the definitive guide 'The Only Work From Home Resources You'll Need' joins the show this week to talk about working from home (WFH) without going crazy.",
           "__EMPTY_LINE__",
@@ -83,15 +181,39 @@
           "+ Tips to implement to make the whole thing easier.",
           "+ What it takes to have the perfect WFH setup.",
           "+ The pros & cons of WFH from an employer and employee standpoint."
+        ],
+        "participants": [
+          {
+            "id": "uKjACmjLYd",
+            "name": "Zack Braksa",
+            "image": "/static/images/profiles/zack-braksa.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/braksa/"
+          },
+          {
+            "id": "2HuLcZAskb",
+            "name": "Soukaina Chebihi",
+            "image": "/static/images/profiles/soukaina-chebihi.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/soukaina-c-2060a413b/"
+          }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
+          }
         ]
       },
       {
         "ep": 6,
-        "tag": "DevRev #6",
+        "season": 1,
+        "stringUrl": "devrev-6",
         "videoId": "v7xhkVBC0zw",
         "title": "The Road to Senior Fullstack Developer",
-        "thumbnail": "/thumbnail/thumbnail-ep6.webp",
-        "duration": "1:21:38",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep6.webp",
+        "duration": "PT1H21M39S",
+        "publishedAt": "2020-06-11T08:29:46Z",
         "description": [
           "Tune in for a new live episode of DevRev, this time about the journey to becoming a Senior Fullstack or Frontend Developer.",
           "__EMPTY_LINE__",
@@ -101,91 +223,360 @@
           "+ What skills are must-have or nice-to-have to get started.",
           "+ What it takes to become a Senior Fullstack developer.",
           "+ [YOUR OWN QUESTIONS]"
+        ],
+        "participants": [
+          {
+            "id": "uKjACmjLYd",
+            "name": "Zack Braksa",
+            "image": "/static/images/profiles/zack-braksa.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/braksa/"
+          },
+          {
+            "id": "ijdihXb7iX",
+            "name": "Othmane Tayab",
+            "image": "/static/images/profiles/othmane-tayab.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/othmane-tayab-1b4015179/"
+          },
+          {
+            "id": "psPdrhemrn",
+            "name": "Youness Fkhach",
+            "image": "/static/images/profiles/youness-fkhach.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/youness-fkhach/"
+          }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
+          }
         ]
       },
       {
         "ep": 7,
-        "tag": "DevRev #7",
+        "season": 1,
+        "stringUrl": "devrev-7",
         "videoId": "bQbAjNQgb1U",
         "title": "Code editors and dev environments",
-        "thumbnail": "/thumbnail/thumbnail-ep7.webp",
-        "duration": "1:19:04",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep7.webp",
+        "duration": "PT1H19M5S",
+        "publishedAt": "2020-06-18T08:32:42Z",
         "description": [
           "This week I'll be joined by Othmane, Youness and Said to discuss their dev environments, code editor of choice, CLI settings, as well their favorite dev productivity tools."
+        ],
+        "participants": [
+          {
+            "id": "uKjACmjLYd",
+            "name": "Zack Braksa",
+            "image": "/static/images/profiles/zack-braksa.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/braksa/"
+          },
+          {
+            "id": "ijdihXb7iX",
+            "name": "Othmane Tayab",
+            "image": "/static/images/profiles/othmane-tayab.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/othmane-tayab-1b4015179/"
+          },
+          {
+            "id": "psPdrhemrn",
+            "name": "Youness Fkhach",
+            "image": "/static/images/profiles/youness-fkhach.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/youness-fkhach/"
+          },
+          {
+            "id": "JGR2HkA7aa",
+            "name": "Said Dermoumi",
+            "image": "/static/images/profiles/said-dermoumi.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/sa%C3%AFd-d-51011413b/"
+          }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
+          }
         ]
       },
       {
         "ep": 8,
-        "tag": "DevRev #8",
+        "season": 1,
+        "stringUrl": "devrev-8",
         "videoId": "MWyR9USrsUc",
         "title": "Competitive Programming 101",
-        "thumbnail": "/thumbnail/thumbnail-ep8.webp",
-        "duration": "1:29:34",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep8.webp",
+        "duration": "PT1H29M35S",
+        "publishedAt": "2020-06-25T08:41:42Z",
         "description": [
           "This week I'll be joined by Diaa Alhak EL FALLOUS from MCPC and Omar Salim Moussa from Google to discuss competitive programming, what it is, why it's important and what it takes to be an MCPC champion."
+        ],
+        "participants": [
+          {
+            "id": "uKjACmjLYd",
+            "name": "Zack Braksa",
+            "image": "/static/images/profiles/zack-braksa.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/braksa/"
+          },
+          {
+            "id": "gXuYUu3CKu",
+            "name": "Diaa Alhak EL FALLOUS",
+            "image": "/static/images/profiles/diaa-alhak.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/elfallous/"
+          },
+          {
+            "id": "EsPf5hemrn",
+            "name": "Omar Salim Moussa",
+            "image": "/static/images/profiles/omar-salim-moussa.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/omar-salim-moussa-92632113b/"
+          }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
+          }
         ]
       },
       {
         "ep": 9,
-        "tag": "DevRev #9",
+        "season": 1,
+        "stringUrl": "devrev-9",
         "videoId": "YxEipaEo3qk",
         "title": "Self-hosting, why and how?",
-        "thumbnail": "/thumbnail/thumbnail-ep9.webp",
-        "duration": "1:28:28",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep9.webp",
+        "duration": "PT1H28M29S",
+        "publishedAt": "2020-07-02T08:36:37Z",
         "description": [
           "This week, DevRev welcomes Yassine and Said to give us a tour of their self-hosted setup, tell us how they got started and address the fundamental question of 'why self-host'.",
           "__EMPTY_LINE__",
+          "Yassine Fathi is a Software Engineer at Fluicity, an online platform that allows governments to establish communication channels with the population.",
+          "__EMPTY_LINE__",
           "Said Dermoumi is a Software Engineer at Efficity, a France-based online real estate platform, part of the Foncia Group."
+        ],
+        "participants": [
+          {
+            "id": "uKjACmjLYd",
+            "name": "Zack Braksa",
+            "image": "/static/images/profiles/zack-braksa.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/braksa/"
+          },
+          {
+            "id": "JGR2HkA7aa",
+            "name": "Said Dermoumi",
+            "image": "/static/images/profiles/said-dermoumi.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/sa%C3%AFd-d-51011413b/"
+          },
+          {
+            "id": "u2sTjJofS6",
+            "name": "Yassine Fathi",
+            "image": "/static/images/profiles/yassine-fathi.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.facebook.com/m4tt72"
+          }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
+          }
         ]
       },
       {
         "ep": 10,
-        "tag": "DevRev #10",
+        "season": 1,
+        "stringUrl": "devrev-10",
         "videoId": "4oFOLIh0V3g",
         "title": "The Journey of a Data Engineer",
-        "thumbnail": "/thumbnail/thumbnail-ep10.webp",
-        "duration": "56:04",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep10.webp",
+        "duration": "PT56M5S",
+        "publishedAt": "2020-07-09T08:05:37Z",
         "description": [
           "In this episode of DevRev, we interview Taha Sadiki, Data Engineer at Enigma (NY-based), who talks to us about his leap into his role as Data Engineer and how to best position yourself for a career in this field.",
           "__EMPTY_LINE__",
           "Enigma (raised $130 million) builds data infrastructure, developer-friendly APIs, and intelligent tools. They are based in New York."
+        ],
+        "participants": [
+          {
+            "id": "uKjACmjLYd",
+            "name": "Zack Braksa",
+            "image": "/static/images/profiles/zack-braksa.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/braksa/"
+          },
+          {
+            "id": "9s6UJct4sd",
+            "name": "Taha Sadiki",
+            "image": "/static/images/profiles/taha-sadiki.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/taha-sadiki/"
+          }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
+          }
         ]
       },
       {
         "ep": 11,
-        "tag": "DevRev #11",
+        "season": 1,
+        "stringUrl": "devrev-11",
         "videoId": "ynAWha2kbfc",
         "title": "How to Become a Senior iOS Developer",
-        "thumbnail": "/thumbnail/thumbnail-ep11.webp",
-        "duration": "1:04:36",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep11.webp",
+        "duration": "PT1H4M37S",
+        "publishedAt": "2020-07-23T08:10:42Z",
         "description": [
           "Being a Senior in any area of Software Engineering is always an obscure topic. Yes, it's about skills and not raw number of years of experience. But even then, there is no true universal definition. ",
           "__EMPTY_LINE__",
           "In this new live episode we'll give it a shot and try to break it down to skills and strengths. We'll also be going over how to keep learning and evolving, the obscure iOS topics to focus on and the common mistakes to avoid (including those Massive View Controllers ...)"
+        ],
+        "participants": [
+          {
+            "id": "uKjACmjLYd",
+            "name": "Zack Braksa",
+            "image": "/static/images/profiles/zack-braksa.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/braksa/"
+          },
+          {
+            "id": "k0CadwSQXs",
+            "name": "Salim Braksa",
+            "image": "/static/images/profiles/salim-braksa.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/salim-braksa-175941b6/"
+          }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
+          }
         ]
       }
     ],
     "2": [
       {
         "ep": 1,
-        "tag": "DevRev #12",
+        "season": 2,
+        "stringUrl": "devrev-12",
         "videoId": "zjjKfqCgfTQ",
         "title": "The Career Path of Director of Engineering",
-        "thumbnail": "/thumbnail/thumbnail-ep12.webp",
-        "duration": "1:21:15",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep12.webp",
+        "duration": "PT1H21M16S",
+        "publishedAt": "2020-11-05T11:37:04Z",
         "description": [
           "In this episode, Zack Braksa chats with special guest Oussama Zaki, Director of Engineering at Svea Solar about the role of 'Director of Engineering', his day-to-day, the skills required, and the career path to get there."
+        ],
+        "participants": [
+          {
+            "id": "uKjACmjLYd",
+            "name": "Zack Braksa",
+            "image": "/static/images/profiles/zack-braksa.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/braksa/"
+          },
+          {
+            "id": "DQfVYyEiP2",
+            "name": "Oussama Zaki",
+            "image": "/static/images/profiles/oussama-zaki.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/zakioussama/"
+          }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
+          }
         ]
       },
       {
         "ep": 2,
-        "tag": "DevRev #13",
+        "season": 2,
+        "stringUrl": "devrev-13",
         "videoId": "cRqjxlqWWY4",
         "title": "Job Search in Morocco - Mistakes To Avoid",
-        "thumbnail": "/thumbnail/thumbnail-ep13.webp",
-        "duration": "1:21:15",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep13.webp",
+        "duration": "PT1H36M5S",
+        "publishedAt": "2020-11-05T11:44:19Z",
         "description": [
           "In this episode, Zack Braksa chats with special guests Naoufal El Hassnaoui & Diaa Alhak EL FALLOUS about the best way to look for a tech job in 2020. They'll be discussing the best practices to follow and the common mistakes to avoid."
+        ],
+        "participants": [
+          {
+            "id": "uKjACmjLYd",
+            "name": "Zack Braksa",
+            "image": "/static/images/profiles/zack-braksa.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/braksa/"
+          },
+          {
+            "id": "gXuYUu3CKu",
+            "name": "Diaa Alhak EL FALLOUS",
+            "image": "/static/images/profiles/diaa-alhak.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/elfallous/"
+          },
+          {
+            "id": "EgJLVD8YbJ",
+            "name": "Naoufal El hassnaoui",
+            "image": "/static/images/profiles/naoufal-el-hassnaoui.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/naoufalelh/"
+          }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
+          }
+        ]
+      },
+      {
+        "ep": 3,
+        "season": 2,
+        "stringUrl": "devrev-14",
+        "videoId": "heTAt-4huzQ",
+        "title": "Game Development: A Deep Dive",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep14.webp",
+        "duration": "PT1H27M45S",
+        "publishedAt": "2020-11-12T04:08:07Z",
+        "description": [
+          "In this episode, Zack Braksa chats with special guest Faissal Sabouh about what a career in game development means, the skills needed to become a game developer and advice for getting into game development."
+        ],
+        "participants": [
+          {
+            "id": "uKjACmjLYd",
+            "name": "Zack Braksa",
+            "image": "/static/images/profiles/zack-braksa.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/braksa/"
+          },
+          {
+            "id": "WPMFcj0WgK",
+            "name": "Faissal Sabouh",
+            "image": "/static/images/profiles/faissal-sabouh.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/faissal-sabouh-031823121/"
+          }
+        ],
+        "quetions": [
+          {
+            "question": "",
+            "seekTo": "number: timestamp in seconds"
+          }
         ]
       }
     ]
