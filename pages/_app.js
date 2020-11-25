@@ -15,6 +15,7 @@ function App({ Component, pageProps }) {
   const router = useRouter();
 
   const HandleKeyTab = (e) => {
+    // For Tab browsing
     const Class = 'user-is-tabbing';
     const ClassExist = document.body.classList.contains(Class);
     if (e.keyCode === 9 && e.key === 'Tab') {

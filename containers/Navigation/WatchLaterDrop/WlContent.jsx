@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import dynamic from 'next/dynamic';
 import { Timer } from '../../../utils';
 import Image from 'next/image';
@@ -118,4 +118,4 @@ const WlContent = () => {
   );
 };
 
-export default WlContent;
+export default memo(WlContent);

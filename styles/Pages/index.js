@@ -5,6 +5,24 @@ export const PageContainer = styled.div`
   margin: 56px auto auto auto;
 `;
 
+export const HeroContainer = styled.div`
+  margin: auto;
+  max-width: 1240px;
+
+  .horizontal-line {
+    height: 1px;
+    width: 25vw;
+    margin: 30px auto;
+    background: #414141;
+
+    @media screen and (max-width: 735px) {
+      width: 40vw;
+    }
+  }
+`;
+
+// ----
+
 export const ComingSoon = styled(DisFlex_AIC_JCC)`
   position: absolute;
   flex-direction: column;
@@ -13,7 +31,7 @@ export const ComingSoon = styled(DisFlex_AIC_JCC)`
   transform: translate(-50%, -50%);
   width: 100px;
   height: 100px;
-  width: 30%;
+  width: 40%;
   height: 30%;
   text-align: center;
   box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.3);

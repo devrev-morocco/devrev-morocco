@@ -91,7 +91,8 @@ export const NavLogo = styled(DisFlex_AIC_JCC)`
     left: 0;
     width: 60px;
     content: attr(data-content);
-    background: var(--DropMenu-bgc);
+    background: var(--tooltip-bgc);
+    color: #fff;
     ${TextOverflowHiddenCSS}
   }
 
@@ -120,7 +121,7 @@ export const MenuContainer = styled(DisFlex_AIC)`
 
 export const MenuMainPlaceholder = styled(DisFlex_AIC_JCC)`
   & > div {
-    background-color: #333;
+    background-color: var(--DropMenu-bgc);
     width: 70px;
     height: 11px;
     margin: 0 15px;
@@ -186,7 +187,7 @@ export const ClockIconContainer = styled.div`
   width: 30px;
 
   & > svg > path {
-    fill: #fafafa;
+    fill: var(--fg-color);
   }
 
   &:hover > svg > path {

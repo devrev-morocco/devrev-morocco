@@ -68,9 +68,7 @@ const PlaylistsPanel = ({
         </ParticipantsContainer>
       )}
       <VidDetailsContainer>
-        {!ShowDescription && (
-          <VidDisc>{Description ? Description[0] : ''}</VidDisc>
-        )}
+        {!ShowDescription && <VidDisc>{Description[0]}</VidDisc>}
         <InfoDrop_container Show={ShowDescription}>
           {Description &&
             Description.map((line, i) => {

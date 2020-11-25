@@ -142,10 +142,10 @@ export const DD_Container = styled(RelativePosition)`
 
 export const DD_wrapper = styled(DisFlex)`
   padding: 8px 5px;
-  width: 110px;
+  width: 100px;
   background-color: transparent;
   border: 1px solid #555;
-  border-radius: 4px;
+  border-radius: var(--cart-radius);
   box-sizing: border-box;
   justify-content: space-between;
   align-items: stretch;
@@ -167,7 +167,7 @@ export const DropItems_Container = styled(AbsolutePosition)`
   z-index: 15;
   left: 0;
   top: calc(100% + 2px);
-  width: 110px;
+  width: 100px;
   line-height: normal;
   transform-origin: 50% 0;
   letter-spacing: normal;

@@ -31,7 +31,7 @@ export const Mini_Footer_info = styled(DisFlex_AIC_JCC)`
     css`
       cursor: pointer;
       &:hover {
-        color: #fafafa;
+        color: var(--fg-color);
       }
     `}
 

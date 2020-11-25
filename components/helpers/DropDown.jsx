@@ -15,13 +15,10 @@ import { useRouter } from 'next/router';
 
 const DropDown = ({ SelectedSeason, setSelectedSeason }) => {
   const DropNodeRef = useRef(null);
-  const displayCache = useRef(false);
   const Router = useRouter();
 
   const [playlistData, setPlaylistData] = useState({});
   const [display, setDisplay] = useState(false);
-
-  displayCache.current = display;
 
   useEffect(() => {
     fetch('/api/playlistkeys')
@@ -51,8 +48,7 @@ const DropDown = ({ SelectedSeason, setSelectedSeason }) => {
   };
 
   const HandleClick = () => {
-    if (!displayCache.current)
-      document.addEventListener('click', CloseDropMenu);
+    if (!display) document.addEventListener('click', CloseDropMenu);
     setDisplay((value) => !value);
   };
 

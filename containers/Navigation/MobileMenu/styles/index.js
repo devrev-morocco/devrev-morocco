@@ -45,7 +45,7 @@ export const Menu_submenu_item = styled(DisFlex_AIC)`
   height: 43px;
 
   &:not(:last-child) {
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid var(--DropMenu-bgc);
   }
 
   &:first-child {

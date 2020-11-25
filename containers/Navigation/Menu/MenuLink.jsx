@@ -12,15 +12,18 @@ const MenuLink = ({
   preventDefault = false,
   Type,
   Id,
-  dispatchMenu
+  dispatchMenu,
+  wlOpened
 }) => {
   const [rotate, setRotate] = useState(false);
 
   const HandleEnter = () => {
-    setRotate(true);
-    dispatchMenu({ type: Type });
-    let dropNode = document.getElementById(Id);
-    if (dropNode) dropNode.style.display = 'block';
+    if (!wlOpened) {
+      setRotate(true);
+      dispatchMenu({ type: Type });
+      let dropNode = document.getElementById(Id);
+      if (dropNode) dropNode.style.display = 'block';
+    }
   };
 
   const HandleLeave = () => {
@@ -62,7 +65,8 @@ MenuLink.propTypes = {
   Type: PropTypes.string.isRequired,
   Id: PropTypes.string.isRequired,
   dispatchMenu: PropTypes.func,
-  preventDefault: PropTypes.bool
+  preventDefault: PropTypes.bool,
+  wlOpened: PropTypes.bool
 };
 
 export default memo(MenuLink);

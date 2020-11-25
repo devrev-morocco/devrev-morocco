@@ -35,6 +35,14 @@ export const ElementsCollection = css`
     margin-inline-end: 0px;
   }
 
+  ul,
+  ul li {
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    list-style-type: none;
+  }
+
   img {
     display: block;
     margin-left: auto;

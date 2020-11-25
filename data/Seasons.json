@@ -38,8 +38,19 @@
         ],
         "quetions": [
           {
-            "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "id": "q-1",
+            "question": "which stack can you suggest us for Morocco tech market? What about the graphql?",
+            "seekTo": "1:12:17"
+          },
+          {
+            "id": "q-2",
+            "question": "What is the motivation behind ROR choice to be one of the technologies used at Gemography?",
+            "seekTo": "1:14:45"
+          },
+          {
+            "id": "q-3",
+            "question": "What do you think about remote jobs in Morocco?",
+            "seekTo": "1:15:14"
           }
         ]
       },
@@ -79,8 +90,29 @@
         ],
         "quetions": [
           {
-            "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "id": "q-1",
+            "question": "Does working in big corp is better for soft skills compared to startups?",
+            "seekTo": "00:38:00"
+          },
+          {
+            "id": "q-2",
+            "question": "How can I hurt my team, as a developer, by my lack of soft skills? Do you have concrete examples?",
+            "seekTo": "00:43:00"
+          },
+          {
+            "id": "q-3",
+            "question": "What are the worst soft skills to avoid?",
+            "seekTo": "00:51:01"
+          },
+          {
+            "id": "q-4",
+            "question": "What we should answer about our soft weaknesses? Or how we should answer?",
+            "seekTo": "00:52:55"
+          },
+          {
+            "id": "q-5",
+            "question": "How can I overcome that enormous stress I feel every time I try to speak in front of people?",
+            "seekTo": "1:12:12"
           }
         ]
       },
@@ -114,8 +146,9 @@
         ],
         "quetions": [
           {
+            "id": "q-1",
             "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "seekTo": "00:00:00"
           }
         ]
       },
@@ -159,8 +192,9 @@
         ],
         "quetions": [
           {
+            "id": "q-1",
             "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "seekTo": "00:00:00"
           }
         ]
       },
@@ -200,8 +234,9 @@
         ],
         "quetions": [
           {
+            "id": "q-1",
             "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "seekTo": "00:00:00"
           }
         ]
       },
@@ -249,8 +284,9 @@
         ],
         "quetions": [
           {
+            "id": "q-1",
             "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "seekTo": "00:00:00"
           }
         ]
       },
@@ -298,8 +334,9 @@
         ],
         "quetions": [
           {
+            "id": "q-1",
             "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "seekTo": "00:00:00"
           }
         ]
       },
@@ -340,8 +377,9 @@
         ],
         "quetions": [
           {
+            "id": "q-1",
             "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "seekTo": "00:00:00"
           }
         ]
       },
@@ -386,8 +424,9 @@
         ],
         "quetions": [
           {
+            "id": "q-1",
             "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "seekTo": "00:00:00"
           }
         ]
       },
@@ -423,8 +462,9 @@
         ],
         "quetions": [
           {
+            "id": "q-1",
             "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "seekTo": "00:00:00"
           }
         ]
       },
@@ -460,8 +500,9 @@
         ],
         "quetions": [
           {
+            "id": "q-1",
             "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "seekTo": "00:00:00"
           }
         ]
       }
@@ -497,8 +538,9 @@
         ],
         "quetions": [
           {
+            "id": "q-1",
             "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "seekTo": "00:00:00"
           }
         ]
       },
@@ -539,8 +581,9 @@
         ],
         "quetions": [
           {
+            "id": "q-1",
             "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "seekTo": "00:00:00"
           }
         ]
       },
@@ -574,8 +617,45 @@
         ],
         "quetions": [
           {
+            "id": "q-1",
             "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "seekTo": "00:00:00"
+          }
+        ]
+      },
+      {
+        "ep": 4,
+        "season": 2,
+        "stringUrl": "devrev-15",
+        "videoId": "9_Tow4jXjGE",
+        "title": "Cryptocurrency: A Deep Dive",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep15.webp",
+        "duration": "PT1H2M26S",
+        "publishedAt": "2020-11-24T13:49:52Z",
+        "description": [
+          "In this episode, Zack Braksa chats with special guest Mounir Benchemled about Cryptocurrency. What it is, where it fits in the blockchain puzzle, possible career paths in blockchain and crypto as well as what the future holds for the crypto industry."
+        ],
+        "participants": [
+          {
+            "id": "uKjACmjLYd",
+            "name": "Zack Braksa",
+            "image": "/static/images/profiles/zack-braksa.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/braksa/"
+          },
+          {
+            "id": "PPMDvi0Wg0",
+            "name": "Mounir Benchemled",
+            "image": "/static/images/profiles/mounir-benchemled.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/mounibec/"
+          }
+        ],
+        "quetions": [
+          {
+            "id": "q-1",
+            "question": "",
+            "seekTo": "00:00:00"
           }
         ]
       }

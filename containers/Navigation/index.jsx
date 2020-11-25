@@ -117,7 +117,7 @@ const Navigation = () => {
   OpenedMenuCache.current = ShowMenu || show || ShowWatchLater;
 
   useEffect(() => {
-    if (!mediaQueryMatches) {
+    if (!mediaQueryMatches && ShowMenu) {
       dispatchMenu({ type: 'reset' });
     }
   }, [mediaQueryMatches]);
@@ -231,6 +231,7 @@ const Navigation = () => {
               disTran={disableTransition}
               Show={show}
               dispatchMenu={dispatchMenu}
+              wlOpened={ShowWatchLater}
             />
           </LazyRender>
         </MenuContainer>

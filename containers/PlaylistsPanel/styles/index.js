@@ -80,8 +80,8 @@ export const VidDisc = styled.div`
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  padding: 2px 0;
-  line-height: 1.05em;
+  padding-top: 2px;
+  line-height: 1.08em;
 `;
 
 export const VidDisc_show_more = styled.div`
@@ -162,7 +162,7 @@ export const ParticipantWrapper = styled(AbsolutePosition)`
   transition: all 200ms cubic-bezier(0.2, 0.965, 0, 1.005);
   transform: translateY(-50%);
   will-change: transform, opacity;
-  /* it's a bad practice to animate using top, left */
+  /* it's a bad practice to animate using top, left, right, bottom */
   top: 50%;
   left: 50%;
 
@@ -228,7 +228,7 @@ export const ParticipantThumbnail = styled(RelativePosition)`
     left: 0;
     width: auto;
     content: attr(data-content);
-    background: var(--DropMenu-bgc);
+    background: var(--tooltip-bgc);
     ${TextOverflowHiddenCSS}
   }
 

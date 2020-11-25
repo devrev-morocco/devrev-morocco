@@ -8,6 +8,7 @@ export const RootVariables = css`
     --menu-fg-color: #dcdcdc;
     --general-bgc: #18191a;
     --hover-bgc: #ffffff1a;
+    --tooltip-bgc: #616161;
     --DropMenu-bgc: #333;
     --border-color: #505050;
     --Nav-animation-duration: 0.2s;

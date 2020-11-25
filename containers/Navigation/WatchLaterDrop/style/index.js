@@ -78,11 +78,10 @@ export const WLCartHeader = styled(DisFlex_AIC)`
   border-bottom: 1px solid #4d4d4d;
   font-weight: bold;
   height: 40px;
-  background-color: #3a4c61;
   background-color: #32475f;
 
   .wl-tt {
-    color: #fafafa;
+    color: var(--fg-color);
     font-size: 0.9em;
   }
 

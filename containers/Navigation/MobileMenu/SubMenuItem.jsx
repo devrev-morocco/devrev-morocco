@@ -38,13 +38,13 @@ const SubMenuItem = ({
         {Categories &&
           Categories.map((item) => {
             return (
-              <Link href={item.url} passHref key={item.id}>
+              <Link href={item?.url} passHref key={item?.id}>
                 <Submenu_DropDown_wrap
                   tabIndex={SubMenuIsOpen === label ? 0 : -1}
                   rel={item?.ExternalLink ? 'noreferrer' : ''}
                   target={`${item?.ExternalLink ? '_blank' : '_self'}`}
                 >
-                  {item.label}
+                  {item?.label}
                 </Submenu_DropDown_wrap>
               </Link>
             );
