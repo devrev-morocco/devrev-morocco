@@ -41,6 +41,7 @@ function Playlist({ Episodes, CurrentPlayingEp }) {
   const [ShowParticipantProfile, setParticipantProfile] = useState(null);
 
   autoPlayCache.current = autoPlay;
+  CurrentPlayingVideoCache.current = CurrentPlayingEp;
 
   const handleCheckboxChange = (event) => {
     setAutoPlay(event.target.checked);
@@ -50,8 +51,6 @@ function Playlist({ Episodes, CurrentPlayingEp }) {
     setSelectedSeason({ season });
     setListOfEpisodes([...(Episodes ?? [])]);
   }, [season]);
-
-  CurrentPlayingVideoCache.current = CurrentPlayingEp;
 
   const GetNextVideo = (ListOfEpisodes_) => {
     const currentPlaying = CurrentPlayingVideoCache.current;
@@ -117,10 +116,11 @@ function Playlist({ Episodes, CurrentPlayingEp }) {
       <NextSeo
         title={title}
         description={description[0]}
+        canonical={`https://devrev.ma/playlist/${season}/${stringUrl}`}
         openGraph={{
           title: title,
           description: description[0],
-          url: `https://devrev.ma/playlist/${ep}/${stringUrl}`,
+          url: `https://devrev.ma/playlist/${season}/${stringUrl}`,
           images: [
             {
               url: `https://devrev.ma${thumbnail}`,
@@ -270,14 +270,18 @@ Playlist.propTypes = {
       description: PropTypes.arrayOf(PropTypes.string),
       participants: PropTypes.arrayOf(
         PropTypes.shape({
-          Index: PropTypes.number,
-          Name: PropTypes.string,
-          imageUrl: PropTypes.string,
-          About: PropTypes.string,
-          linkedIn: PropTypes.string,
-          ShowMore: PropTypes.string,
-          setShowMore: PropTypes.func,
-          Id: PropTypes.string
+          id: PropTypes.string,
+          name: PropTypes.string,
+          image: PropTypes.string,
+          about: PropTypes.string,
+          linkedin: PropTypes.string
+        })
+      ),
+      quetions: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string,
+          question: PropTypes.string,
+          seekTo: PropTypes.string
         })
       )
     })
@@ -294,14 +298,18 @@ Playlist.propTypes = {
     description: PropTypes.arrayOf(PropTypes.string),
     participants: PropTypes.arrayOf(
       PropTypes.shape({
-        Index: PropTypes.number,
-        Name: PropTypes.string,
-        imageUrl: PropTypes.string,
-        About: PropTypes.string,
-        linkedIn: PropTypes.string,
-        ShowMore: PropTypes.string,
-        setShowMore: PropTypes.func,
-        Id: PropTypes.string
+        id: PropTypes.string,
+        name: PropTypes.string,
+        image: PropTypes.string,
+        about: PropTypes.string,
+        linkedin: PropTypes.string
+      })
+    ),
+    quetions: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string,
+        question: PropTypes.string,
+        seekTo: PropTypes.string
       })
     )
   })

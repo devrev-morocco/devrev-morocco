@@ -10,7 +10,8 @@ import { ActiveLink, RippleEffect } from '../../../components';
 const MenuMain = ({
   disTran = false,
   Show = false,
-  dispatchMenu = () => void 0
+  dispatchMenu = () => void 0,
+  wlOpened
 }) => {
   const PlayListNodeRef = useRef(null);
   const CommunityNodeRef = useRef(null);
@@ -24,6 +25,7 @@ const MenuMain = ({
         Label="playlist"
         Href="/playlist/1/devrev-1"
         Id="playlist-menu"
+        wlOpened={wlOpened}
       >
         <MenuTriangle Enable={Show}></MenuTriangle>
         <MenuTransition ref={PlayListNodeRef} Show={Show} disTran={disTran}>
@@ -37,6 +39,7 @@ const MenuMain = ({
         Type="community"
         Label="community"
         Id="community-menu"
+        wlOpened={wlOpened}
       >
         <MenuTriangle Enable={Show}></MenuTriangle>
         <MenuTransition ref={CommunityNodeRef} Show={Show} disTran={disTran}>
@@ -60,7 +63,8 @@ const MenuMain = ({
 MenuMain.propTypes = {
   disTran: PropTypes.bool,
   Show: PropTypes.bool,
-  dispatchMenu: PropTypes.func
+  dispatchMenu: PropTypes.func,
+  wlOpened: PropTypes.bool
 };
 
 export default memo(MenuMain);

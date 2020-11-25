@@ -5,6 +5,22 @@ export const PageContainer = styled.div`
   margin: 56px auto auto auto;
 `;
 
+export const HeroContainer = styled.div`
+  margin: auto;
+  max-width: 1240px;
+
+  .horizontal-line {
+    height: 1px;
+    width: 25vw;
+    margin: 30px auto;
+    background: #414141;
+
+    @media screen and (max-width: 735px) {
+      width: 40vw;
+    }
+  }
+`;
+
 export const ComingSoon = styled(DisFlex_AIC_JCC)`
   position: absolute;
   flex-direction: column;

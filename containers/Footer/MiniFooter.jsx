@@ -28,6 +28,17 @@ const MiniFooter = () => {
               </a>
             </Link>
           </Mini_Footer_info>
+          <Mini_Footer_Separator></Mini_Footer_Separator>
+          <Mini_Footer_info isLink as="p">
+            <Link
+              href="https://www.linkedin.com/in/larbi-sahli-4a08671b0/"
+              passHref
+            >
+              <a rel="noreferrer" target="_blank">
+                Created by Larbi Sahli
+              </a>
+            </Link>
+          </Mini_Footer_info>
         </Mini_Footer_info>
       </Mini_Footer_wrapper>
     </Mini_Footer>

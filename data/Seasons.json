@@ -38,8 +38,19 @@
         ],
         "quetions": [
           {
-            "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "id": "q-1",
+            "question": "which stack can you suggest us for Morocco tech market? What about the graphql?",
+            "seekTo": "1:12:17"
+          },
+          {
+            "id": "q-2",
+            "question": "What is the motivation behind ROR choice to be one of the technologies used at Gemography?",
+            "seekTo": "1:14:45"
+          },
+          {
+            "id": "q-3",
+            "question": "What do you think about remote jobs in Morocco?",
+            "seekTo": "1:15:14"
           }
         ]
       },
@@ -79,8 +90,29 @@
         ],
         "quetions": [
           {
-            "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "id": "q-1",
+            "question": "Does working in big corp is better for soft skills compared to startups?",
+            "seekTo": "00:38:00"
+          },
+          {
+            "id": "q-2",
+            "question": "How can I hurt my team, as a developer, by my lack of soft skills? Do you have concrete examples?",
+            "seekTo": "00:43:00"
+          },
+          {
+            "id": "q-3",
+            "question": "What are the worst soft skills to avoid?",
+            "seekTo": "00:51:01"
+          },
+          {
+            "id": "q-4",
+            "question": "What we should answer about our soft weaknesses? Or how we should answer?",
+            "seekTo": "00:52:55"
+          },
+          {
+            "id": "q-5",
+            "question": "How can I overcome that enormous stress I feel every time I try to speak in front of people?",
+            "seekTo": "1:12:12"
           }
         ]
       },
@@ -114,8 +146,9 @@
         ],
         "quetions": [
           {
+            "id": "q-1",
             "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "seekTo": "00:00:00"
           }
         ]
       },
@@ -159,8 +192,9 @@
         ],
         "quetions": [
           {
+            "id": "q-1",
             "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "seekTo": "00:00:00"
           }
         ]
       },
@@ -200,8 +234,9 @@
         ],
         "quetions": [
           {
+            "id": "q-1",
             "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "seekTo": "00:00:00"
           }
         ]
       },
@@ -249,8 +284,9 @@
         ],
         "quetions": [
           {
+            "id": "q-1",
             "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "seekTo": "00:00:00"
           }
         ]
       },
@@ -298,8 +334,9 @@
         ],
         "quetions": [
           {
+            "id": "q-1",
             "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "seekTo": "00:00:00"
           }
         ]
       },
@@ -340,8 +377,9 @@
         ],
         "quetions": [
           {
+            "id": "q-1",
             "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "seekTo": "00:00:00"
           }
         ]
       },
@@ -386,8 +424,9 @@
         ],
         "quetions": [
           {
+            "id": "q-1",
             "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "seekTo": "00:00:00"
           }
         ]
       },
@@ -423,8 +462,9 @@
         ],
         "quetions": [
           {
+            "id": "q-1",
             "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "seekTo": "00:00:00"
           }
         ]
       },
@@ -460,8 +500,9 @@
         ],
         "quetions": [
           {
+            "id": "q-1",
             "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "seekTo": "00:00:00"
           }
         ]
       }
@@ -497,8 +538,9 @@
         ],
         "quetions": [
           {
+            "id": "q-1",
             "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "seekTo": "00:00:00"
           }
         ]
       },
@@ -539,8 +581,9 @@
         ],
         "quetions": [
           {
+            "id": "q-1",
             "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "seekTo": "00:00:00"
           }
         ]
       },
@@ -574,8 +617,9 @@
         ],
         "quetions": [
           {
+            "id": "q-1",
             "question": "",
-            "seekTo": "number: timestamp in seconds"
+            "seekTo": "00:00:00"
           }
         ]
       }

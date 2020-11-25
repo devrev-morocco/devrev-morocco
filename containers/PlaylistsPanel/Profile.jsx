@@ -1,4 +1,4 @@
-import React, { useRef, memo } from 'react';
+import React, { memo } from 'react';
 import {
   ParticipantThumbnail,
   ParticipantDetailsX,
@@ -26,9 +26,6 @@ const Profile = ({
   ShowMore,
   setShowMore
 }) => {
-  const ShowMoreCache = useRef(null);
-
-  ShowMoreCache.current = ShowMore;
   const IsParticipant = ShowMore === Id;
 
   const CloseDropMenu = (e) => {
@@ -40,8 +37,7 @@ const Profile = ({
   };
 
   const HandleClick = () => {
-    if (ShowMoreCache.current === null)
-      document.addEventListener('click', CloseDropMenu);
+    if (ShowMore === null) document.addEventListener('click', CloseDropMenu);
     setShowMore((prev) => (prev !== Id ? Id : null));
   };
 

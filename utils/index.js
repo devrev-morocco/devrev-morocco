@@ -47,3 +47,11 @@ String.prototype.toFormattedDate = function () {
   const da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d);
   return `${mo} ${da}, ${ye}`;
 };
+
+String.prototype.toSeconds = function () {
+  return (
+    Number(this.split(':')[0]) * 60 * 60 +
+    Number(this.split(':')[1]) * 60 +
+    Number(this.split(':')[2])
+  );
+};

@@ -35,8 +35,6 @@ const VideoContainer = ({ Episode, Season, CurrentVidId, PlayingState }) => {
     window?.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const thisPlaying = PlayingState === 1;
-
   const HandleHoverIn = () => {
     const slider = document.getElementById(`wl-${Episode?.videoId}`);
 
@@ -71,9 +69,6 @@ const VideoContainer = ({ Episode, Season, CurrentVidId, PlayingState }) => {
   const IswatchLater = useMemo(() => Check(), [StoredValue]);
 
   const HandleWLClick = () => {
-    const item = window?.localStorage.getItem('devrev-wl');
-    const LocalStorageValue = JSON.parse(item);
-
     const AddNewWlVideo = {
       description: Episode?.description[0],
       title: Episode?.title,
@@ -85,16 +80,18 @@ const VideoContainer = ({ Episode, Season, CurrentVidId, PlayingState }) => {
     };
 
     if (IswatchLater) {
-      const NewWlList = LocalStorageValue?.wl.filter((ep) => {
+      const NewWlList = StoredValue?.wl.filter((ep) => {
         return ep?.videoId !== Episode?.videoId;
       });
       setLocalStorage({ wl: [...(NewWlList ?? [])] });
     } else {
       setLocalStorage({
-        wl: [...(LocalStorageValue?.wl ?? []), AddNewWlVideo]
+        wl: [...(StoredValue?.wl ?? []), AddNewWlVideo]
       });
     }
   };
+
+  const thisPlaying = PlayingState === 1;
 
   return (
     <Video_Container>

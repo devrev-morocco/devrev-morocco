@@ -1,10 +1,5 @@
 import styled, { css } from 'styled-components';
-import {
-  AbsolutePosition,
-  DisFlex,
-  DisFlex_AIC_JCC,
-  RelativePosition
-} from '../../../styles';
+import { DisFlex, DisFlex_AIC_JCC, RelativePosition } from '../../../styles';
 
 export const Video_Container = styled.div`
   margin-bottom: 8px;
@@ -117,7 +112,7 @@ export const Inner_btn = styled(DisFlex)`
   right: 0;
   margin: 2px;
   color: #fff;
-  border-radius: 2px;
+  border-radius: var(--cart-radius);
   letter-spacing: 0.5px;
   font-size: 0.8rem;
   overflow: hidden;
@@ -176,16 +171,16 @@ export const VideoContainer_Body_wrap = styled(DisFlex)`
 `;
 
 export const VideoContainer_body_Title = styled.div`
-  font-size: 0.91rem;
+  font-size: 0.92rem;
   cursor: pointer;
-  margin: 0 0 3px 0;
+  margin: 0 0 4px 0;
   max-height: 3.2rem;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  color: #fafafa;
-  padding: 1px;
+  color: #fff;
+  padding: 2px 0;
 
   @media screen and (max-width: 1050px) {
     font-size: 1rem;
@@ -199,7 +194,6 @@ export const VideoContainer_body_Title = styled.div`
 export const VideoContainer_body_Details = styled.div`
   display: block;
   max-width: 100%;
-  padding: 1px;
   font-size: 0.75rem;
   color: var(--Duration-Color);
   color: #aaa;

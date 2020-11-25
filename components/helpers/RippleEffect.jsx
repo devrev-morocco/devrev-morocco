@@ -12,9 +12,9 @@ const RippleEffect = ({
   onClick = () => void 0,
   noPadding = false
 }) => {
-  const [{ y, x, show }, setRipple] = useState({
-    y: 0,
-    x: 0,
+  const [{ Yaxis, Xaxis, show }, setRipple] = useState({
+    Yaxis: 0,
+    Xaxis: 0,
     show: false
   });
 
@@ -27,15 +27,15 @@ const RippleEffect = ({
     };
 
     setRipple({
-      y: e.pageY - offset.top,
-      x: e.pageX - offset.left,
+      Yaxis: e.pageY - offset.top,
+      Xaxis: e.pageX - offset.left,
       show: true
     });
 
     Timer(400).then(() => {
       setRipple({
-        y: 0,
-        x: 0,
+        Yaxis: 0,
+        Xaxis: 0,
         show: false
       });
     });
@@ -48,7 +48,7 @@ const RippleEffect = ({
       onClick={onClick}
     >
       <GoogleRippleEffect_wrapper>
-        {show && <GoogleRippleEffect_circle x={x} y={y} />}
+        {show && <GoogleRippleEffect_circle x={Xaxis} y={Yaxis} />}
       </GoogleRippleEffect_wrapper>
       {children}
     </GoogleRippleEffect>
