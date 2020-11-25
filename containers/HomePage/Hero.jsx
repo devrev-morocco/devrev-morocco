@@ -19,14 +19,17 @@ const Hero = () => {
         <H2>
           A weekly live show featuring conversations with great tech minds about
           software engineering, tech careers, and startups.
+          <br />
+          Hosted by Zack Braksa, Co-founder and Head of Engineering at
+          Gemography.
         </H2>
         <Link href="/playlist/1/devrev-1" passHref>
-          <HeroButtonWrap>
-            <HeroButtonContainer>
+          <HeroButtonContainer>
+            <HeroButtonWrap>
               <div className="play-btn-event-horizon"></div>
               Explore Episodes
-            </HeroButtonContainer>
-          </HeroButtonWrap>
+            </HeroButtonWrap>
+          </HeroButtonContainer>
         </Link>
       </DescriptionContainer>
       <HoloSvgContainer>

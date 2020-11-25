@@ -14,9 +14,10 @@ const LiveSection = () => {
           passHref
         >
           <a
+            aria-label="Live on YouTube"
             rel="noreferrer"
             target="_blank"
-            className="social_item_wrap tooltip-yt"
+            className="social_item_wrap tooltip--yt"
           >
             <div className="tooltip">Live on YouTube</div>
             <div className="social-icon">
@@ -26,9 +27,10 @@ const LiveSection = () => {
         </Link>
         <Link href="https://www.facebook.com/devrevmorocco/" passHref>
           <a
+            aria-label="Live on Facebook"
             rel="noreferrer"
             target="_blank"
-            className="social_item_wrap tooltip-fb"
+            className="social_item_wrap tooltip--fb"
           >
             <div className="tooltip">Live on Facebook</div>
             <div className="social-icon">
@@ -38,9 +40,10 @@ const LiveSection = () => {
         </Link>
         <Link href="https://twitch.com/devrevmorocco" passHref>
           <a
+            aria-label="Live on Twitch"
             rel="noreferrer"
             target="_blank"
-            className="social_item_wrap tooltip-tw"
+            className="social_item_wrap tooltip--tw"
           >
             <div className="tooltip">Live on Twitch</div>
             <div rel="noreferrer" target="_blank" className="social-icon">

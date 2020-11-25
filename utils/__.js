@@ -44,20 +44,3 @@
 // }
 
 // export default YouTubePlayer;
-
-const { episodes } = require('../data/FeaturedEpisodes.json');
-const { seasons } = require('../data/Seasons.json');
-const FeaturedEpisodes = [];
-episodes.forEach((ep) => {
-  const Fep = seasons[ep.season].filter((episode) => {
-    return episode.ep === ep.ep;
-  });
-  FeaturedEpisodes.push({
-    title: Fep[0].title,
-    thumbnail: Fep[0].thumbnail,
-    description: Fep[0].description[0],
-    url: `/playlist/${Fep[0].season}/${Fep[0].stringUrl}`
-  });
-});
-
-console.log('FeaturedEpisodes', FeaturedEpisodes);

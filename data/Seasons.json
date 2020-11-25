@@ -622,6 +622,42 @@
             "seekTo": "00:00:00"
           }
         ]
+      },
+      {
+        "ep": 4,
+        "season": 2,
+        "stringUrl": "devrev-15",
+        "videoId": "9_Tow4jXjGE",
+        "title": "Cryptocurrency: A Deep Dive",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep15.webp",
+        "duration": "PT1H2M26S",
+        "publishedAt": "2020-11-24T13:49:52Z",
+        "description": [
+          "In this episode, Zack Braksa chats with special guest Mounir Benchemled about Cryptocurrency. What it is, where it fits in the blockchain puzzle, possible career paths in blockchain and crypto as well as what the future holds for the crypto industry."
+        ],
+        "participants": [
+          {
+            "id": "uKjACmjLYd",
+            "name": "Zack Braksa",
+            "image": "/static/images/profiles/zack-braksa.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/braksa/"
+          },
+          {
+            "id": "PPMDvi0Wg0",
+            "name": "Mounir Benchemled",
+            "image": "/static/images/profiles/mounir-benchemled.webp",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+            "linkedin": "https://www.linkedin.com/in/mounibec/"
+          }
+        ],
+        "quetions": [
+          {
+            "id": "q-1",
+            "question": "",
+            "seekTo": "00:00:00"
+          }
+        ]
       }
     ]
   }

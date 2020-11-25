@@ -8,7 +8,7 @@ import {
   MiniFooter
 } from '../containers';
 import PropTypes from 'prop-types';
-export default function Home({ F_episodes }) {
+export default function Home({ Featured_episodes }) {
   return (
     <PageContainer>
       <HeroContainer>
@@ -16,7 +16,7 @@ export default function Home({ F_episodes }) {
         <div className="horizontal-line"></div>
         <LiveSection />
         <div className="horizontal-line"></div>
-        <FeaturedEpisodes Episodes={F_episodes} />
+        <FeaturedEpisodes Episodes={Featured_episodes} />
         <div className="horizontal-line"></div>
         <JoinCommunity />
       </HeroContainer>
@@ -29,13 +29,13 @@ export async function getStaticProps() {
   const { episodes } = require('../data/FeaturedEpisodes.json');
   const { seasons } = require('../data/Seasons.json');
 
-  const F_episodes = [];
+  const Featured_episodes = [];
 
   episodes.forEach((ep) => {
     const Fep = seasons[ep.season].filter((episode) => {
       return episode.ep === ep.ep;
     });
-    F_episodes.push({
+    Featured_episodes.push({
       title: `DevRev #${Fep[0].stringUrl?.split('-')[1]} | ${Fep[0].title}`,
       thumbnail: Fep[0].thumbnail,
       description: Fep[0].description[0],
@@ -45,12 +45,12 @@ export async function getStaticProps() {
 
   return {
     props: {
-      F_episodes
+      Featured_episodes
     }
   };
 }
 Home.propTypes = {
-  F_episodes: PropTypes.arrayOf(
+  Featured_episodes: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       thumbnail: PropTypes.string.isRequired,

@@ -9,7 +9,7 @@ export { default as HologramSvg } from './HologramSvg';
 export { default as YouTubeSvg } from './YouTubeSvg';
 export { default as FacebookSvg } from './FacebookSvg';
 export { default as TwitchSvg } from './TwitchSvg';
-export { default as HeyCommunity } from './HeyCommunity';
 export { default as InstagramSvg } from './InstagramSvg';
 export { default as RedditSvg } from './RedditSvg';
 export { default as TwitterSvg } from './TwitterSvg';
+export { default as SpotifySvg } from './SpotifySvg';

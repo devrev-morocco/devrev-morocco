@@ -7,8 +7,6 @@ import {
 } from '../../../styles';
 import { RDash } from '../../../styles/keyframes';
 
-// ----------------<HERO SECTION>-------------------
-
 export const HeroContainer = styled(DisFlex_AIC)`
   justify-content: space-between;
   margin-top: calc(56px + 35px);
@@ -42,8 +40,11 @@ export const DescriptionContainer = styled(DisFlex)`
 `;
 
 export const H1 = styled.h1`
+  font-size: 2.2em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   font-weight: bold;
-  margin-bottom: 25px;
+  margin-bottom: 0.77em;
   text-transform: uppercase;
   background: linear-gradient(
     to right,
@@ -56,36 +57,45 @@ export const H1 = styled.h1`
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 2.5em;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-weight: bold;
 `;
 
 export const H2 = styled.h2`
   color: #ccc;
   font-weight: bold;
-  font-size: 1.6em;
-  line-height: 1.1em;
+  font-size: 1.35em;
+  line-height: 1.2em;
 
   @media screen and (max-width: 1050px) {
     text-align: center;
   }
 `;
 
-export const HeroButtonContainer = styled(DisFlex_AIC)`
+export const HeroButtonContainer = styled.a`
+  margin-top: 1.5em;
+  background-image: linear-gradient(#111, #111),
+    linear-gradient(90deg, #ec6192, #ec4c34, #ffbd2b, #ebde56, #57c754, #53a1eb);
+  padding: 2px;
+  background-clip: content-box, border-box;
+  border-radius: 0.8em;
+  transition: transform 0.2s ease-in-out 0s;
+  transform: translateY(0);
+
+  &:hover {
+    transform: translateY(-1.5px);
+  }
+`;
+
+export const HeroButtonWrap = styled(DisFlex_AIC)`
   position: relative;
   box-sizing: border-box;
   color: #ececec;
-  padding: 12px 25px;
   padding: 0.8em 1.5em;
   text-align: center;
   cursor: pointer;
-  box-shadow: 0 0 0 1px #00000040, 0 1px 3px #0000004d;
   font-weight: bold;
   border: none;
   text-decoration: none;
-  border-radius: 30px;
+  border-radius: 0.8em;
 
   &:hover {
     background: linear-gradient(
@@ -115,31 +125,16 @@ export const HeroButtonContainer = styled(DisFlex_AIC)`
       top: 0px;
       left: 0px;
       border-radius: 50%;
-      animation: ${RDash} 8s infinite linear;
+      animation: ${RDash} 7s infinite linear;
     }
   }
 `;
 
-export const HeroButtonWrap = styled.a`
-  margin-top: 20px;
-  background-image: linear-gradient(#111, #111),
-    linear-gradient(90deg, #ec6192, #ec4c34, #ffbd2b, #ebde56, #57c754, #53a1eb);
-  padding: 2px;
-  background-clip: content-box, border-box;
-  border-radius: 30px;
-  transition: transform 0.2s ease-in-out 0s;
-  transform: translateY(0);
-
-  &:hover {
-    transform: translateY(-1.5px);
-  }
-`;
-
 export const HoloSvgContainer = styled(RelativePosition)`
-  position: relative;
   transform: rotate(90deg);
 
   @media screen and (max-width: 1050px) {
+    margin-top: 5px;
     transform: rotate(180deg);
   }
 
@@ -159,7 +154,7 @@ export const HoloSvgContainer = styled(RelativePosition)`
 `;
 
 export const SectionContainer = styled(DisFlex_AIC)`
-  color: #fafafa;
+  color: var(--fg-color);
   flex-direction: column;
   font-size: 1rem;
 
@@ -168,7 +163,7 @@ export const SectionContainer = styled(DisFlex_AIC)`
   }
 
   @media screen and (max-width: 735px) {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
   }
 
   .section-title {
@@ -178,7 +173,7 @@ export const SectionContainer = styled(DisFlex_AIC)`
   }
 
   .section-date {
-    font-size: 0.75em;
+    font-size: 0.83em;
     color: #999;
     font-weight: bold;
     margin-top: 0.5em;
@@ -203,13 +198,22 @@ export const SectionContainer = styled(DisFlex_AIC)`
     cursor: pointer;
     transition: transform 0.2s ease-in-out 0s;
     transform: translateY(0);
+    font-size: 1rem;
+
+    @media screen and (max-width: 1050px) {
+      font-size: 0.85rem;
+    }
+
+    @media screen and (max-width: 735px) {
+      font-size: 0.67rem;
+    }
 
     &:first-child:hover {
       background-color: #d9264d;
       transform: translateY(-3px);
 
       & > .social-icon > svg > .yt-b {
-        fill: #111;
+        fill: #222;
       }
       & > .social-icon > svg > .yt-p {
         fill: #d9264d;
@@ -225,7 +229,7 @@ export const SectionContainer = styled(DisFlex_AIC)`
         transform: translateY(calc(-2em - 3px));
 
         & > .social-icon > svg > path {
-          fill: var(--general-bgc);
+          fill: #222;
         }
       }
     }
@@ -235,52 +239,7 @@ export const SectionContainer = styled(DisFlex_AIC)`
       transform: translateY(-3px);
 
       & > .social-icon > svg > path {
-        fill: var(--general-bgc);
-      }
-    }
-  }
-
-  .tooltip-yt {
-    &:hover {
-      .tooltip {
-        visibility: visible;
-        opacity: 1;
-        transform: translate(-50%, -150%);
-        background-color: #d9264d;
-
-        &::after {
-          border-top-color: #d9264d;
-        }
-      }
-    }
-  }
-
-  .tooltip-fb {
-    &:hover {
-      .tooltip {
-        visibility: visible;
-        opacity: 1;
-        transform: translate(-50%, -150%);
-        background-color: #4267b2;
-
-        &::after {
-          border-top-color: #4267b2;
-        }
-      }
-    }
-  }
-
-  .tooltip-tw {
-    &:hover {
-      .tooltip {
-        visibility: visible;
-        opacity: 1;
-        transform: translate(-50%, -150%);
-        background-color: #5a3e85;
-
-        &::after {
-          border-top-color: #5a3e85;
-        }
+        fill: #222;
       }
     }
   }
@@ -289,9 +248,9 @@ export const SectionContainer = styled(DisFlex_AIC)`
     position: absolute;
     top: 0;
     left: 50%;
-    padding: 0.65rem 0.9rem;
+    padding: 0.7em 0.9em;
     border-radius: 40px;
-    font-size: 0.75rem;
+    font-size: 0.85em;
     font-weight: bold;
     opacity: 0;
     visibility: hidden;
@@ -315,6 +274,51 @@ export const SectionContainer = styled(DisFlex_AIC)`
       border-color: transparent;
       transform: translate(-50%, 100%);
     }
+
+    &--yt {
+      &:hover {
+        .tooltip {
+          visibility: visible;
+          opacity: 1;
+          transform: translate(-50%, -150%);
+          background-color: #d9264d;
+
+          &::after {
+            border-top-color: #d9264d;
+          }
+        }
+      }
+    }
+
+    &--fb {
+      &:hover {
+        .tooltip {
+          visibility: visible;
+          opacity: 1;
+          transform: translate(-50%, -150%);
+          background-color: #4267b2;
+
+          &::after {
+            border-top-color: #4267b2;
+          }
+        }
+      }
+    }
+
+    &--tw {
+      &:hover {
+        .tooltip {
+          visibility: visible;
+          opacity: 1;
+          transform: translate(-50%, -150%);
+          background-color: #5a3e85;
+
+          &::after {
+            border-top-color: #5a3e85;
+          }
+        }
+      }
+    }
   }
 
   .social-icon {
@@ -322,27 +326,12 @@ export const SectionContainer = styled(DisFlex_AIC)`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 60px;
-    height: 60px;
+    width: 3.75em;
+    height: 3.75em;
 
-    @media screen and (max-width: 1050px) {
-      width: 50px;
-      height: 50px;
-
-      & > svg {
-        width: 50px;
-        height: 50px;
-      }
-    }
-
-    @media screen and (max-width: 735px) {
-      width: 40px;
-      height: 40px;
-
-      & > svg {
-        width: 40px;
-        height: 40px;
-      }
+    & > svg {
+      width: 3.75em;
+      height: 3.75em;
     }
   }
 
@@ -350,20 +339,19 @@ export const SectionContainer = styled(DisFlex_AIC)`
 
   .video_section {
     width: 100%;
+    font-size: 1rem;
     margin-top: 3em !important;
 
     @media screen and (max-width: 735px) {
       display: flex;
       flex-direction: column;
-      font-size: 1.2em !important;
+      font-size: 0.9rem !important;
     }
   }
 
   .featured_video_container {
-    margin-left: 8px;
-    margin-right: 8px;
     width: 300px;
-    margin-bottom: 40px;
+    margin: 0 8px 40px 8px;
     cursor: pointer;
   }
 
@@ -407,19 +395,20 @@ export const SectionContainer = styled(DisFlex_AIC)`
   }
 
   .video_body_title {
-    color: #fafafa;
+    color: var(--fg-color);
     font-size: 1em;
     font-weight: bold;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    line-height: 1.2em;
   }
 
   .video_body_description {
     color: #999;
     padding-top: 5px;
-    font-size: 0.8em;
+    font-size: 0.92em;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -428,15 +417,15 @@ export const SectionContainer = styled(DisFlex_AIC)`
   }
 `;
 
-// ----------<Join Community>----------
+// ---<Join Community>---
 
 export const JoinCommunityContainer = styled.div`
   font-size: 0.9rem;
   display: flex;
   position: relative;
   max-height: 750px;
-  max-width: 70vw;
-  margin: 9em auto;
+  max-width: 60vw;
+  margin: 5em auto;
   box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
   background-image: linear-gradient(#1c1c1c, #1c1c1c),
@@ -445,48 +434,17 @@ export const JoinCommunityContainer = styled.div`
   background-clip: content-box, border-box;
 
   @media screen and (max-width: 735px) {
-    margin: 5em auto;
-  }
-`;
-
-export const Illustration_Container = styled(DisFlex_AIC_JCC)`
-  background-color: #111;
-  position: relative;
-  transform: translate(-20%, -20%);
-  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
-  height: 300px;
-  width: 300px;
-  border-radius: 10px;
-
-  @media screen and (max-width: 1150px) {
-    height: 200px;
-    width: 200px;
-
-    & > svg {
-      height: 180px;
-      width: 180px;
-    }
-  }
-
-  @media screen and (max-width: 735px) {
-    height: 130px;
-    width: 150px;
-
-    & > svg {
-      height: 100px;
-      width: 100px;
-    }
+    max-width: 85vw;
   }
 `;
 
 export const ShowcaseContainer = styled(DisFlex_AIC)`
   flex: 1;
   flex-direction: column;
-  color: #fafafa;
+  color: var(--fg-color);
   font-size: 1rem;
   margin-top: 1.5em;
   position: relative;
-  transform: translatex(-5%);
 
   @media screen and (max-width: 1150px) {
     font-size: 0.8rem;
@@ -494,30 +452,33 @@ export const ShowcaseContainer = styled(DisFlex_AIC)`
 
   @media screen and (max-width: 735px) {
     font-size: 0.7rem;
-    transform: translatex(-10%);
   }
 
   .Showcase-title {
     font-size: 1.3em;
     font-weight: bold;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #444;
+    padding-bottom: 7px;
     white-space: nowrap;
+  }
+
+  .Showcase-line {
+    width: 6em;
+    height: 1px;
+    background-color: #444;
   }
 `;
 
 export const IconsShowcaseContainer = styled(DisFlex_AIC_JCC)`
-  margin-top: 2em;
+  margin-top: 1.5em;
   flex-flow: wrap;
 `;
-export const IconShowcase = styled.div`
+export const IconShowcase = styled(RelativePosition)`
   height: 5em;
   width: 5em;
   margin: 0.5em;
   margin-bottom: 1.5em;
   border-radius: 50%;
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
-  position: relative;
   cursor: pointer;
   background-color: #222;
   transition: transform 0.2s ease-in-out 0s;

@@ -10,7 +10,7 @@ const FeaturedEpisodes = ({ Episodes }) => {
       <div className="section-title">Featured Episodes</div>
       <div className="section-items-container video_section">
         {Episodes &&
-          Episodes?.map((ep, idx) => {
+          Episodes.map((ep, idx) => {
             return (
               <Link key={idx} href={ep?.url} passHref>
                 <a className="featured_video_container">
@@ -21,7 +21,7 @@ const FeaturedEpisodes = ({ Episodes }) => {
                           src={ep?.thumbnail}
                           width={300}
                           height={(300 * 9) / 16}
-                          quality={95}
+                          quality={100}
                         />
                       </div>
                     </div>

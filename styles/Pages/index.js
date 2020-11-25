@@ -21,6 +21,8 @@ export const HeroContainer = styled.div`
   }
 `;
 
+// ----
+
 export const ComingSoon = styled(DisFlex_AIC_JCC)`
   position: absolute;
   flex-direction: column;
@@ -29,7 +31,7 @@ export const ComingSoon = styled(DisFlex_AIC_JCC)`
   transform: translate(-50%, -50%);
   width: 100px;
   height: 100px;
-  width: 30%;
+  width: 40%;
   height: 30%;
   text-align: center;
   box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.3);
