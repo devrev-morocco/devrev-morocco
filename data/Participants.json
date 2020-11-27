@@ -1,0 +1,130 @@
+{
+  "Participants": [
+    {
+      "id": "uKjACmjLYd",
+      "fullName": "Zack Braksa",
+      "image": "/static/images/profiles/zack-braksa.webp",
+      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "linkedin": "https://www.linkedin.com/in/braksa/"
+    },
+    {
+      "id": "TCil4qK7KL",
+      "name": "Yassine El Kachchani",
+      "image": "/static/images/profiles/yassine-el-kachchani.webp",
+      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "linkedin": "https://www.linkedin.com/in/yassine-el-kachchani-96142332/"
+    },
+    {
+      "id": "8h2fKKvAeF",
+      "name": "Serrah Menif",
+      "image": "/static/images/profiles/serrah-menif.webp",
+      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "linkedin": "https://www.linkedin.com/in/serrahmenif/"
+    },
+    {
+      "id": "b9T5q1ymNw",
+      "name": "Zakaria Boualaid",
+      "image": "/static/images/profiles/zakaria-boualaid.webp",
+      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "linkedin": "https://www.linkedin.com/in/zakaria-boualaid-19b57065/"
+    },
+    {
+      "id": "VZnU7oD9lu",
+      "name": "Adil Haizoune",
+      "image": "/static/images/profiles/adil-haizoune.webp",
+      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "linkedin": "https://www.linkedin.com/in/adil-haizoune-18436616/"
+    },
+    {
+      "id": "2HuLcZAskb",
+      "name": "Soukaina Chebihi",
+      "image": "/static/images/profiles/soukaina-chebihi.webp",
+      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "linkedin": "https://www.linkedin.com/in/soukaina-c-2060a413b/"
+    },
+    {
+      "id": "ijdihXb7iX",
+      "name": "Othmane Tayab",
+      "image": "/static/images/profiles/othmane-tayab.webp",
+      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "linkedin": "https://www.linkedin.com/in/othmane-tayab-1b4015179/"
+    },
+    {
+      "id": "psPdrhemrn",
+      "name": "Youness Fkhach",
+      "image": "/static/images/profiles/youness-fkhach.webp",
+      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "linkedin": "https://www.linkedin.com/in/youness-fkhach/"
+    },
+    {
+      "id": "JGR2HkA7aa",
+      "name": "Said Dermoumi",
+      "image": "/static/images/profiles/said-dermoumi.webp",
+      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "linkedin": "https://www.linkedin.com/in/sa%C3%AFd-d-51011413b/"
+    },
+    {
+      "id": "EsPf5hemrn",
+      "name": "Omar Salim Moussa",
+      "image": "/static/images/profiles/omar-salim-moussa.webp",
+      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "linkedin": "https://www.linkedin.com/in/omar-salim-moussa-92632113b/"
+    },
+    {
+      "id": "u2sTjJofS6",
+      "name": "Yassine Fathi",
+      "image": "/static/images/profiles/yassine-fathi.webp",
+      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "linkedin": "https://www.facebook.com/m4tt72"
+    },
+    {
+      "id": "9s6UJct4sd",
+      "name": "Taha Sadiki",
+      "image": "/static/images/profiles/taha-sadiki.webp",
+      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "linkedin": "https://www.linkedin.com/in/taha-sadiki/"
+    },
+    {
+      "id": "k0CadwSQXs",
+      "name": "Salim Braksa",
+      "image": "/static/images/profiles/salim-braksa.webp",
+      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "linkedin": "https://www.linkedin.com/in/salim-braksa-175941b6/"
+    },
+    {
+      "id": "DQfVYyEiP2",
+      "name": "Oussama Zaki",
+      "image": "/static/images/profiles/oussama-zaki.webp",
+      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "linkedin": "https://www.linkedin.com/in/zakioussama/"
+    },
+    {
+      "id": "gXuYUu3CKu",
+      "name": "Diaa Alhak EL FALLOUS",
+      "image": "/static/images/profiles/diaa-alhak.webp",
+      "about": "A former VAS engineer at Nokia and a career coach whose current mission is to help young developers and students find the best opportunities, and enhance their technical and soft skills!",
+      "linkedin": "https://www.linkedin.com/in/elfallous/"
+    },
+    {
+      "id": "EgJLVD8YbJ",
+      "name": "Naoufal El hassnaoui",
+      "image": "/static/images/profiles/naoufal-el-hassnaoui.webp",
+      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "linkedin": "https://www.linkedin.com/in/naoufalelh/"
+    },
+    {
+      "id": "WPMFcj0WgK",
+      "name": "Faissal Sabouh",
+      "image": "/static/images/profiles/faissal-sabouh.webp",
+      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "linkedin": "https://www.linkedin.com/in/faissal-sabouh-031823121/"
+    },
+    {
+      "id": "PPMDvi0Wg0",
+      "name": "Mounir Benchemled",
+      "image": "/static/images/profiles/mounir-benchemled.webp",
+      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "linkedin": "https://www.linkedin.com/in/mounibec/"
+    }
+  ]
+}
