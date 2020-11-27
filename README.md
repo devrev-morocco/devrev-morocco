@@ -1,6 +1,6 @@
 <p align="center"><img src="public/static/images/devrev-og-image.webp" width="80%"/></p>
 
-<h2 align="center">DevRef Morocco</h2>
+<h2 align="center">DevRev Morocco</h2>
 <h4 align="center">
 A weekly live show featuring conversations with great tech minds about software engineering, tech careers, and startups.</h4>
 
