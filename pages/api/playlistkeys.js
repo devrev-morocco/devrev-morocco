@@ -1,6 +1,6 @@
 import { seasons } from '../../data/Seasons.json';
 
-export default function playlistKeysHandler(req, res) {
+export default function (req, res) {
   let PlayListDrop = {};
 
   for (const [key, value] of Object.entries(seasons)) {

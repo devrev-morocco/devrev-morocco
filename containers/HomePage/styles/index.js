@@ -3,7 +3,8 @@ import {
   DisFlex_AIC,
   RelativePosition,
   DisFlex,
-  DisFlex_AIC_JCC
+  DisFlex_AIC_JCC,
+  AbsolutePosition
 } from '../../../styles';
 import { RDash } from '../../../styles/keyframes';
 
@@ -547,5 +548,75 @@ export const IconShowcase = styled(RelativePosition)`
         width: 30px;
       }
     }
+  }
+`;
+
+// --------------
+
+export const SubscribeContainer = styled(DisFlex_AIC)`
+  flex-direction: column;
+  margin: 10px;
+
+  .sub {
+    font-size: 1.1em;
+    padding: 7px 0;
+    white-space: nowrap;
+  }
+
+  .sub-txt {
+    color: #999;
+    font-size: 1.05em;
+    text-align: center;
+  }
+`;
+
+export const SubForm = styled(DisFlex_AIC_JCC)`
+  position: relative;
+  margin: 10px 0;
+  width: 100%;
+  background-color: #333;
+  transition: background-color 0.3s ease-in-out;
+  flex-flow: row nowrap;
+  border: 1px solid #555;
+  border-radius: 4px;
+  padding: 0;
+
+  /* box-shadow: 0 0 0 2px #a9ff9457;
+  background-color: transparent; */
+`;
+
+export const SubInput = styled.div`
+  background-color: green;
+  border: none;
+  padding-left: 5px;
+  padding-right: 5px;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  font-size: 1.08em;
+  transition: background-color 0.3s ease-in-out;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+
+  &::placeholder {
+    font-size: 0.9em;
+  }
+`;
+
+export const SubButtonContainer = styled(DisFlex_AIC_JCC)`
+  border: none;
+  margin: 4px;
+  padding: 8px;
+  background-color: #555;
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none;
+`;
+
+export const SubButton = styled.div`
+  font-weight: bold;
+  &:hover {
+    transform: translateY(0px);
   }
 `;

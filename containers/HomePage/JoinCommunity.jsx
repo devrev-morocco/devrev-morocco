@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Link from 'next/link';
 import {
   JoinCommunityContainer,
   ShowcaseContainer,
   IconsShowcaseContainer,
-  IconShowcase
+  IconShowcase,
+  SubscribeContainer,
+  SubForm,
+  SubInput,
+  SubButton,
+  SubButtonContainer
 } from './styles';
 import {
   YouTubeSvg,
@@ -17,6 +22,15 @@ import {
 } from '../../components/svgs';
 
 const JoinCommunity = () => {
+  const inputRef = useRef(null);
+
+  const subscribe = async (e) => {
+    e.preventDefault();
+
+    console.log('inputRef.current :>> ', inputRef.current);
+    console.log('inputRef :>> ', inputRef.current.value);
+  };
+
   return (
     <JoinCommunityContainer as="section">
       <ShowcaseContainer>
@@ -114,6 +128,33 @@ const JoinCommunity = () => {
             </Link>
           </IconShowcase>
         </IconsShowcaseContainer>
+        <SubscribeContainer>
+          <div className="Showcase-line"></div>
+          <div className="Showcase-title sub">Subscribe to the newsletter</div>
+          <div className="sub-txt">
+            Get emails from me about tech, early access to new episodes and live
+            events.
+          </div>
+          <SubForm as="form" onSubmit={subscribe}>
+            <SubInput
+              as="input"
+              name="email"
+              placeholder="you@apple.com"
+              ref={inputRef}
+              type="email"
+            />
+            {/* <div>
+         {message
+          ? message
+          : ``}
+         </div> */}
+            <SubButtonContainer>
+              <SubButton as="button" type="submit">
+                Subscribe
+              </SubButton>
+            </SubButtonContainer>
+          </SubForm>
+        </SubscribeContainer>
       </ShowcaseContainer>
     </JoinCommunityContainer>
   );
