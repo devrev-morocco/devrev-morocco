@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Link from 'next/link';
 import {
   JoinCommunityContainer,
@@ -9,7 +9,8 @@ import {
   SubForm,
   SubInput,
   SubButton,
-  SubButtonContainer
+  SubButtonContainer,
+  SubMessageBox
 } from './styles';
 import {
   YouTubeSvg,
@@ -24,12 +25,16 @@ import {
 const JoinCommunity = () => {
   const inputRef = useRef(null);
 
+  const [FocusOn, setFocusOn] = useState(false);
+
   const subscribe = async (e) => {
     e.preventDefault();
 
     console.log('inputRef.current :>> ', inputRef.current);
     console.log('inputRef :>> ', inputRef.current.value);
   };
+
+  const HandleFocus = () => setFocusOn((prev) => !prev);
 
   return (
     <JoinCommunityContainer as="section">
@@ -135,19 +140,17 @@ const JoinCommunity = () => {
             Get emails from me about tech, early access to new episodes and live
             events.
           </div>
-          <SubForm as="form" onSubmit={subscribe}>
+          <SubForm Focus={FocusOn} as="form" onSubmit={subscribe}>
             <SubInput
               as="input"
               name="email"
               placeholder="you@apple.com"
               ref={inputRef}
               type="email"
+              onFocus={HandleFocus}
+              onBlur={HandleFocus}
             />
-            {/* <div>
-         {message
-          ? message
-          : ``}
-         </div> */}
+            <SubMessageBox>{12345}</SubMessageBox>
             <SubButtonContainer>
               <SubButton as="button" type="submit">
                 Subscribe

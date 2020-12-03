@@ -1,10 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import {
   DisFlex_AIC,
   RelativePosition,
   DisFlex,
-  DisFlex_AIC_JCC,
-  AbsolutePosition
+  DisFlex_AIC_JCC
 } from '../../../styles';
 import { RDash } from '../../../styles/keyframes';
 
@@ -570,9 +569,9 @@ export const SubscribeContainer = styled(DisFlex_AIC)`
   }
 `;
 
-export const SubForm = styled(DisFlex_AIC_JCC)`
+export const SForm = styled(DisFlex_AIC_JCC)`
   position: relative;
-  margin: 10px 0;
+  margin: 20px 0 5px 0;
   width: 100%;
   background-color: #333;
   transition: background-color 0.3s ease-in-out;
@@ -580,9 +579,15 @@ export const SubForm = styled(DisFlex_AIC_JCC)`
   border: 1px solid #555;
   border-radius: 4px;
   padding: 0;
+`;
 
-  /* box-shadow: 0 0 0 2px #a9ff9457;
-  background-color: transparent; */
+export const SubForm = styled(SForm)`
+  ${(props) =>
+    props.Focus &&
+    css`
+      box-shadow: 0 0 0 2px #a9ff9457;
+      background-color: transparent;
+    `}
 `;
 
 export const SubInput = styled.div`
@@ -604,6 +609,29 @@ export const SubInput = styled.div`
   }
 `;
 
+export const SubMessageBox = styled.div`
+  position: fixed;
+  bottom: 20px; // footer padding: 10px 16px;
+  right: 50%;
+  left: 50%;
+  transition: transform 0.5s ease-in-out;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  min-width: 35%;
+  max-width: 50%;
+  background-color: #6cb429dc;
+  text-align: center;
+  border-radius: 2px;
+  z-index: 2;
+
+  transform: translate(-50%, calc(20px - 100%));
+
+  @media screen and (max-width: 1150px) {
+    min-width: 75%;
+    max-width: 90%;
+  }
+`;
+
 export const SubButtonContainer = styled(DisFlex_AIC_JCC)`
   border: none;
   margin: 4px;
@@ -612,11 +640,22 @@ export const SubButtonContainer = styled(DisFlex_AIC_JCC)`
   border-radius: 2px;
   cursor: pointer;
   outline: none;
+  color: #f1f1f1;
+
+  border: 1px solid #666;
+
+  &:hover {
+    color: #222;
+    background-color: #80b71a96;
+    border: 1px solid #9bd43181;
+  }
 `;
 
 export const SubButton = styled.div`
   font-weight: bold;
+
   &:hover {
     transform: translateY(0px);
+    box-shadow: none;
   }
 `;
