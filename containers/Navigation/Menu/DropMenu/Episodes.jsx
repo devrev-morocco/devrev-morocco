@@ -4,7 +4,7 @@ import { MenuContainer } from '../styles';
 import PropTypes from 'prop-types';
 import { playlist_categories } from '../../../../data/PlayListMenu.json';
 
-const PlayListLink = forwardRef(({ Id }, ref) => {
+const Episodes = forwardRef(({ Id }, ref) => {
   return (
     <MenuContainer ref={ref} id={Id}>
       <MenuItemsList Categories={playlist_categories} />
@@ -12,10 +12,10 @@ const PlayListLink = forwardRef(({ Id }, ref) => {
   );
 });
 
-PlayListLink.displayName = 'PlayListLink';
+Episodes.displayName = 'Episodes';
 
-PlayListLink.propTypes = {
+Episodes.propTypes = {
   Id: PropTypes.string.isRequired
 };
 
-export default memo(PlayListLink);
+export default memo(Episodes);
