@@ -1,2 +1,2 @@
-export { default as PlayListLink } from './PlayListLink';
+export { default as Episodes } from './Episodes';
 export { default as Community } from './Community';

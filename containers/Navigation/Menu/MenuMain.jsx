@@ -1,7 +1,7 @@
 import React, { memo, useRef } from 'react';
 import MenuTransition from './MenuTransition';
 import MenuLink from './MenuLink';
-import { PlayListLink, Community } from './DropMenu';
+import { Episodes, Community } from './DropMenu';
 import PropTypes from 'prop-types';
 import { MainMenu, NavLinkContainer, LinkNav, LinkSpan } from './styles';
 import { MenuTriangle } from '../../../styles/StyledComponents';
@@ -22,14 +22,14 @@ const MenuMain = ({
       <MenuLink
         dispatchMenu={dispatchMenu}
         Type="playlist"
-        Label="playlist"
+        Label="episodes"
         Href="/playlist/1/devrev-1"
         Id="playlist-menu"
         wlOpened={wlOpened}
       >
         <MenuTriangle Enable={Show}></MenuTriangle>
         <MenuTransition ref={PlayListNodeRef} Show={Show} disTran={disTran}>
-          <PlayListLink ref={PlayListNodeRef} Id="playlist-menu" />
+          <Episodes ref={PlayListNodeRef} Id="playlist-menu" />
         </MenuTransition>
       </MenuLink>
       {/* ------- COMMUNITY ------- */}
