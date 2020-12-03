@@ -14,7 +14,7 @@ const MiniFooter = () => {
         <Mini_Footer_info as="p">&#169; DevRev Morocco 2020</Mini_Footer_info>
         <Mini_Footer_info>
           <Mini_Footer_info isLink as="p">
-            <Link href="https://github.com/larbisahli/devrev-morocco" passHref>
+            <Link href="https://github.com/gemography/devrev-morocco" passHref>
               <a rel="noreferrer" target="_blank">
                 Sourced on GitHub
               </a>
