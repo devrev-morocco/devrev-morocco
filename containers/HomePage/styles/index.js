@@ -335,7 +335,7 @@ export const SectionContainer = styled(DisFlex_AIC)`
     }
   }
 
-  // --<FEATURED EPIDODES SECTION>--
+  // --<FEATURED EPISODES SECTION>--
 
   .video_section {
     width: 100%;
@@ -609,26 +609,79 @@ export const SubInput = styled.div`
   }
 `;
 
-export const SubMessageBox = styled.div`
+const InputSubMessage = styled(DisFlex_AIC_JCC)`
   position: fixed;
   bottom: 20px; // footer padding: 10px 16px;
   right: 50%;
   left: 50%;
   transition: transform 0.5s ease-in-out;
   transform: translate(-50%, -50%);
-  padding: 10px;
+  padding: 12px 8px 5px 8px;
   min-width: 35%;
   max-width: 50%;
-  background-color: #6cb429dc;
-  text-align: center;
+  background-color: #333;
   border-radius: 2px;
   z-index: 2;
-
-  transform: translate(-50%, calc(20px - 100%));
+  transform: translate(-50%, calc(20px + 100%));
+  font-size: 1rem;
 
   @media screen and (max-width: 1150px) {
-    min-width: 75%;
+    min-width: 40%;
     max-width: 90%;
+  }
+  @media screen and (max-width: 735px) {
+    min-width: 70%;
+    max-width: 90%;
+  }
+`;
+
+export const SubMessageBox = styled(InputSubMessage)`
+  ${(props) =>
+    props.Active &&
+    css`
+      transform: translate(-50%, calc(20px - 100%));
+    `}
+
+  .msg-alert {
+    & > svg > path {
+      fill: red;
+    }
+  }
+
+  .msg-success {
+    & > svg > path {
+      fill: #6cb429dc;
+    }
+  }
+
+  .msg-state {
+    flex: 0;
+  }
+
+  .sub-msg-area {
+    color: #fafafa;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    text-align: center;
+    font-size: 0.9em;
+    flex: 1;
+    width: 100%;
+  }
+
+  .close-msg-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: -5px;
+    margin: 3px;
+
+    &:hover {
+      & > svg > path {
+        fill: red;
+      }
+    }
   }
 `;
 
