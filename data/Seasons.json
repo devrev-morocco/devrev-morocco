@@ -1,513 +1,262 @@
 {
-    "seasons": {
-      "1": [
-        {
-          "ep": 1,
-          "season": 1,
-          "stringUrl": "devrev-1",
-          "videoId": "7XjAtQbN-BQ",
-          "title": "Tech Careers in Morocco with Yassine El Kachchani",
-          "thumbnail": "/static/images/thumbnail/thumbnail-ep1.webp",
-          "duration": "PT1H20M54S",
-          "publishedAt": "2020-05-07T15:59:39Z",
-          "description": [
-            "A casual live chat between Yassine (CEO at Gemography) and Zack (VPoE at Gemography) about developer career paths in Morocco.",
-            "__EMPTY_LINE__",
-            "They will be discussing:",
-            "+ The top skills developers need in 2020.",
-            "+ The Best Approach to develop those skills.",
-            "+ Why it takes more than technical skills to succeed.",
-            "+ How to get noticed and land your dream job.",
-            "+ Why you should (or shouldn't) join a tech startup."
-          ],
-          "participants": ["uKjACmjLYd", "TCil4qK7KL"],
-          "questions": [
-            {
-              "id": "q-1",
-              "question": "which stack can you suggest us for Morocco tech market? What about the GraphQL?",
-              "seekTo": "1:12:17"
-            },
-            {
-              "id": "q-2",
-              "question": "What is the motivation behind ROR choice to be one of the technologies used at Gemography?",
-              "seekTo": "1:14:45"
-            },
-            {
-              "id": "q-3",
-              "question": "What do you think about remote jobs in Morocco?",
-              "seekTo": "1:15:14"
-            }
-          ]
-        },
-        {
-          "ep": 2,
-          "season": 1,
-          "stringUrl": "devrev-2",
-          "videoId": "ECROOdMKDGA",
-          "title": "Soft Skills for Developers with Serrah Menif",
-          "thumbnail": "/static/images/thumbnail/thumbnail-ep2.webp",
-          "duration": "PT1H22M51S",
-          "publishedAt": "2020-05-14T13:43:28Z",
-          "description": [
-            "A casual live chat between Zack (VPoE at Gemography) and Serrah (Head of People Ops at Gemography) about the why and how behind soft-skills, specifically for software engineers.",
-            "__EMPTY_LINE__",
-            "They will be discussing:",
-            "+ What are soft-skills (and why developers should care).",
-            "+ How to learn and improve soft-skills.",
-            "+ What are the common mistakes to avoid.",
-            "+ How to showcase good soft-skills during job interviews."
-          ],
-          "participants": ["uKjACmjLYd", "8h2fKKvAeF"],
-          "questions": [
-            {
-              "id": "q-1",
-              "question": "Is working in big corp better for soft skills than startups?",
-              "seekTo": "00:38:00"
-            },
-            {
-              "id": "q-2",
-              "question": "How can I hurt my team, as a developer, by my lack of soft skills? Do you have concrete examples?",
-              "seekTo": "00:43:00"
-            },
-            {
-              "id": "q-3",
-              "question": "What are the worst soft skills to avoid?",
-              "seekTo": "00:51:01"
-            },
-            {
-              "id": "q-4",
-              "question": "What we should answer about our soft weaknesses? Or how we should answer?",
-              "seekTo": "00:52:55"
-            },
-            {
-              "id": "q-5",
-              "question": "How can I overcome that enormous stress I feel every time I try to speak in front of people?",
-              "seekTo": "1:12:12"
-            }
-          ]
-        },
-        {
-          "ep": 3,
-          "season": 1,
-          "stringUrl": "devrev-3",
-          "videoId": "qVHk5pBZb8g",
-          "title": "Startups, DevOps and Being a Senior Engineer",
-          "thumbnail": "/static/images/thumbnail/thumbnail-ep3.webp",
-          "duration": "PT1H8M51S",
-          "publishedAt": "2020-05-21T06:44:34Z",
-          "description": [
-            "On this week's live episode of DevRev, Zack interviews Zakaria Boualaid, a Senior DevOps Engineer at Oracle. They discuss how he got into DevOps, his startup journey, how he ended up in Dubai and what it takes to be a senior engineer."
-          ],
-          "participants": ["uKjACmjLYd", "b9T5q1ymNw"],
-          "questions": [
-            {
-              "id": "q-1",
-              "question": "",
-              "seekTo": "00:00:00"
-            }
-          ]
-        },
-        {
-          "ep": 4,
-          "season": 1,
-          "stringUrl": "devrev-4",
-          "videoId": "T8g310bUXYI",
-          "title": "Cracking the Technical Interview",
-          "thumbnail": "/static/images/thumbnail/thumbnail-ep4.webp",
-          "duration": "PT1H7M55S",
-          "publishedAt": "2020-05-28T09:13:44Z",
-          "description": [
-            "A casual live chat between Adil (CTO at Gemography) and Zack (VPoE at Gemography) about the definitive guide to technical interviews regardless of where you're applying.",
-            "__EMPTY_LINE__",
-            "They will be discussing:",
-            "+ How to know you're ready for a technical interview.",
-            "+ What kind of questions to expect.",
-            "+ How to showcase your strengths.",
-            "+ What to do about your weaknesses.",
-            "+ Common mistakes to avoid.",
-            "__EMPTY_LINE__",
-            "Language: ",
-            "Arabic, English"
-          ],
-          "participants": ["uKjACmjLYd", "VZnU7oD9lu"],
-          "questions": [
-            {
-              "id": "q-1",
-              "question": "",
-              "seekTo": "00:00:00"
-            }
-          ]
-        },
-        {
-          "ep": 5,
-          "season": 1,
-          "stringUrl": "devrev-5",
-          "videoId": "BTcOlxfkjDc",
-          "title": "Work From Home Without Going Crazy",
-          "thumbnail": "/static/images/thumbnail/thumbnail-ep5.webp",
-          "duration": "PT1H26S",
-          "publishedAt": "2020-06-04T08:05:45Z",
-          "description": [
-            "Soukaina Chebihi, Head of Growth at Gemography and author of the definitive guide 'The Only Work From Home Resources You'll Need' joins the show this week to talk about working from home (WFH) without going crazy.",
-            "__EMPTY_LINE__",
-            "We'll be discussing primary:",
-            "+ Common WFH issues and how to deal with them.",
-            "+ Tips to implement to make the whole thing easier.",
-            "+ What it takes to have the perfect WFH setup.",
-            "+ The pros & cons of WFH from an employer and employee standpoint."
-          ],
-          "participants": ["uKjACmjLYd", "2HuLcZAskb"],
-          "questions": [
-            {
-              "id": "q-1",
-              "question": "",
-              "seekTo": "00:00:00"
-            }
-          ]
-        },
-        {
-          "ep": 6,
-          "season": 1,
-          "stringUrl": "devrev-6",
-          "videoId": "v7xhkVBC0zw",
-          "title": "The Road to Senior Fullstack Developer",
-          "thumbnail": "/static/images/thumbnail/thumbnail-ep6.webp",
-          "duration": "PT1H21M39S",
-          "publishedAt": "2020-06-11T08:29:46Z",
-          "description": [
-            "Tune in for a new live episode of DevRev, this time about the journey to becoming a Senior Fullstack or Frontend Developer.",
-            "__EMPTY_LINE__",
-            "We'll be discussing:",
-            "+ The actual responsibilities of a Fullstack/Frontend developer.",
-            "+ The current tools and technologies they are using.",
-            "+ What skills are must-have or nice-to-have to get started.",
-            "+ What it takes to become a Senior Fullstack developer.",
-            "+ [YOUR OWN QUESTIONS]"
-          ],
-          "participants": ["uKjACmjLYd", "ijdihXb7iX", "psPdrhemrn"],
-          "questions": [
-            {
-              "id": "q-1",
-              "question": "",
-              "seekTo": "00:00:00"
-            }
-          ]
-        },
-        {
-          "ep": 7,
-          "season": 1,
-          "stringUrl": "devrev-7",
-          "videoId": "bQbAjNQgb1U",
-          "title": "Code editors and dev environments",
-          "thumbnail": "/static/images/thumbnail/thumbnail-ep7.webp",
-          "duration": "PT1H19M5S",
-          "publishedAt": "2020-06-18T08:32:42Z",
-          "description": [
-            "This week I'll be joined by Othmane, Youness and Said to discuss their dev environments, code editor of choice, CLI settings, as well their favorite dev productivity tools."
-          ],
-          "participants": [
-            "uKjACmjLYd",
-            "ijdihXb7iX",
-            "psPdrhemrn",
-            "JGR2HkA7aa"
-          ],
-          "questions": [
-            {
-              "id": "q-1",
-              "question": "",
-              "seekTo": "00:00:00"
-            }
-          ]
-        },
-        {
-          "ep": 8,
-          "season": 1,
-          "stringUrl": "devrev-8",
-          "videoId": "MWyR9USrsUc",
-          "title": "Competitive Programming 101",
-          "thumbnail": "/static/images/thumbnail/thumbnail-ep8.webp",
-          "duration": "PT1H29M35S",
-          "publishedAt": "2020-06-25T08:41:42Z",
-          "description": [
-            "This week I'll be joined by Diaa Alhak EL FALLOUS from MCPC and Omar Salim Moussa from Google to discuss competitive programming, what it is, why it's important and what it takes to be an MCPC champion."
-          ],
-          "participants": ["uKjACmjLYd", "gXuYUu3CKu", "EsPf5hemrn"],
-          "questions": [
-            {
-              "id": "q-1",
-              "question": "",
-              "seekTo": "00:00:00"
-            }
-          ]
-        },
-        {
-          "ep": 9,
-          "season": 1,
-          "stringUrl": "devrev-9",
-          "videoId": "YxEipaEo3qk",
-          "title": "Self-hosting, why and how?",
-          "thumbnail": "/static/images/thumbnail/thumbnail-ep9.webp",
-          "duration": "PT1H28M29S",
-          "publishedAt": "2020-07-02T08:36:37Z",
-          "description": [
-            "This week, DevRev welcomes Yassine and Said to give us a tour of their self-hosted setup, tell us how they got started and address the fundamental question of 'why self-host'.",
-            "__EMPTY_LINE__",
-            "Yassine Fathi is a Software Engineer at Fluicity, an online platform that allows governments to establish communication channels with the population.",
-            "__EMPTY_LINE__",
-            "Said Dermoumi is a Software Engineer at Efficity, a France-based online real estate platform, part of the Foncia Group."
-          ],
-          "participants": ["uKjACmjLYd", "JGR2HkA7aa", "u2sTjJofS6"],
-          "questions": [
-            {
-              "id": "q-1",
-              "question": "",
-              "seekTo": "00:00:00"
-            }
-          ]
-        },
-        {
-          "ep": 10,
-          "season": 1,
-          "stringUrl": "devrev-10",
-          "videoId": "4oFOLIh0V3g",
-          "title": "The Journey of a Data Engineer",
-          "thumbnail": "/static/images/thumbnail/thumbnail-ep10.webp",
-          "duration": "PT56M5S",
-          "publishedAt": "2020-07-09T08:05:37Z",
-          "description": [
-            "In this episode of DevRev, we interview Taha Sadiki, Data Engineer at Enigma (NY-based), who talks to us about his leap into his role as Data Engineer and how to best position yourself for a career in this field.",
-            "__EMPTY_LINE__",
-            "Enigma (raised $130 million) builds data infrastructure, developer-friendly APIs, and intelligent tools. They are based in New York."
-          ],
-          "participants": ["uKjACmjLYd", "9s6UJct4sd"],
-          "questions": [
-            {
-              "id": "q-1",
-              "question": "",
-              "seekTo": "00:00:00"
-            }
-          ]
-        },
-        {
-          "ep": 11,
-          "season": 1,
-          "stringUrl": "devrev-11",
-          "videoId": "ynAWha2kbfc",
-          "title": "How to Become a Senior iOS Developer",
-          "thumbnail": "/static/images/thumbnail/thumbnail-ep11.webp",
-          "duration": "PT1H4M37S",
-          "publishedAt": "2020-07-23T08:10:42Z",
-          "description": [
-            "Being a Senior in any area of Software Engineering is always an obscure topic. Yes, it's about skills and not raw number of years of experience. But even then, there is no true universal definition. ",
-            "__EMPTY_LINE__",
-            "In this new live episode we'll give it a shot and try to break it down to skills and strengths. We'll also be going over how to keep learning and evolving, the obscure iOS topics to focus on and the common mistakes to avoid (including those Massive View Controllers ...)"
-          ],
-          "participants": ["uKjACmjLYd", "k0CadwSQXs"],
-          "questions": [
-            {
-              "id": "q-1",
-              "question": "",
-              "seekTo": "00:00:00"
-            }
-          ]
-        }
-      ],
-      "2": [
-        {
-          "ep": 1,
-          "season": 2,
-          "stringUrl": "devrev-12",
-          "videoId": "zjjKfqCgfTQ",
-          "title": "The Career Path of Director of Engineering",
-          "thumbnail": "/static/images/thumbnail/thumbnail-ep12.webp",
-          "duration": "PT1H21M16S",
-          "publishedAt": "2020-11-05T11:37:04Z",
-          "description": [
-            "In this episode, Zack Braksa chats with special guest Oussama Zaki, Director of Engineering at Svea Solar about the role of 'Director of Engineering', his day-to-day, the skills required, and the career path to get there."
-          ],
-          "participants": ["uKjACmjLYd", "DQfVYyEiP2"],
-          "questions": [
-            {
-              "id": "q-1",
-              "question": "",
-              "seekTo": "00:00:00"
-            }
-          ]
-        },
-        {
-          "ep": 2,
-          "season": 2,
-          "stringUrl": "devrev-13",
-          "videoId": "cRqjxlqWWY4",
-          "title": "Job Search in Morocco - Mistakes To Avoid",
-          "thumbnail": "/static/images/thumbnail/thumbnail-ep13.webp",
-          "duration": "PT1H36M5S",
-          "publishedAt": "2020-11-05T11:44:19Z",
-          "description": [
-            "In this episode, Zack Braksa chats with special guests Naoufal El Hassnaoui & Diaa Alhak EL FALLOUS about the best way to look for a tech job in 2020. They'll be discussing the best practices to follow and the common mistakes to avoid."
-          ],
-          "participants": ["uKjACmjLYd", "gXuYUu3CKu", "EgJLVD8YbJ"],
-          "questions": [
-            {
-              "id": "q-1",
-              "question": "Guests presentation",
-              "seekTo": "00:04:05"
-            },
-            {
-              "id": "q-2",
-              "question": "I am a fresh graduate, how should I apply for a job ?",
-              "seekTo": "00:07:40"
-            },
-            {
-              "id": "q-3",
-              "question": "Who should I contact on LinkedIn, HRs or people working in the company ?",
-              "seekTo": "00:16:15"
-            },
-            {
-              "id": "q-4",
-              "question": "Why should you apply to as much as possible companies ?",
-              "seekTo": "00:19:45"
-            },
-            {
-              "id": "q-5",
-              "question": "Common CV mistakes to avoid.",
-              "seekTo": "00:27:14"
-            },
-            {
-              "id": "q-6",
-              "question": "Picture in the CV ?",
-              "seekTo": "00:29:56"
-            },
-            {
-              "id": "q-7",
-              "question": "How should skills and experience parts look like ?",
-              "seekTo": "00:31:18"
-            },
-            {
-              "id": "q-8",
-              "question": "Common interview mistakes to avoid.",
-              "seekTo": "00:42:00"
-            },
-            {
-              "id": "q-9",
-              "question": "Should I prepare for an interview or not ? If yes, then how ?",
-              "seekTo": "00:45:55"
-            },
-            {
-              "id": "q-10",
-              "question": "Master vs Engineering degree, any difference ?",
-              "seekTo": "00:54:23"
-            },
-            {
-              "id": "q-11",
-              "question": "Can projects replace the degree in Moroccan companies ?",
-              "seekTo": "00:57:03"
-            },
-            {
-              "id": "q-12",
-              "question": "How should I contact with people on LinkedIn ?",
-              "seekTo": "00:59:41"
-            },
-            {
-              "id": "q-13",
-              "question": "Should I include the skills part in the CV ?",
-              "seekTo": "01:05:55"
-            },
-            {
-              "id": "q-14",
-              "question": "How to categorize skills in the CV ?",
-              "seekTo": "01:06:43"
-            },
-            {
-              "id": "q-15",
-              "question": "Can frameworks/libraries mastery override data structures and algorithskills ? ",
-              "seekTo": "01:07:11"
-            },
-            {
-              "id": "q-16",
-              "question": "What to mention as a location in the CV when working remotely ?",
-              "seekTo": "01:09:49"
-            },
-            {
-              "id": "q-17",
-              "question": "What to include in my CV if I'm self taught ?",
-              "seekTo": "01:11:47"
-            },
-            {
-              "id": "q-18",
-              "question": "Whould cold emialing before applying help standout from the crowd ?",
-              "seekTo": "01:15:40"
-            },
-            {
-              "id": "q-19",
-              "question": "Who's the HR at Gemography ?",
-              "seekTo": "01:16:40"
-            },
-            {
-              "id": "q-20",
-              "question": "Career switch, should I do it ?",
-              "seekTo": "01:18:30"
-            },
-            {
-              "id": "q-21",
-              "question": "Do certifications matter ?",
-              "seekTo": "01:22:03"
-            },
-            {
-              "id": "q-22",
-              "question": "How to make projects more valuable, when not having much internships ?",
-              "seekTo": "01:24:44"
-            },
-            {
-              "id": "q-23",
-              "question": "Is data science a good career in Morocco ?",
-              "seekTo": "01:27:01"
-            }
-          ]
-        },
-        {
-          "ep": 3,
-          "season": 2,
-          "stringUrl": "devrev-14",
-          "videoId": "heTAt-4huzQ",
-          "title": "Game Development: A Deep Dive",
-          "thumbnail": "/static/images/thumbnail/thumbnail-ep14.webp",
-          "duration": "PT1H27M45S",
-          "publishedAt": "2020-11-12T04:08:07Z",
-          "description": [
-            "In this episode, Zack Braksa chats with special guest Faissal Sabouh about what a career in game development means, the skills needed to become a game developer and advice for getting into game development."
-          ],
-          "participants": ["uKjACmjLYd", "WPMFcj0WgK"],
-          "questions": [
-            {
-              "id": "q-1",
-              "question": "",
-              "seekTo": "00:00:00"
-            }
-          ]
-        },
-        {
-          "ep": 4,
-          "season": 2,
-          "stringUrl": "devrev-15",
-          "videoId": "9_Tow4jXjGE",
-          "title": "Cryptocurrency: A Deep Dive",
-          "thumbnail": "/static/images/thumbnail/thumbnail-ep15.webp",
-          "duration": "PT1H2M26S",
-          "publishedAt": "2020-11-24T13:49:52Z",
-          "description": [
-            "In this episode, Zack Braksa chats with special guest Mounir Benchemled about Cryptocurrency. What it is, where it fits in the blockchain puzzle, possible career paths in blockchain and crypto as well as what the future holds for the crypto industry."
-          ],
-          "participants": ["uKjACmjLYd", "PPMDvi0Wg0"],
-          "questions": [
-            {
-              "id": "q-1",
-              "question": "",
-              "seekTo": "00:00:00"
-            }
-          ]
-        }
-      ]
-    }
+  "seasons": {
+    "1": [
+      {
+        "ep": 1,
+        "season": 1,
+        "stringUrl": "devrev-1",
+        "videoId": "7XjAtQbN-BQ",
+        "title": "Tech Careers in Morocco with Yassine El Kachchani",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep1.webp",
+        "duration": "PT1H20M54S",
+        "publishedAt": "2020-05-07T15:59:39Z",
+        "description": [
+          "A casual live chat between Yassine (CEO at Gemography) and Zack (VPoE at Gemography) about developer career paths in Morocco.",
+          "__EMPTY_LINE__",
+          "They will be discussing:",
+          "+ The top skills developers need in 2020.",
+          "+ The Best Approach to develop those skills.",
+          "+ Why it takes more than technical skills to succeed.",
+          "+ How to get noticed and land your dream job.",
+          "+ Why you should (or shouldn't) join a tech startup."
+        ],
+        "participants": ["uKjACmjLYd", "TCil4qK7KL"]
+      },
+      {
+        "ep": 2,
+        "season": 1,
+        "stringUrl": "devrev-2",
+        "videoId": "ECROOdMKDGA",
+        "title": "Soft Skills for Developers with Serrah Menif",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep2.webp",
+        "duration": "PT1H22M51S",
+        "publishedAt": "2020-05-14T13:43:28Z",
+        "description": [
+          "A casual live chat between Zack (VPoE at Gemography) and Serrah (Head of People Ops at Gemography) about the why and how behind soft-skills, specifically for software engineers.",
+          "__EMPTY_LINE__",
+          "They will be discussing:",
+          "+ What are soft-skills (and why developers should care).",
+          "+ How to learn and improve soft-skills.",
+          "+ What are the common mistakes to avoid.",
+          "+ How to showcase good soft-skills during job interviews."
+        ],
+        "participants": ["uKjACmjLYd", "8h2fKKvAeF"]
+      },
+      {
+        "ep": 3,
+        "season": 1,
+        "stringUrl": "devrev-3",
+        "videoId": "qVHk5pBZb8g",
+        "title": "Startups, DevOps and Being a Senior Engineer",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep3.webp",
+        "duration": "PT1H8M51S",
+        "publishedAt": "2020-05-21T06:44:34Z",
+        "description": [
+          "On this week's live episode of DevRev, Zack interviews Zakaria Boualaid, a Senior DevOps Engineer at Oracle. They discuss how he got into DevOps, his startup journey, how he ended up in Dubai and what it takes to be a senior engineer."
+        ],
+        "participants": ["uKjACmjLYd", "b9T5q1ymNw"]
+      },
+      {
+        "ep": 4,
+        "season": 1,
+        "stringUrl": "devrev-4",
+        "videoId": "T8g310bUXYI",
+        "title": "Cracking the Technical Interview",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep4.webp",
+        "duration": "PT1H7M55S",
+        "publishedAt": "2020-05-28T09:13:44Z",
+        "description": [
+          "A casual live chat between Adil (CTO at Gemography) and Zack (VPoE at Gemography) about the definitive guide to technical interviews regardless of where you're applying.",
+          "__EMPTY_LINE__",
+          "They will be discussing:",
+          "+ How to know you're ready for a technical interview.",
+          "+ What kind of questions to expect.",
+          "+ How to showcase your strengths.",
+          "+ What to do about your weaknesses.",
+          "+ Common mistakes to avoid.",
+          "__EMPTY_LINE__",
+          "Language: ",
+          "Arabic, English"
+        ],
+        "participants": ["uKjACmjLYd", "VZnU7oD9lu"]
+      },
+      {
+        "ep": 5,
+        "season": 1,
+        "stringUrl": "devrev-5",
+        "videoId": "BTcOlxfkjDc",
+        "title": "Work From Home Without Going Crazy",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep5.webp",
+        "duration": "PT1H26S",
+        "publishedAt": "2020-06-04T08:05:45Z",
+        "description": [
+          "Soukaina Chebihi, Head of Growth at Gemography and author of the definitive guide 'The Only Work From Home Resources You'll Need' joins the show this week to talk about working from home (WFH) without going crazy.",
+          "__EMPTY_LINE__",
+          "We'll be discussing primary:",
+          "+ Common WFH issues and how to deal with them.",
+          "+ Tips to implement to make the whole thing easier.",
+          "+ What it takes to have the perfect WFH setup.",
+          "+ The pros & cons of WFH from an employer and employee standpoint."
+        ],
+        "participants": ["uKjACmjLYd", "2HuLcZAskb"]
+      },
+      {
+        "ep": 6,
+        "season": 1,
+        "stringUrl": "devrev-6",
+        "videoId": "v7xhkVBC0zw",
+        "title": "The Road to Senior Fullstack Developer",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep6.webp",
+        "duration": "PT1H21M39S",
+        "publishedAt": "2020-06-11T08:29:46Z",
+        "description": [
+          "Tune in for a new live episode of DevRev, this time about the journey to becoming a Senior Fullstack or Frontend Developer.",
+          "__EMPTY_LINE__",
+          "We'll be discussing:",
+          "+ The actual responsibilities of a Fullstack/Frontend developer.",
+          "+ The current tools and technologies they are using.",
+          "+ What skills are must-have or nice-to-have to get started.",
+          "+ What it takes to become a Senior Fullstack developer.",
+          "+ [YOUR OWN QUESTIONS]"
+        ],
+        "participants": ["uKjACmjLYd", "ijdihXb7iX", "psPdrhemrn"]
+      },
+      {
+        "ep": 7,
+        "season": 1,
+        "stringUrl": "devrev-7",
+        "videoId": "bQbAjNQgb1U",
+        "title": "Code editors and dev environments",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep7.webp",
+        "duration": "PT1H19M5S",
+        "publishedAt": "2020-06-18T08:32:42Z",
+        "description": [
+          "This week I'll be joined by Othmane, Youness and Said to discuss their dev environments, code editor of choice, CLI settings, as well their favorite dev productivity tools."
+        ],
+        "participants": ["uKjACmjLYd", "ijdihXb7iX", "psPdrhemrn", "JGR2HkA7aa"]
+      },
+      {
+        "ep": 8,
+        "season": 1,
+        "stringUrl": "devrev-8",
+        "videoId": "MWyR9USrsUc",
+        "title": "Competitive Programming 101",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep8.webp",
+        "duration": "PT1H29M35S",
+        "publishedAt": "2020-06-25T08:41:42Z",
+        "description": [
+          "This week I'll be joined by Diaa Alhak EL FALLOUS from MCPC and Omar Salim Moussa from Google to discuss competitive programming, what it is, why it's important and what it takes to be an MCPC champion."
+        ],
+        "participants": ["uKjACmjLYd", "gXuYUu3CKu", "EsPf5hemrn"]
+      },
+      {
+        "ep": 9,
+        "season": 1,
+        "stringUrl": "devrev-9",
+        "videoId": "YxEipaEo3qk",
+        "title": "Self-hosting, why and how?",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep9.webp",
+        "duration": "PT1H28M29S",
+        "publishedAt": "2020-07-02T08:36:37Z",
+        "description": [
+          "This week, DevRev welcomes Yassine and Said to give us a tour of their self-hosted setup, tell us how they got started and address the fundamental question of 'why self-host'.",
+          "__EMPTY_LINE__",
+          "Yassine Fathi is a Software Engineer at Fluicity, an online platform that allows governments to establish communication channels with the population.",
+          "__EMPTY_LINE__",
+          "Said Dermoumi is a Software Engineer at Efficity, a France-based online real estate platform, part of the Foncia Group."
+        ],
+        "participants": ["uKjACmjLYd", "JGR2HkA7aa", "u2sTjJofS6"]
+      },
+      {
+        "ep": 10,
+        "season": 1,
+        "stringUrl": "devrev-10",
+        "videoId": "4oFOLIh0V3g",
+        "title": "The Journey of a Data Engineer",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep10.webp",
+        "duration": "PT56M5S",
+        "publishedAt": "2020-07-09T08:05:37Z",
+        "description": [
+          "In this episode of DevRev, we interview Taha Sadiki, Data Engineer at Enigma (NY-based), who talks to us about his leap into his role as Data Engineer and how to best position yourself for a career in this field.",
+          "__EMPTY_LINE__",
+          "Enigma (raised $130 million) builds data infrastructure, developer-friendly APIs, and intelligent tools. They are based in New York."
+        ],
+        "participants": ["uKjACmjLYd", "9s6UJct4sd"]
+      },
+      {
+        "ep": 11,
+        "season": 1,
+        "stringUrl": "devrev-11",
+        "videoId": "ynAWha2kbfc",
+        "title": "How to Become a Senior iOS Developer",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep11.webp",
+        "duration": "PT1H4M37S",
+        "publishedAt": "2020-07-23T08:10:42Z",
+        "description": [
+          "Being a Senior in any area of Software Engineering is always an obscure topic. Yes, it's about skills and not raw number of years of experience. But even then, there is no true universal definition. ",
+          "__EMPTY_LINE__",
+          "In this new live episode we'll give it a shot and try to break it down to skills and strengths. We'll also be going over how to keep learning and evolving, the obscure iOS topics to focus on and the common mistakes to avoid (including those Massive View Controllers ...)"
+        ],
+        "participants": ["uKjACmjLYd", "k0CadwSQXs"]
+      }
+    ],
+    "2": [
+      {
+        "ep": 1,
+        "season": 2,
+        "stringUrl": "devrev-12",
+        "videoId": "zjjKfqCgfTQ",
+        "title": "The Career Path of Director of Engineering",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep12.webp",
+        "duration": "PT1H21M16S",
+        "publishedAt": "2020-11-05T11:37:04Z",
+        "description": [
+          "In this episode, Zack Braksa chats with special guest Oussama Zaki, Director of Engineering at Svea Solar about the role of 'Director of Engineering', his day-to-day, the skills required, and the career path to get there."
+        ],
+        "participants": ["uKjACmjLYd", "DQfVYyEiP2"]
+      },
+      {
+        "ep": 2,
+        "season": 2,
+        "stringUrl": "devrev-13",
+        "videoId": "cRqjxlqWWY4",
+        "title": "Job Search in Morocco - Mistakes To Avoid",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep13.webp",
+        "duration": "PT1H36M5S",
+        "publishedAt": "2020-11-05T11:44:19Z",
+        "description": [
+          "In this episode, Zack Braksa chats with special guests Naoufal El Hassnaoui & Diaa Alhak EL FALLOUS about the best way to look for a tech job in 2020. They'll be discussing the best practices to follow and the common mistakes to avoid."
+        ],
+        "participants": ["uKjACmjLYd", "gXuYUu3CKu", "EgJLVD8YbJ"]
+      },
+      {
+        "ep": 3,
+        "season": 2,
+        "stringUrl": "devrev-14",
+        "videoId": "heTAt-4huzQ",
+        "title": "Game Development: A Deep Dive",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep14.webp",
+        "duration": "PT1H27M45S",
+        "publishedAt": "2020-11-12T04:08:07Z",
+        "description": [
+          "In this episode, Zack Braksa chats with special guest Faissal Sabouh about what a career in game development means, the skills needed to become a game developer and advice for getting into game development."
+        ],
+        "participants": ["uKjACmjLYd", "WPMFcj0WgK"]
+      },
+      {
+        "ep": 4,
+        "season": 2,
+        "stringUrl": "devrev-15",
+        "videoId": "9_Tow4jXjGE",
+        "title": "Cryptocurrency: A Deep Dive",
+        "thumbnail": "/static/images/thumbnail/thumbnail-ep15.webp",
+        "duration": "PT1H2M26S",
+        "publishedAt": "2020-11-24T13:49:52Z",
+        "description": [
+          "In this episode, Zack Braksa chats with special guest Mounir Benchemled about Cryptocurrency. What it is, where it fits in the blockchain puzzle, possible career paths in blockchain and crypto as well as what the future holds for the crypto industry."
+        ],
+        "participants": ["uKjACmjLYd", "PPMDvi0Wg0"]
+      }
+    ]
   }
-  
+}

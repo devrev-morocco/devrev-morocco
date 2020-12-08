@@ -1,0 +1,311 @@
+{
+  "1": [
+    {
+      "id": "ep-1",
+      "ep": 1,
+      "questions": [
+        {
+          "id": "q-1",
+          "question": "which stack can you suggest us for Morocco tech market? What about the GraphQL?",
+          "seekTo": "1:12:17"
+        },
+        {
+          "id": "q-2",
+          "question": "What is the motivation behind ROR choice to be one of the technologies used at Gemography?",
+          "seekTo": "1:14:45"
+        },
+        {
+          "id": "q-3",
+          "question": "What do you think about remote jobs in Morocco?",
+          "seekTo": "1:15:14"
+        }
+      ]
+    },
+    {
+      "id": "ep-2",
+      "ep": 2,
+      "questions": [
+        {
+          "id": "q-1",
+          "question": "Is working in big corp better for soft skills than startups?",
+          "seekTo": "00:38:00"
+        },
+        {
+          "id": "q-2",
+          "question": "How can I hurt my team, as a developer, by my lack of soft skills? Do you have concrete examples?",
+          "seekTo": "00:43:00"
+        },
+        {
+          "id": "q-3",
+          "question": "What are the worst soft skills to avoid?",
+          "seekTo": "00:51:01"
+        },
+        {
+          "id": "q-4",
+          "question": "What we should answer about our soft weaknesses? Or how we should answer?",
+          "seekTo": "00:52:55"
+        },
+        {
+          "id": "q-5",
+          "question": "How can I overcome that enormous stress I feel every time I try to speak in front of people?",
+          "seekTo": "1:12:12"
+        }
+      ]
+    },
+    {
+      "id": "ep-3",
+      "ep": 3,
+      "questions": [
+        {
+          "id": "q-1",
+          "question": "",
+          "seekTo": "00:00:00"
+        }
+      ]
+    },
+    {
+      "id": "ep-4",
+      "ep": 4,
+      "questions": [
+        {
+          "id": "q-1",
+          "question": "",
+          "seekTo": "00:00:00"
+        }
+      ]
+    },
+    {
+      "id": "ep-5",
+      "ep": 5,
+      "questions": [
+        {
+          "id": "q-1",
+          "question": "",
+          "seekTo": "00:00:00"
+        }
+      ]
+    },
+    {
+      "id": "ep-6",
+      "ep": 6,
+      "questions": [
+        {
+          "id": "q-1",
+          "question": "",
+          "seekTo": "00:00:00"
+        }
+      ]
+    },
+    {
+      "id": "ep-7",
+      "ep": 7,
+      "questions": [
+        {
+          "id": "q-1",
+          "question": "",
+          "seekTo": "00:00:00"
+        }
+      ]
+    },
+    {
+      "id": "ep-8",
+      "ep": 8,
+      "questions": [
+        {
+          "id": "q-1",
+          "question": "",
+          "seekTo": "00:00:00"
+        }
+      ]
+    },
+    {
+      "id": "ep-9",
+      "ep": 9,
+      "questions": [
+        {
+          "id": "q-1",
+          "question": "",
+          "seekTo": "00:00:00"
+        }
+      ]
+    },
+    {
+      "id": "ep-10",
+      "ep": 10,
+      "questions": [
+        {
+          "id": "q-1",
+          "question": "",
+          "seekTo": "00:00:00"
+        }
+      ]
+    },
+    {
+      "id": "ep-11",
+      "ep": 11,
+      "questions": [
+        {
+          "id": "q-1",
+          "question": "",
+          "seekTo": "00:00:00"
+        }
+      ]
+    }
+  ],
+  "2": [
+    {
+      "id": "ep-1",
+      "ep": 1,
+      "questions": [
+        {
+          "id": "q-1",
+          "question": "",
+          "seekTo": "00:00:00"
+        }
+      ]
+    },
+    {
+      "id": "ep-2",
+      "ep": 2,
+      "questions": [
+        {
+          "id": "q-1",
+          "question": "Guests presentation",
+          "seekTo": "00:04:05"
+        },
+        {
+          "id": "q-2",
+          "question": "I am a fresh graduate, how should I apply for a job ?",
+          "seekTo": "00:07:40"
+        },
+        {
+          "id": "q-3",
+          "question": "Who should I contact on LinkedIn, HRs or people working in the company ?",
+          "seekTo": "00:16:15"
+        },
+        {
+          "id": "q-4",
+          "question": "Why should you apply to as much as possible companies ?",
+          "seekTo": "00:19:45"
+        },
+        {
+          "id": "q-5",
+          "question": "Common CV mistakes to avoid.",
+          "seekTo": "00:27:14"
+        },
+        {
+          "id": "q-6",
+          "question": "Picture in the CV ?",
+          "seekTo": "00:29:56"
+        },
+        {
+          "id": "q-7",
+          "question": "How should skills and experience parts look like ?",
+          "seekTo": "00:31:18"
+        },
+        {
+          "id": "q-8",
+          "question": "Common interview mistakes to avoid.",
+          "seekTo": "00:42:00"
+        },
+        {
+          "id": "q-9",
+          "question": "Should I prepare for an interview or not ? If yes, then how ?",
+          "seekTo": "00:45:55"
+        },
+        {
+          "id": "q-10",
+          "question": "Master vs Engineering degree, any difference ?",
+          "seekTo": "00:54:23"
+        },
+        {
+          "id": "q-11",
+          "question": "Can projects replace the degree in Moroccan companies ?",
+          "seekTo": "00:57:03"
+        },
+        {
+          "id": "q-12",
+          "question": "How should I contact with people on LinkedIn ?",
+          "seekTo": "00:59:41"
+        },
+        {
+          "id": "q-13",
+          "question": "Should I include the skills part in the CV ?",
+          "seekTo": "01:05:55"
+        },
+        {
+          "id": "q-14",
+          "question": "How to categorize skills in the CV ?",
+          "seekTo": "01:06:43"
+        },
+        {
+          "id": "q-15",
+          "question": "Can frameworks/libraries mastery override data structures and algorithskills ? ",
+          "seekTo": "01:07:11"
+        },
+        {
+          "id": "q-16",
+          "question": "What to mention as a location in the CV when working remotely ?",
+          "seekTo": "01:09:49"
+        },
+        {
+          "id": "q-17",
+          "question": "What to include in my CV if I'm self taught ?",
+          "seekTo": "01:11:47"
+        },
+        {
+          "id": "q-18",
+          "question": "Would cold emailing before applying help standout from the crowd ?",
+          "seekTo": "01:15:40"
+        },
+        {
+          "id": "q-19",
+          "question": "Who's the HR at Gemography ?",
+          "seekTo": "01:16:40"
+        },
+        {
+          "id": "q-20",
+          "question": "Career switch, should I do it ?",
+          "seekTo": "01:18:30"
+        },
+        {
+          "id": "q-21",
+          "question": "Do certifications matter ?",
+          "seekTo": "01:22:03"
+        },
+        {
+          "id": "q-22",
+          "question": "How to make projects more valuable, when not having much internships ?",
+          "seekTo": "01:24:44"
+        },
+        {
+          "id": "q-23",
+          "question": "Is data science a good career in Morocco ?",
+          "seekTo": "01:27:01"
+        }
+      ]
+    },
+    {
+      "id": "ep-3",
+      "ep": 3,
+      "questions": [
+        {
+          "id": "q-1",
+          "question": "",
+          "seekTo": "00:00:00"
+        }
+      ]
+    },
+    {
+      "id": "ep-4",
+      "ep": 4,
+      "questions": [
+        {
+          "id": "q-1",
+          "question": "",
+          "seekTo": "00:00:00"
+        }
+      ]
+    }
+  ]
+}
