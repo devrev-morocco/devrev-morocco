@@ -21,7 +21,8 @@ import {
   TwitterSvg,
   SpotifySvg,
   XSvg,
-  CheckedSvg
+  CheckedSvg,
+  Loader
 } from '../../components/svgs';
 import { Timer } from '../../utils';
 
@@ -31,54 +32,57 @@ const JoinCommunity = () => {
   const [Message, setMessage] = useState({
     msg: '',
     isError: false,
-    active: false
+    isActive: false
   });
+
+  const [Loading, setLoading] = useState(false);
 
   const [FocusOn, setFocusOn] = useState(false);
 
-  // const subscribe = async (e) => {
-  //   e.preventDefault();
-
-  //   console.log('inputRef.current :>> ', inputRef.current);
-  //   console.log('inputRef :>> ', inputRef.current.value);
-  // };
-
-  const subscribe = async (e) => {
+  const Subscribe = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
-    console.log('inputRef.current.value :>> ', inputRef.current.value);
+    if (inputRef.current.value) {
+      const res = await fetch('/api/subscribe', {
+        body: JSON.stringify({
+          email: inputRef.current.value
+        }),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        method: 'POST'
+      });
 
-    const res = await fetch('/api/subscribe', {
-      body: JSON.stringify({
-        email: inputRef.current.value
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      method: 'POST'
-    });
+      const { error } = await res.json();
 
-    const { error } = await res.json();
+      if (error) {
+        HandleMessage(error, true);
+        setLoading(false);
+        return;
+      }
 
-    console.log('error :>> ', error);
-
-    if (error) {
-      HandleMessage(error, true);
+      // Clear the input value and show a success message.
+      inputRef.current.value = '';
+      let msg;
+      if (res.status === 200)
+        msg = 'This email address has already subscribed to the newsletter.';
+      if (res.status === 201)
+        msg = 'Success! You are now subscribed to the newsletter.';
+      HandleMessage(msg, false);
+      setLoading(false);
+    } else {
+      setLoading(false);
       return;
     }
-
-    // Clear the input value and show a success message.
-    inputRef.current.value = '';
-    const msg = 'Success! You are now subscribed to the newsletter.';
-    HandleMessage(msg, false);
   };
 
   const HandleCloseMessage = () => {
     setMessage((prev) => {
       return {
         msg: prev.msg,
-        isError: false,
-        active: false
+        isError: prev.isError,
+        isActive: false
       };
     });
     return;
@@ -88,16 +92,16 @@ const JoinCommunity = () => {
     setMessage({
       msg: msg,
       isError: isError,
-      active: true
+      isActive: true
     });
-    Timer(5000).then(() => {
+    Timer(6000).then(() => {
       HandleCloseMessage();
     });
   };
 
   const HandleFocus = () => setFocusOn((prev) => !prev);
 
-  const { msg, isError, active } = Message;
+  const { msg, isError, isActive } = Message;
 
   return (
     <JoinCommunityContainer as="section">
@@ -203,7 +207,7 @@ const JoinCommunity = () => {
             Get emails from me about tech, early access to new episodes and live
             events.
           </div>
-          <SubForm Focus={FocusOn} as="form" onSubmit={subscribe}>
+          <SubForm Focus={FocusOn} as="form" onSubmit={Subscribe}>
             <SubInput
               as="input"
               name="email"
@@ -214,15 +218,19 @@ const JoinCommunity = () => {
               onBlur={HandleFocus}
             />
 
-            <SubMessageBox isError={isError} Active={active}>
+            <SubMessageBox isError={isError} isActive={isActive}>
               <div className="msg-state">
                 {isError ? (
-                  <div className="msg-alert">
-                    <XSvg height={25} width={25} />
+                  <div className="msg-icon">
+                    <div className="sub-icon sub-icon--alert">
+                      <XSvg height={16} width={16} />
+                    </div>
                   </div>
                 ) : (
-                  <div className="msg-success">
-                    <CheckedSvg height={25} width={25} />
+                  <div className="msg-icon">
+                    <div className="sub-icon sub-icon--success">
+                      <CheckedSvg height={25} width={25} />
+                    </div>
                   </div>
                 )}
               </div>
@@ -234,13 +242,12 @@ const JoinCommunity = () => {
                 onClick={HandleCloseMessage}
                 className="close-msg-btn"
               >
-                <XSvg height={16} width={16} />
+                <XSvg height={11} width={11} />
               </div>
             </SubMessageBox>
-            <SubButtonContainer>
-              <SubButton as="button" type="submit">
-                Subscribe
-              </SubButton>
+            {Loading && <Loader />}
+            <SubButtonContainer as="button" type="submit">
+              <SubButton>Subscribe</SubButton>
             </SubButtonContainer>
           </SubForm>
         </SubscribeContainer>

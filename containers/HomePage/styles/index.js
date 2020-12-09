@@ -616,13 +616,14 @@ const InputSubMessage = styled(DisFlex_AIC_JCC)`
   left: 50%;
   transition: transform 0.5s ease-in-out;
   transform: translate(-50%, -50%);
-  padding: 12px 8px 5px 8px;
+  padding: 8px;
   min-width: 35%;
   max-width: 50%;
-  background-color: #333;
+  background-color: #313131;
   border-radius: 2px;
   z-index: 2;
-  transform: translate(-50%, calc(20px + 100%));
+  transform: translate(-50%, calc(35px + 100%));
+  box-shadow: 0 1px 6px 3px rgba(0, 0, 0, 0.2);
   font-size: 1rem;
 
   @media screen and (max-width: 1150px) {
@@ -630,32 +631,47 @@ const InputSubMessage = styled(DisFlex_AIC_JCC)`
     max-width: 90%;
   }
   @media screen and (max-width: 735px) {
-    min-width: 70%;
-    max-width: 90%;
+    min-width: 90%;
+    max-width: 95%;
   }
 `;
 
 export const SubMessageBox = styled(InputSubMessage)`
   ${(props) =>
-    props.Active &&
+    props.isActive &&
     css`
-      transform: translate(-50%, calc(20px - 100%));
+      transform: translate(-50%, calc(35px - 100%));
     `}
-
-  .msg-alert {
-    & > svg > path {
-      fill: red;
-    }
-  }
-
-  .msg-success {
-    & > svg > path {
-      fill: #6cb429dc;
-    }
-  }
 
   .msg-state {
     flex: 0;
+  }
+
+  .msg-icon {
+    background-color: #000;
+    border-radius: 50%;
+    padding: 16px;
+    position: relative;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .sub-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &--alert {
+      & > svg > path {
+        fill: red;
+      }
+    }
+
+    &--success {
+      & > svg > path {
+        fill: #6cb429dc;
+      }
+    }
   }
 
   .sub-msg-area {
@@ -663,19 +679,24 @@ export const SubMessageBox = styled(InputSubMessage)`
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     text-align: center;
-    font-size: 0.9em;
+    font-size: 0.85em;
+    font-weight: bold;
     flex: 1;
     width: 100%;
+    padding: 0 3px;
   }
 
   .close-msg-btn {
     cursor: pointer;
     position: absolute;
-    top: 0;
-    right: -5px;
-    margin: 3px;
+    top: -8px;
+    right: -8px;
+    background-color: #000;
+    border-radius: 4px;
+    padding: 3px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
 
     &:hover {
       & > svg > path {
@@ -694,21 +715,17 @@ export const SubButtonContainer = styled(DisFlex_AIC_JCC)`
   cursor: pointer;
   outline: none;
   color: #f1f1f1;
-
   border: 1px solid #666;
 
   &:hover {
     color: #222;
     background-color: #80b71a96;
     border: 1px solid #9bd43181;
+    transform: translateY(0px);
+    box-shadow: none;
   }
 `;
 
 export const SubButton = styled.div`
   font-weight: bold;
-
-  &:hover {
-    transform: translateY(0px);
-    box-shadow: none;
-  }
 `;
