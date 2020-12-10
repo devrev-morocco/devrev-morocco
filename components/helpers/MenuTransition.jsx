@@ -14,13 +14,13 @@ const MenuTransition = forwardRef(
     },
     ref
   ) => {
-    const [disable, setdisable] = useState(false);
+    const [disable, setDisable] = useState(false);
 
     useEffect(() => {
       if (disTran && Show) {
-        setdisable(true);
+        setDisable(true);
       } else {
-        setdisable(false);
+        setDisable(false);
       }
     }, [Show, disTran]);
 

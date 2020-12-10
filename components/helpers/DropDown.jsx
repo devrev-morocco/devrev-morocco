@@ -10,7 +10,7 @@ import {
   DropItems_Container,
   DropItem
 } from './styles';
-import MenuTransition from '../../containers/Navigation/Menu/MenuTransition';
+import MenuTransition from './MenuTransition';
 import { useRouter } from 'next/router';
 
 const DropDown = ({ SelectedSeason, setSelectedSeason }) => {
