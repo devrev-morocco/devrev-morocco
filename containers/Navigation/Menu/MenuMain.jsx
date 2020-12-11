@@ -1,11 +1,10 @@
 import React, { memo, useRef } from 'react';
-import MenuTransition from './MenuTransition';
 import MenuLink from './MenuLink';
 import { Episodes, Community } from './DropMenu';
 import PropTypes from 'prop-types';
 import { MainMenu, NavLinkContainer, LinkNav, LinkSpan } from './styles';
 import { MenuTriangle } from '../../../styles/StyledComponents';
-import { ActiveLink, RippleEffect } from '../../../components';
+import { ActiveLink, RippleEffect, MenuTransition } from '../../../components';
 
 const MenuMain = ({
   disTran = false,
@@ -29,13 +28,13 @@ const MenuMain = ({
       >
         <MenuTriangle Enable={Show}></MenuTriangle>
         <MenuTransition ref={PlayListNodeRef} Show={Show} disTran={disTran}>
-          <Episodes ref={PlayListNodeRef} Id="playlist-menu" />
+          <Episodes ref={PlayListNodeRef} />
         </MenuTransition>
       </MenuLink>
       {/* ------- COMMUNITY ------- */}
       <MenuLink
         dispatchMenu={dispatchMenu}
-        preventDefault={true}
+        preventDefault
         Type="community"
         Label="community"
         Id="community-menu"
@@ -43,7 +42,7 @@ const MenuMain = ({
       >
         <MenuTriangle Enable={Show}></MenuTriangle>
         <MenuTransition ref={CommunityNodeRef} Show={Show} disTran={disTran}>
-          <Community ref={CommunityNodeRef} Id="community-menu" />
+          <Community ref={CommunityNodeRef} />
         </MenuTransition>
       </MenuLink>
       {/* ------- ABOUT ------- */}

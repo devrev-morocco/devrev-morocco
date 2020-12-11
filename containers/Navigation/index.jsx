@@ -4,7 +4,8 @@ import React, {
   useState,
   useCallback,
   useEffect,
-  useRef
+  useRef,
+  useMemo
 } from 'react';
 import {
   Nav,
@@ -110,7 +111,14 @@ const Navigation = () => {
   const mediaQueryMatches = useMediaQuery('max-width', 735);
   const [StoredValue] = useWL();
 
-  const show = showPlaylistMenu || showCommunityMenu; // || more dropMenus
+  const show = useMemo(() => showPlaylistMenu || showCommunityMenu, [
+    showCommunityMenu,
+    showPlaylistMenu
+  ]); // || more dropMenus
+
+  if (typeof window !== 'undefined')
+    innerWidthCache.current = window.innerWidth >= 735;
+
   const isMobileView = !(!mediaQueryMatches && innerWidthCache.current);
   const IsWatchLater = StoredValue?.wl.length > 0;
 
@@ -207,9 +215,6 @@ const Navigation = () => {
       }, 900);
     }
   }, [WLCartInterval.current, ShowWatchLater]);
-
-  if (typeof window !== 'undefined')
-    innerWidthCache.current = window.innerWidth >= 735;
 
   return (
     <Nav menuIsOpen={ShowMenu}>

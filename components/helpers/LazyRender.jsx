@@ -1,4 +1,4 @@
-import React, { useState, useEffect, memo } from 'react';
+import { useState, useEffect, memo } from 'react';
 import PropTypes from 'prop-types';
 
 const LazyRender = ({ children, render, Suspense = null }) => {
@@ -10,9 +10,7 @@ const LazyRender = ({ children, render, Suspense = null }) => {
     }
   }, [render, Seen]);
 
-  return Seen
-    ? React.Children.map(children, (child) => React.cloneElement(child))
-    : Suspense;
+  return Seen ? children : Suspense;
 };
 
 LazyRender.propTypes = {
