@@ -1,6 +1,6 @@
 import React, { memo, useState, useEffect, useRef, Fragment } from 'react';
 import { useMediaQuery } from '../../../hooks';
-import MenuTransition from '../Menu/MenuTransition';
+import { MenuTransition } from '../../../components';
 import { mobileCheck } from '../../../utils';
 import { WLCartContainerWrap, WLCart_Container, WLCartHeader } from './style';
 import { useWL } from '../../../hooks';

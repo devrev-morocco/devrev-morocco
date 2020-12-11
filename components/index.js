@@ -4,3 +4,4 @@ export { default as LazyRender } from './helpers/LazyRender';
 export { default as LoadingBar } from './helpers/LoadingBar';
 export { default as AutoPlaySwitch } from './helpers/AutoPlaySwitch';
 export { default as DropDown } from './helpers/DropDown';
+export { default as MenuTransition } from './helpers/MenuTransition';
