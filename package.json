@@ -10,7 +10,8 @@
     "start": "next start",
     "test": "jest",
     "prettier": "prettier --write \"**/*.{js,jsx,json,md,yml}\"",
-    "regenerate": "rm -rf .next && yarn build && yarn start"
+    "regenerate": "del -rf .next && yarn build && yarn start",
+    "del": "del .next"
   },
   "dependencies": {
     "next": "10.0.1",
