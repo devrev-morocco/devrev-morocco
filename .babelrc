@@ -27,6 +27,11 @@
                     }
                 ]
             ]
+        },
+        "test": {
+            "plugins": [
+                "transform-dynamic-import"
+            ]
         }
     }
 }

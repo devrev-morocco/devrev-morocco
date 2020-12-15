@@ -4,7 +4,7 @@ module.exports = withOffline({
   generateInDevMode: true,
   reactStrictMode: true,
   images: {
-    deviceSizes: [30, 60, 120, 320, 420, 768, 1024, 1200],
+    deviceSizes: [320, 420, 768, 1024, 1200],
     iconSizes: [],
     domains: ['127.0.0.1', 'devrev-morocco.vercel.app', 'devrev.ma'],
     path: '/_next/image',
