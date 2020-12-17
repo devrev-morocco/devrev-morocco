@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders ActiveLink renders correctly 1`] = `
+<a
+  className="foo selected"
+  href="/playlist/1/devrev-1"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+>
+  <span>
+    playlist
+  </span>
+</a>
+`;

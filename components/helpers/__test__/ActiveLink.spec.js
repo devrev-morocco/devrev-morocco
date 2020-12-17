@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 import { render, cleanup, screen } from '@testing-library/react';
 import ActiveLink from '../ActiveLink';
+import renderer from 'react-test-renderer';
 import '@testing-library/jest-dom/extend-expect';
 
 afterEach(cleanup);
@@ -16,7 +17,7 @@ jest.mock('next/router', () => ({
   }
 }));
 
-describe('render ActiveLink:', () => {
+describe('Renders ActiveLink', () => {
   it('Has Href', () => {
     const { container } = render(
       <ActiveLink href={'/playlist/1/devrev-1'} activeClassName="selected">
@@ -46,8 +47,8 @@ describe('render ActiveLink:', () => {
 
   it('Has not `selected` className', () => {
     render(
-      <ActiveLink href={'/playlist/1/devrev-1'} activeClassName="selected">
-        <a className={'foo'}>
+      <ActiveLink href={'/'} activeClassName="selected">
+        <a className="foo">
           <span>playlist</span>
         </a>
       </ActiveLink>
@@ -57,6 +58,19 @@ describe('render ActiveLink:', () => {
     ).toBe(true);
     expect(
       screen.getByText('playlist').closest('a').classList.contains('selected')
-    ).toBe(true);
+    ).toBe(false);
+  });
+
+  it('renders correctly', () => {
+    const tree = renderer
+      .create(
+        <ActiveLink href={'/playlist/1/devrev-1'} activeClassName="selected">
+          <a className="foo">
+            <span>playlist</span>
+          </a>
+        </ActiveLink>
+      )
+      .toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });
