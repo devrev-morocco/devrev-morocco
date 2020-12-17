@@ -31,6 +31,8 @@ export default async (req, res) => {
     );
 
     if (response.status >= 400) {
+      // Check if the email is already subscribed.
+
       const subscriberHash = md5(email.toLowerCase());
 
       const CheckUserResponse = await fetch(

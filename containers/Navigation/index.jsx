@@ -144,8 +144,13 @@ const Navigation = () => {
     // Therefore, we can incorporate useRef to solve this problem.
     if (OpenedMenuCache.current) {
       dispatchMenu({ type: 'reset' });
-      let dropNode = document.getElementById('playlist-menu');
-      if (dropNode?.style.display === 'block') dropNode.style.display = 'none';
+      let PlaylistNode = document.getElementById('playlist-menu');
+      let CommunityNode = document.getElementById('community-menu');
+      // Add every new dropdown on navbar here.
+      if (PlaylistNode?.style.display === 'block')
+        PlaylistNode.style.display = 'none';
+      if (CommunityNode?.style.display === 'block')
+        CommunityNode.style.display = 'none';
     }
   };
 

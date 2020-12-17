@@ -34,9 +34,7 @@ const JoinCommunity = () => {
     isError: false,
     isActive: false
   });
-
   const [Loading, setLoading] = useState(false);
-
   const [FocusOn, setFocusOn] = useState(false);
 
   const Subscribe = async (e) => {
@@ -62,13 +60,15 @@ const JoinCommunity = () => {
         return;
       }
 
-      // Clear the input value and show a success message.
       inputRef.current.value = '';
       let msg;
       if (res.status === 200)
         msg = 'This email address has already subscribed to the newsletter.';
       if (res.status === 201)
         msg = 'Success! You are now subscribed to the newsletter.';
+      if (res.status === 500)
+        // Report the error message
+        msg = 'Something went wrong, Please Try again!';
       HandleMessage(msg, false);
       setLoading(false);
     } else {
@@ -200,9 +200,9 @@ const JoinCommunity = () => {
             </Link>
           </IconShowcase>
         </IconsShowcaseContainer>
-        <SubscribeContainer>
-          <div className="Showcase-line"></div>
+        <SubscribeContainer id="subscribe">
           <div className="Showcase-title sub">Subscribe to the newsletter</div>
+          <div className="Showcase-line"></div>
           <div className="sub-txt">
             Get emails from me about tech, early access to new episodes and live
             events.

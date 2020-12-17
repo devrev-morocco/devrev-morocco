@@ -16,7 +16,7 @@ const Loader = () => {
         style={{ enableBackground: 'new 0 0 50 50' }}
         space="preserve"
       >
-        <rect x="0" y="10" width="4" height="10" fill="#9b9b9b" opacity="0.2">
+        <rect x="0" y="10" width="4" height="10" fill="#a5a5a5" opacity="0.2">
           <animate
             attributeName="opacity"
             attributeType="XML"
@@ -42,7 +42,7 @@ const Loader = () => {
             repeatCount="indefinite"
           />
         </rect>
-        <rect x="8" y="10" width="4" height="10" fill="#9b9b9b" opacity="0.2">
+        <rect x="8" y="10" width="4" height="10" fill="#a5a5a5" opacity="0.2">
           <animate
             attributeName="opacity"
             attributeType="XML"
@@ -68,7 +68,7 @@ const Loader = () => {
             repeatCount="indefinite"
           />
         </rect>
-        <rect x="16" y="10" width="4" height="10" fill="#9b9b9b" opacity="0.2">
+        <rect x="16" y="10" width="4" height="10" fill="#a5a5a5" opacity="0.2">
           <animate
             attributeName="opacity"
             attributeType="XML"

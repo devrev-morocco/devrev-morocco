@@ -457,13 +457,13 @@ export const ShowcaseContainer = styled(DisFlex_AIC)`
   .Showcase-title {
     font-size: 1.3em;
     font-weight: bold;
-    padding-bottom: 7px;
     white-space: nowrap;
   }
 
   .Showcase-line {
-    width: 6em;
+    width: 7em;
     height: 1px;
+    margin: 10px 0;
     background-color: #444;
   }
 `;
@@ -550,21 +550,18 @@ export const IconShowcase = styled(RelativePosition)`
   }
 `;
 
-// --------------
-
 export const SubscribeContainer = styled(DisFlex_AIC)`
   flex-direction: column;
   margin: 10px;
 
   .sub {
     font-size: 1.1em;
-    padding: 7px 0;
     white-space: nowrap;
   }
 
   .sub-txt {
     color: #999;
-    font-size: 1.05em;
+    font-size: 1em;
     text-align: center;
   }
 `;
@@ -617,22 +614,26 @@ const InputSubMessage = styled(DisFlex_AIC_JCC)`
   transition: transform 0.5s ease-in-out;
   transform: translate(-50%, -50%);
   padding: 8px;
-  min-width: 35%;
-  max-width: 50%;
   background-color: #313131;
   border-radius: 2px;
   z-index: 2;
   transform: translate(-50%, calc(35px + 100%));
   box-shadow: 0 1px 6px 3px rgba(0, 0, 0, 0.2);
   font-size: 1rem;
+  width: 450px;
 
   @media screen and (max-width: 1150px) {
-    min-width: 40%;
-    max-width: 90%;
+    font-size: 0.98rem;
   }
+
   @media screen and (max-width: 735px) {
-    min-width: 90%;
-    max-width: 95%;
+    font-size: 0.85rem;
+    width: 330px;
+  }
+
+  @media screen and (max-width: 350px) {
+    font-size: 0.8rem;
+    width: 90%;
   }
 `;
 
@@ -652,7 +653,7 @@ export const SubMessageBox = styled(InputSubMessage)`
     border-radius: 50%;
     padding: 16px;
     position: relative;
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
   }
 
   .sub-icon {
@@ -679,9 +680,10 @@ export const SubMessageBox = styled(InputSubMessage)`
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
+    margin: 0 5px;
     text-align: center;
-    font-size: 0.85em;
+    font-size: 0.87em;
     font-weight: bold;
     flex: 1;
     width: 100%;
@@ -691,12 +693,9 @@ export const SubMessageBox = styled(InputSubMessage)`
   .close-msg-btn {
     cursor: pointer;
     position: absolute;
-    top: -8px;
-    right: -8px;
-    background-color: #000;
-    border-radius: 4px;
-    padding: 3px;
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+    top: -2px;
+    right: 0px;
+    padding: 2px;
 
     &:hover {
       & > svg > path {
