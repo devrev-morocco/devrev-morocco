@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import Link from 'next/link';
 import {
   JoinCommunityContainer,
   ShowcaseContainer,
   IconsShowcaseContainer,
-  IconShowcase
+  IconShowcase,
+  SubscribeContainer,
+  SubForm,
+  SubInput,
+  SubButton,
+  SubButtonContainer,
+  SubMessageBox
 } from './styles';
 import {
   YouTubeSvg,
@@ -13,10 +19,101 @@ import {
   InstagramSvg,
   RedditSvg,
   TwitterSvg,
-  SpotifySvg
+  SpotifySvg,
+  XSvg,
+  CheckedSvg,
+  Loader
 } from '../../components/svgs';
+import { Timer } from '../../utils';
 
 const JoinCommunity = () => {
+  const inputRef = useRef(null);
+
+  const [Message, setMessage] = useState({
+    msg: '',
+    isError: null,
+    isActive: false
+  });
+  const [Loading, setLoading] = useState(false);
+  const [FocusOn, setFocusOn] = useState(false);
+
+  const Subscribe = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    if (inputRef.current.value) {
+      const res = await fetch('/api/subscribe', {
+        body: JSON.stringify({
+          email: inputRef.current.value
+        }),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        method: 'POST'
+      });
+
+      const { error } = await res.json();
+
+      if (error) {
+        HandleMessage(error, true);
+        setLoading(false);
+        return;
+      }
+
+      inputRef.current.value = '';
+      let msg;
+      let _isError;
+
+      if (res.status === 200) {
+        msg = 'This email address has already subscribed to the newsletter.';
+        _isError = null;
+      }
+
+      if (res.status === 201) {
+        msg = 'Success! You are now subscribed to the newsletter.';
+        _isError = false;
+      }
+
+      if (res.status === 500) {
+        // Report the error message here
+        msg = 'Something went wrong, Please Try again!';
+        _isError = true;
+      }
+
+      HandleMessage(msg, _isError);
+      setLoading(false);
+    } else {
+      setLoading(false);
+      return;
+    }
+  };
+
+  const HandleClosingMessage = () => {
+    setMessage((prev) => {
+      return {
+        msg: prev.msg,
+        isError: prev.isError,
+        isActive: false
+      };
+    });
+    return;
+  };
+
+  const HandleMessage = (msg, isError) => {
+    setMessage({
+      msg,
+      isError,
+      isActive: true
+    });
+    Timer(6000).then(() => {
+      HandleClosingMessage();
+    });
+  };
+
+  const HandleFocus = () => setFocusOn((prev) => !prev);
+
+  const { msg, isError, isActive } = Message;
+
   return (
     <JoinCommunityContainer as="section">
       <ShowcaseContainer>
@@ -114,6 +211,58 @@ const JoinCommunity = () => {
             </Link>
           </IconShowcase>
         </IconsShowcaseContainer>
+        <SubscribeContainer id="subscribe">
+          <div className="Showcase-title sub">Subscribe to the newsletter</div>
+          <div className="Showcase-line"></div>
+          <div className="sub-txt">
+            Get emails from us about tech, early access to new episodes and live
+            events.
+          </div>
+          <SubForm Focus={FocusOn} as="form" onSubmit={Subscribe}>
+            <SubInput
+              as="input"
+              name="email"
+              placeholder="you@domain.com"
+              ref={inputRef}
+              type="email"
+              onFocus={HandleFocus}
+              onBlur={HandleFocus}
+            />
+
+            <SubMessageBox isError={isError} isActive={isActive}>
+              <div className="msg-state">
+                {isError !== null &&
+                  (isError ? (
+                    <div className="msg-icon">
+                      <div className="sub-icon sub-icon--alert">
+                        <XSvg height={16} width={16} />
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="msg-icon">
+                      <div className="sub-icon sub-icon--success">
+                        <CheckedSvg height={25} width={25} />
+                      </div>
+                    </div>
+                  ))}
+              </div>
+              <div className="sub-msg-area">{msg}</div>
+              <div
+                role="button"
+                tabIndex={0}
+                onKeyPress={HandleClosingMessage}
+                onClick={HandleClosingMessage}
+                className="close-msg-btn"
+              >
+                <XSvg height={11} width={11} />
+              </div>
+            </SubMessageBox>
+            {Loading && <Loader />}
+            <SubButtonContainer as="button" type="submit">
+              <SubButton>Subscribe</SubButton>
+            </SubButtonContainer>
+          </SubForm>
+        </SubscribeContainer>
       </ShowcaseContainer>
     </JoinCommunityContainer>
   );

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import {
   DisFlex_AIC,
   RelativePosition,
@@ -335,7 +335,7 @@ export const SectionContainer = styled(DisFlex_AIC)`
     }
   }
 
-  // --<FEATURED EPIDODES SECTION>--
+  // --<FEATURED EPISODES SECTION>--
 
   .video_section {
     width: 100%;
@@ -457,13 +457,13 @@ export const ShowcaseContainer = styled(DisFlex_AIC)`
   .Showcase-title {
     font-size: 1.3em;
     font-weight: bold;
-    padding-bottom: 7px;
     white-space: nowrap;
   }
 
   .Showcase-line {
-    width: 6em;
+    width: 7em;
     height: 1px;
+    margin: 10px 0;
     background-color: #444;
   }
 `;
@@ -548,4 +548,186 @@ export const IconShowcase = styled(RelativePosition)`
       }
     }
   }
+`;
+
+export const SubscribeContainer = styled(DisFlex_AIC)`
+  flex-direction: column;
+  margin: 10px;
+
+  .sub {
+    font-size: 1.1em;
+    white-space: nowrap;
+  }
+
+  .sub-txt {
+    color: #999;
+    font-size: 1em;
+    text-align: center;
+  }
+`;
+
+export const SForm = styled(DisFlex_AIC_JCC)`
+  position: relative;
+  margin: 20px 0 5px 0;
+  width: 100%;
+  background-color: #333;
+  transition: background-color 0.3s ease-in-out;
+  flex-flow: row nowrap;
+  border: 1px solid #555;
+  border-radius: 4px;
+  padding: 0;
+`;
+
+export const SubForm = styled(SForm)`
+  ${(props) =>
+    props.Focus &&
+    css`
+      box-shadow: 0 0 0 2px #a9ff9457;
+      background-color: transparent;
+    `}
+`;
+
+export const SubInput = styled.div`
+  background-color: green;
+  border: none;
+  padding-left: 5px;
+  padding-right: 5px;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  font-size: 1.08em;
+  transition: background-color 0.3s ease-in-out;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+
+  &::placeholder {
+    font-size: 0.9em;
+  }
+`;
+
+const InputSubMessage = styled(DisFlex_AIC_JCC)`
+  position: fixed;
+  bottom: 20px; // footer padding: 10px 16px;
+  right: 50%;
+  left: 50%;
+  transition: transform 0.5s ease-in-out;
+  transform: translate(-50%, -50%);
+  padding: 8px;
+  background-color: #313131;
+  border-radius: 2px;
+  z-index: 2;
+  transform: translate(-50%, calc(35px + 100%));
+  box-shadow: 0 1px 6px 3px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  width: 450px;
+
+  @media screen and (max-width: 1150px) {
+    font-size: 0.98rem;
+  }
+
+  @media screen and (max-width: 735px) {
+    font-size: 0.85rem;
+    width: 330px;
+  }
+
+  @media screen and (max-width: 350px) {
+    font-size: 0.8rem;
+    width: 90%;
+  }
+`;
+
+export const SubMessageBox = styled(InputSubMessage)`
+  ${(props) =>
+    props.isActive &&
+    css`
+      transform: translate(-50%, calc(35px - 100%));
+    `}
+
+  .msg-state {
+    flex: 0;
+  }
+
+  .msg-icon {
+    background-color: #000;
+    border-radius: 50%;
+    padding: 16px;
+    position: relative;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .sub-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &--alert {
+      & > svg > path {
+        fill: red;
+      }
+    }
+
+    &--success {
+      & > svg > path {
+        fill: #6cb429dc;
+      }
+    }
+  }
+
+  .sub-msg-area {
+    color: #fafafa;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    margin: 0 5px;
+    text-align: center;
+    font-size: 0.87em;
+    font-weight: bold;
+    flex: 1;
+    width: 100%;
+    padding: 0 3px;
+    padding: 8px 0;
+  }
+
+  .close-msg-btn {
+    cursor: pointer;
+    position: absolute;
+    top: -2px;
+    right: 0px;
+    padding: 2px;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      & > svg > path {
+        fill: red;
+      }
+    }
+  }
+`;
+
+export const SubButtonContainer = styled(DisFlex_AIC_JCC)`
+  border: none;
+  margin: 4px;
+  padding: 8px;
+  background-color: #555;
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none;
+  color: #f1f1f1;
+  border: 1px solid #666;
+
+  &:hover {
+    color: #222;
+    background-color: #80b71a96;
+    border: 1px solid #9bd43181;
+    transform: translateY(0px);
+    box-shadow: none;
+  }
+`;
+
+export const SubButton = styled.div`
+  font-weight: bold;
 `;
