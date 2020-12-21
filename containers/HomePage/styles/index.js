@@ -688,6 +688,7 @@ export const SubMessageBox = styled(InputSubMessage)`
     flex: 1;
     width: 100%;
     padding: 0 3px;
+    padding: 8px 0;
   }
 
   .close-msg-btn {
@@ -696,8 +697,10 @@ export const SubMessageBox = styled(InputSubMessage)`
     top: -2px;
     right: 0px;
     padding: 2px;
+    outline: none;
 
-    &:hover {
+    &:hover,
+    &:focus {
       & > svg > path {
         fill: red;
       }

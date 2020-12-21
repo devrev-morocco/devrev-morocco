@@ -31,7 +31,7 @@ const JoinCommunity = () => {
 
   const [Message, setMessage] = useState({
     msg: '',
-    isError: false,
+    isError: null,
     isActive: false
   });
   const [Loading, setLoading] = useState(false);
@@ -62,14 +62,25 @@ const JoinCommunity = () => {
 
       inputRef.current.value = '';
       let msg;
-      if (res.status === 200)
+      let _isError;
+
+      if (res.status === 200) {
         msg = 'This email address has already subscribed to the newsletter.';
-      if (res.status === 201)
+        _isError = null;
+      }
+
+      if (res.status === 201) {
         msg = 'Success! You are now subscribed to the newsletter.';
-      if (res.status === 500)
-        // Report the error message
+        _isError = false;
+      }
+
+      if (res.status === 500) {
+        // Report the error message here
         msg = 'Something went wrong, Please Try again!';
-      HandleMessage(msg, false);
+        _isError = true;
+      }
+
+      HandleMessage(msg, _isError);
       setLoading(false);
     } else {
       setLoading(false);
@@ -77,7 +88,7 @@ const JoinCommunity = () => {
     }
   };
 
-  const HandleCloseMessage = () => {
+  const HandleClosingMessage = () => {
     setMessage((prev) => {
       return {
         msg: prev.msg,
@@ -90,12 +101,12 @@ const JoinCommunity = () => {
 
   const HandleMessage = (msg, isError) => {
     setMessage({
-      msg: msg,
-      isError: isError,
+      msg,
+      isError,
       isActive: true
     });
     Timer(6000).then(() => {
-      HandleCloseMessage();
+      HandleClosingMessage();
     });
   };
 
@@ -204,14 +215,14 @@ const JoinCommunity = () => {
           <div className="Showcase-title sub">Subscribe to the newsletter</div>
           <div className="Showcase-line"></div>
           <div className="sub-txt">
-            Get emails from me about tech, early access to new episodes and live
+            Get emails from us about tech, early access to new episodes and live
             events.
           </div>
           <SubForm Focus={FocusOn} as="form" onSubmit={Subscribe}>
             <SubInput
               as="input"
               name="email"
-              placeholder="you@apple.com"
+              placeholder="you@domain.com"
               ref={inputRef}
               type="email"
               onFocus={HandleFocus}
@@ -220,26 +231,27 @@ const JoinCommunity = () => {
 
             <SubMessageBox isError={isError} isActive={isActive}>
               <div className="msg-state">
-                {isError ? (
-                  <div className="msg-icon">
-                    <div className="sub-icon sub-icon--alert">
-                      <XSvg height={16} width={16} />
+                {isError !== null &&
+                  (isError ? (
+                    <div className="msg-icon">
+                      <div className="sub-icon sub-icon--alert">
+                        <XSvg height={16} width={16} />
+                      </div>
                     </div>
-                  </div>
-                ) : (
-                  <div className="msg-icon">
-                    <div className="sub-icon sub-icon--success">
-                      <CheckedSvg height={25} width={25} />
+                  ) : (
+                    <div className="msg-icon">
+                      <div className="sub-icon sub-icon--success">
+                        <CheckedSvg height={25} width={25} />
+                      </div>
                     </div>
-                  </div>
-                )}
+                  ))}
               </div>
               <div className="sub-msg-area">{msg}</div>
               <div
                 role="button"
                 tabIndex={0}
-                onKeyPress={HandleCloseMessage}
-                onClick={HandleCloseMessage}
+                onKeyPress={HandleClosingMessage}
+                onClick={HandleClosingMessage}
                 className="close-msg-btn"
               >
                 <XSvg height={11} width={11} />
