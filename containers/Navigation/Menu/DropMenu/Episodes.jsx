@@ -3,7 +3,7 @@ import MenuItemsList from '../MenuItemsList';
 import { MenuContainer } from '../styles';
 import { playlist_categories } from '../../../../data/PlayListMenu.json';
 
-const PlayListLink = forwardRef((props, ref) => {
+const Episodes = forwardRef((props, ref) => {
   return (
     <MenuContainer ref={ref} id="playlist-menu">
       <MenuItemsList Categories={playlist_categories} />
@@ -11,6 +11,6 @@ const PlayListLink = forwardRef((props, ref) => {
   );
 });
 
-PlayListLink.displayName = 'PlayListLink';
+Episodes.displayName = 'Episodes';
 
-export default memo(PlayListLink);
+export default memo(Episodes);
