@@ -37,10 +37,10 @@
     },
     {
       "id": "qgWMqr0wff",
-      "label": "Want to get notified?",
-      "url": "https://gemography.us20.list-manage.com/track/click?u=505ace65daaf423bc75011765&id=1322f00d46&e=e050439c77",
+      "label": "Subscribe",
+      "url": "/#subscribe",
       "separateLine": false,
-      "ExternalLink": true
+      "ExternalLink": false
     }
   ]
 }

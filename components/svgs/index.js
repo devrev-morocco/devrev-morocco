@@ -13,3 +13,4 @@ export { default as InstagramSvg } from './InstagramSvg';
 export { default as RedditSvg } from './RedditSvg';
 export { default as TwitterSvg } from './TwitterSvg';
 export { default as SpotifySvg } from './SpotifySvg';
+export { default as Loader } from './Loader';
