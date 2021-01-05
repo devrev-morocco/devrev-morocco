@@ -11,28 +11,28 @@
       "id": "TCil4qK7KL",
       "name": "Yassine El Kachchani",
       "image": "/static/images/profiles/yassine-el-kachchani.webp",
-      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "about": "Yassine is co-founder & CEO of Gemography and co-host of Bizness B'Nab, a talk show about startups and tech in Morocco. He chose the startup route just a year after graduation & experimented with different business models, sectors, and business pivots;  for instance, his last pivot was from Hidden Founders to United Remote, the latter was rebranded as Gemography.",
       "linkedin": "https://www.linkedin.com/in/yassine-el-kachchani-96142332/"
     },
     {
       "id": "8h2fKKvAeF",
       "name": "Serrah Menif",
       "image": "/static/images/profiles/serrah-menif.webp",
-      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "about": "Serrah is currently head of people Ops at Gemography, she knew Yassine Elkachchani early on as a classmate and was one of his first-team members at LaCartePlz.ma. She has an MBA from a Uni in Canada and is skilled in project management and business analysis.",
       "linkedin": "https://www.linkedin.com/in/serrahmenif/"
     },
     {
       "id": "b9T5q1ymNw",
       "name": "Zakaria Boualaid",
       "image": "/static/images/profiles/zakaria-boualaid.webp",
-      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "about": "Zakaria is an experienced DevOps Engineer with 6 years experience working in various projects at Oracle, Umbreo and Nimbleways. He is also speaking and participating at different events, which make him very active in the Dev community.",
       "linkedin": "https://www.linkedin.com/in/zakaria-boualaid-19b57065/"
     },
     {
       "id": "VZnU7oD9lu",
       "name": "Adil Haizoune",
       "image": "/static/images/profiles/adil-haizoune.webp",
-      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "about": "CTO & Co-founder of Gemography, Adil has 10+ years of experience in SSII. He joined Yassine for a new startup adventure in which they tested 3 prototypes: WeUnikorns, elevengo, and Hidden Founders (CTO as a service). The latter would show early signs of success and would get the team's entire focus to finally become Gemography as we know it today.",
       "linkedin": "https://www.linkedin.com/in/adil-haizoune-18436616/"
     },
     {
@@ -46,7 +46,7 @@
       "id": "ijdihXb7iX",
       "name": "Othmane Tayab",
       "image": "/static/images/profiles/othmane-tayab.webp",
-      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "about": "Othmane has a master's degree in computer science, he's an experienced Software Engineer working for Trueface. He's Skilled in JavaScript, HTML, CSS, Front-end Development, and Reactjs.",
       "linkedin": "https://www.linkedin.com/in/othmane-tayab-1b4015179/"
     },
     {
@@ -60,28 +60,28 @@
       "id": "JGR2HkA7aa",
       "name": "Said Dermoumi",
       "image": "/static/images/profiles/said-dermoumi.webp",
-      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "about": "Said has a bachelor's degree in software engineering and system administration from EST. He is a software architect at Fluicity, skilled in Full stack web development, UI/UX design and Dev Ops. As a video games' fan his early personal projects were in gamedev and hardware acceleration.",
       "linkedin": "https://www.linkedin.com/in/sa%C3%AFd-d-51011413b/"
     },
     {
       "id": "EsPf5hemrn",
       "name": "Omar Salim Moussa",
       "image": "/static/images/profiles/omar-salim-moussa.webp",
-      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "about": "Omar graduated from Al Akhawayn University in 2019 and currently is a software engineer at Google. He believes in the power of continous learning and is passionate about aviation, mathematics, and competitive programming.",
       "linkedin": "https://www.linkedin.com/in/omar-salim-moussa-92632113b/"
     },
     {
       "id": "u2sTjJofS6",
       "name": "Yassine Fathi",
       "image": "/static/images/profiles/yassine-fathi.webp",
-      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "about": "Yassine is a software engineer at Fluicity, he's been a Linux enthusiast for the last 5 years, CLI is his home. He loves building things & solving real customer problems. Yassine has been playing guitar for 9 years and you can check his music on his IG account: m4tt72.",
       "linkedin": "https://www.facebook.com/m4tt72"
     },
     {
       "id": "9s6UJct4sd",
       "name": "Taha Sadiki",
       "image": "/static/images/profiles/taha-sadiki.webp",
-      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "about": "Taha graduated from EMI and started as an intern at Gemography. He's experienced in data architecture (including data ingestion, pipeline design), ETL workflows optimization, data modeling, data mining, and advanced data processing. Currently, he's a data engineer at Enigma technologies.",
       "linkedin": "https://www.linkedin.com/in/taha-sadiki/"
     },
     {
@@ -95,7 +95,7 @@
       "id": "DQfVYyEiP2",
       "name": "Oussama Zaki",
       "image": "/static/images/profiles/oussama-zaki.webp",
-      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "about": "Oussama has accumulated 6 years of experience as a Software engineer. Today he's the director of Engineering at Svea Solar, the leading supplier of solar energy in Sweden. But, coding isn't the only thing he does for fun, skydiving is actually his favorite activity.",
       "linkedin": "https://www.linkedin.com/in/zakioussama/"
     },
     {
@@ -109,21 +109,21 @@
       "id": "EgJLVD8YbJ",
       "name": "Naoufal El hassnaoui",
       "image": "/static/images/profiles/naoufal-el-hassnaoui.webp",
-      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "about": "Naoufal started as a software intern at Eutech Morocco and 18 months later he became a technical manager and team leader reporting directly to the CTO in France.",
       "linkedin": "https://www.linkedin.com/in/naoufalelh/"
     },
     {
       "id": "WPMFcj0WgK",
       "name": "Faissal Sabouh",
       "image": "/static/images/profiles/faissal-sabouh.webp",
-      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "about": "An experienced developer with 12 years in the gaming industry, he worked in many fields including: Animation, Physics, 3D, Game Design and Game Content Management.",
       "linkedin": "https://www.linkedin.com/in/faissal-sabouh-031823121/"
     },
     {
       "id": "PPMDvi0Wg0",
       "name": "Mounir Benchemled",
       "image": "/static/images/profiles/mounir-benchemled.webp",
-      "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
+      "about": "He’s a software developer at heart with a strong passion for crypto. A simple chat with crypto entrepreneurs at Web Summit back in 2018 led him to raise $2.7 million just 2 months ago as the founder & CEO of Paraswap.",
       "linkedin": "https://www.linkedin.com/in/mounibec/"
     }
   ]
