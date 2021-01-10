@@ -20,39 +20,7 @@
           "+ How to get noticed and land your dream job.",
           "+ Why you should (or shouldn't) join a tech startup."
         ],
-        "participants": [
-          {
-            "id": "uKjACmjLYd",
-            "name": "Zack Braksa",
-            "image": "/static/images/profiles/zack-braksa.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/braksa/"
-          },
-          {
-            "id": "TCil4qK7KL",
-            "name": "Yassine El Kachchani",
-            "image": "/static/images/profiles/yassine-el-kachchani.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/yassine-el-kachchani-96142332/"
-          }
-        ],
-        "quetions": [
-          {
-            "id": "q-1",
-            "question": "which stack can you suggest us for Morocco tech market? What about the graphql?",
-            "seekTo": "1:12:17"
-          },
-          {
-            "id": "q-2",
-            "question": "What is the motivation behind ROR choice to be one of the technologies used at Gemography?",
-            "seekTo": "1:14:45"
-          },
-          {
-            "id": "q-3",
-            "question": "What do you think about remote jobs in Morocco?",
-            "seekTo": "1:15:14"
-          }
-        ]
+        "participants": ["uKjACmjLYd", "TCil4qK7KL"]
       },
       {
         "ep": 2,
@@ -72,49 +40,7 @@
           "+ What are the common mistakes to avoid.",
           "+ How to showcase good soft-skills during job interviews."
         ],
-        "participants": [
-          {
-            "id": "uKjACmjLYd",
-            "name": "Zack Braksa",
-            "image": "/static/images/profiles/zack-braksa.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/braksa/"
-          },
-          {
-            "id": "8h2fKKvAeF",
-            "name": "Serrah Menif",
-            "image": "/static/images/profiles/serrah-menif.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/serrahmenif/"
-          }
-        ],
-        "quetions": [
-          {
-            "id": "q-1",
-            "question": "Does working in big corp is better for soft skills compared to startups?",
-            "seekTo": "00:38:00"
-          },
-          {
-            "id": "q-2",
-            "question": "How can I hurt my team, as a developer, by my lack of soft skills? Do you have concrete examples?",
-            "seekTo": "00:43:00"
-          },
-          {
-            "id": "q-3",
-            "question": "What are the worst soft skills to avoid?",
-            "seekTo": "00:51:01"
-          },
-          {
-            "id": "q-4",
-            "question": "What we should answer about our soft weaknesses? Or how we should answer?",
-            "seekTo": "00:52:55"
-          },
-          {
-            "id": "q-5",
-            "question": "How can I overcome that enormous stress I feel every time I try to speak in front of people?",
-            "seekTo": "1:12:12"
-          }
-        ]
+        "participants": ["uKjACmjLYd", "8h2fKKvAeF"]
       },
       {
         "ep": 3,
@@ -128,29 +54,7 @@
         "description": [
           "On this week's live episode of DevRev, Zack interviews Zakaria Boualaid, a Senior DevOps Engineer at Oracle. They discuss how he got into DevOps, his startup journey, how he ended up in Dubai and what it takes to be a senior engineer."
         ],
-        "participants": [
-          {
-            "id": "uKjACmjLYd",
-            "name": "Zack Braksa",
-            "image": "/static/images/profiles/zack-braksa.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/braksa/"
-          },
-          {
-            "id": "b9T5q1ymNw",
-            "name": "Zakaria Boualaid",
-            "image": "/static/images/profiles/zakaria-boualaid.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/zakaria-boualaid-19b57065/"
-          }
-        ],
-        "quetions": [
-          {
-            "id": "q-1",
-            "question": "",
-            "seekTo": "00:00:00"
-          }
-        ]
+        "participants": ["uKjACmjLYd", "b9T5q1ymNw"]
       },
       {
         "ep": 4,
@@ -174,29 +78,7 @@
           "Language: ",
           "Arabic, English"
         ],
-        "participants": [
-          {
-            "id": "uKjACmjLYd",
-            "name": "Zack Braksa",
-            "image": "/static/images/profiles/zack-braksa.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/braksa/"
-          },
-          {
-            "id": "VZnU7oD9lu",
-            "name": "Adil Haizoune",
-            "image": "/static/images/profiles/adil-haizoune.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/adil-haizoune-18436616/"
-          }
-        ],
-        "quetions": [
-          {
-            "id": "q-1",
-            "question": "",
-            "seekTo": "00:00:00"
-          }
-        ]
+        "participants": ["uKjACmjLYd", "VZnU7oD9lu"]
       },
       {
         "ep": 5,
@@ -216,29 +98,7 @@
           "+ What it takes to have the perfect WFH setup.",
           "+ The pros & cons of WFH from an employer and employee standpoint."
         ],
-        "participants": [
-          {
-            "id": "uKjACmjLYd",
-            "name": "Zack Braksa",
-            "image": "/static/images/profiles/zack-braksa.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/braksa/"
-          },
-          {
-            "id": "2HuLcZAskb",
-            "name": "Soukaina Chebihi",
-            "image": "/static/images/profiles/soukaina-chebihi.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/soukaina-c-2060a413b/"
-          }
-        ],
-        "quetions": [
-          {
-            "id": "q-1",
-            "question": "",
-            "seekTo": "00:00:00"
-          }
-        ]
+        "participants": ["uKjACmjLYd", "2HuLcZAskb"]
       },
       {
         "ep": 6,
@@ -259,36 +119,7 @@
           "+ What it takes to become a Senior Fullstack developer.",
           "+ [YOUR OWN QUESTIONS]"
         ],
-        "participants": [
-          {
-            "id": "uKjACmjLYd",
-            "name": "Zack Braksa",
-            "image": "/static/images/profiles/zack-braksa.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/braksa/"
-          },
-          {
-            "id": "ijdihXb7iX",
-            "name": "Othmane Tayab",
-            "image": "/static/images/profiles/othmane-tayab.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/othmane-tayab-1b4015179/"
-          },
-          {
-            "id": "psPdrhemrn",
-            "name": "Youness Fkhach",
-            "image": "/static/images/profiles/youness-fkhach.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/youness-fkhach/"
-          }
-        ],
-        "quetions": [
-          {
-            "id": "q-1",
-            "question": "",
-            "seekTo": "00:00:00"
-          }
-        ]
+        "participants": ["uKjACmjLYd", "ijdihXb7iX", "psPdrhemrn"]
       },
       {
         "ep": 7,
@@ -302,43 +133,7 @@
         "description": [
           "This week I'll be joined by Othmane, Youness and Said to discuss their dev environments, code editor of choice, CLI settings, as well their favorite dev productivity tools."
         ],
-        "participants": [
-          {
-            "id": "uKjACmjLYd",
-            "name": "Zack Braksa",
-            "image": "/static/images/profiles/zack-braksa.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/braksa/"
-          },
-          {
-            "id": "ijdihXb7iX",
-            "name": "Othmane Tayab",
-            "image": "/static/images/profiles/othmane-tayab.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/othmane-tayab-1b4015179/"
-          },
-          {
-            "id": "psPdrhemrn",
-            "name": "Youness Fkhach",
-            "image": "/static/images/profiles/youness-fkhach.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/youness-fkhach/"
-          },
-          {
-            "id": "JGR2HkA7aa",
-            "name": "Said Dermoumi",
-            "image": "/static/images/profiles/said-dermoumi.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/sa%C3%AFd-d-51011413b/"
-          }
-        ],
-        "quetions": [
-          {
-            "id": "q-1",
-            "question": "",
-            "seekTo": "00:00:00"
-          }
-        ]
+        "participants": ["uKjACmjLYd", "ijdihXb7iX", "psPdrhemrn", "JGR2HkA7aa"]
       },
       {
         "ep": 8,
@@ -352,36 +147,7 @@
         "description": [
           "This week I'll be joined by Diaa Alhak EL FALLOUS from MCPC and Omar Salim Moussa from Google to discuss competitive programming, what it is, why it's important and what it takes to be an MCPC champion."
         ],
-        "participants": [
-          {
-            "id": "uKjACmjLYd",
-            "name": "Zack Braksa",
-            "image": "/static/images/profiles/zack-braksa.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/braksa/"
-          },
-          {
-            "id": "gXuYUu3CKu",
-            "name": "Diaa Alhak EL FALLOUS",
-            "image": "/static/images/profiles/diaa-alhak.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/elfallous/"
-          },
-          {
-            "id": "EsPf5hemrn",
-            "name": "Omar Salim Moussa",
-            "image": "/static/images/profiles/omar-salim-moussa.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/omar-salim-moussa-92632113b/"
-          }
-        ],
-        "quetions": [
-          {
-            "id": "q-1",
-            "question": "",
-            "seekTo": "00:00:00"
-          }
-        ]
+        "participants": ["uKjACmjLYd", "gXuYUu3CKu", "EsPf5hemrn"]
       },
       {
         "ep": 9,
@@ -399,36 +165,7 @@
           "__EMPTY_LINE__",
           "Said Dermoumi is a Software Engineer at Efficity, a France-based online real estate platform, part of the Foncia Group."
         ],
-        "participants": [
-          {
-            "id": "uKjACmjLYd",
-            "name": "Zack Braksa",
-            "image": "/static/images/profiles/zack-braksa.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/braksa/"
-          },
-          {
-            "id": "JGR2HkA7aa",
-            "name": "Said Dermoumi",
-            "image": "/static/images/profiles/said-dermoumi.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/sa%C3%AFd-d-51011413b/"
-          },
-          {
-            "id": "u2sTjJofS6",
-            "name": "Yassine Fathi",
-            "image": "/static/images/profiles/yassine-fathi.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.facebook.com/m4tt72"
-          }
-        ],
-        "quetions": [
-          {
-            "id": "q-1",
-            "question": "",
-            "seekTo": "00:00:00"
-          }
-        ]
+        "participants": ["uKjACmjLYd", "JGR2HkA7aa", "u2sTjJofS6"]
       },
       {
         "ep": 10,
@@ -444,29 +181,7 @@
           "__EMPTY_LINE__",
           "Enigma (raised $130 million) builds data infrastructure, developer-friendly APIs, and intelligent tools. They are based in New York."
         ],
-        "participants": [
-          {
-            "id": "uKjACmjLYd",
-            "name": "Zack Braksa",
-            "image": "/static/images/profiles/zack-braksa.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/braksa/"
-          },
-          {
-            "id": "9s6UJct4sd",
-            "name": "Taha Sadiki",
-            "image": "/static/images/profiles/taha-sadiki.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/taha-sadiki/"
-          }
-        ],
-        "quetions": [
-          {
-            "id": "q-1",
-            "question": "",
-            "seekTo": "00:00:00"
-          }
-        ]
+        "participants": ["uKjACmjLYd", "9s6UJct4sd"]
       },
       {
         "ep": 11,
@@ -482,29 +197,7 @@
           "__EMPTY_LINE__",
           "In this new live episode we'll give it a shot and try to break it down to skills and strengths. We'll also be going over how to keep learning and evolving, the obscure iOS topics to focus on and the common mistakes to avoid (including those Massive View Controllers ...)"
         ],
-        "participants": [
-          {
-            "id": "uKjACmjLYd",
-            "name": "Zack Braksa",
-            "image": "/static/images/profiles/zack-braksa.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/braksa/"
-          },
-          {
-            "id": "k0CadwSQXs",
-            "name": "Salim Braksa",
-            "image": "/static/images/profiles/salim-braksa.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/salim-braksa-175941b6/"
-          }
-        ],
-        "quetions": [
-          {
-            "id": "q-1",
-            "question": "",
-            "seekTo": "00:00:00"
-          }
-        ]
+        "participants": ["uKjACmjLYd", "k0CadwSQXs"]
       }
     ],
     "2": [
@@ -520,29 +213,7 @@
         "description": [
           "In this episode, Zack Braksa chats with special guest Oussama Zaki, Director of Engineering at Svea Solar about the role of 'Director of Engineering', his day-to-day, the skills required, and the career path to get there."
         ],
-        "participants": [
-          {
-            "id": "uKjACmjLYd",
-            "name": "Zack Braksa",
-            "image": "/static/images/profiles/zack-braksa.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/braksa/"
-          },
-          {
-            "id": "DQfVYyEiP2",
-            "name": "Oussama Zaki",
-            "image": "/static/images/profiles/oussama-zaki.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/zakioussama/"
-          }
-        ],
-        "quetions": [
-          {
-            "id": "q-1",
-            "question": "",
-            "seekTo": "00:00:00"
-          }
-        ]
+        "participants": ["uKjACmjLYd", "DQfVYyEiP2"]
       },
       {
         "ep": 2,
@@ -556,36 +227,7 @@
         "description": [
           "In this episode, Zack Braksa chats with special guests Naoufal El Hassnaoui & Diaa Alhak EL FALLOUS about the best way to look for a tech job in 2020. They'll be discussing the best practices to follow and the common mistakes to avoid."
         ],
-        "participants": [
-          {
-            "id": "uKjACmjLYd",
-            "name": "Zack Braksa",
-            "image": "/static/images/profiles/zack-braksa.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/braksa/"
-          },
-          {
-            "id": "gXuYUu3CKu",
-            "name": "Diaa Alhak EL FALLOUS",
-            "image": "/static/images/profiles/diaa-alhak.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/elfallous/"
-          },
-          {
-            "id": "EgJLVD8YbJ",
-            "name": "Naoufal El hassnaoui",
-            "image": "/static/images/profiles/naoufal-el-hassnaoui.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/naoufalelh/"
-          }
-        ],
-        "quetions": [
-          {
-            "id": "q-1",
-            "question": "",
-            "seekTo": "00:00:00"
-          }
-        ]
+        "participants": ["uKjACmjLYd", "gXuYUu3CKu", "EgJLVD8YbJ"]
       },
       {
         "ep": 3,
@@ -599,29 +241,7 @@
         "description": [
           "In this episode, Zack Braksa chats with special guest Faissal Sabouh about what a career in game development means, the skills needed to become a game developer and advice for getting into game development."
         ],
-        "participants": [
-          {
-            "id": "uKjACmjLYd",
-            "name": "Zack Braksa",
-            "image": "/static/images/profiles/zack-braksa.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/braksa/"
-          },
-          {
-            "id": "WPMFcj0WgK",
-            "name": "Faissal Sabouh",
-            "image": "/static/images/profiles/faissal-sabouh.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/faissal-sabouh-031823121/"
-          }
-        ],
-        "quetions": [
-          {
-            "id": "q-1",
-            "question": "",
-            "seekTo": "00:00:00"
-          }
-        ]
+        "participants": ["uKjACmjLYd", "WPMFcj0WgK"]
       },
 
       {
@@ -636,29 +256,7 @@
         "description": [
           "In this episode, Zack Braksa chats with special guest Mounir Benchemled about Cryptocurrency. What it is, where it fits in the blockchain puzzle, possible career paths in blockchain and crypto as well as what the future holds for the crypto industry."
         ],
-        "participants": [
-          {
-            "id": "uKjACmjLYd",
-            "name": "Zack Braksa",
-            "image": "/static/images/profiles/zack-braksa.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/braksa/"
-          },
-          {
-            "id": "PPMDvi0Wg0",
-            "name": "Mounir Benchemled",
-            "image": "/static/images/profiles/mounir-benchemled.webp",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores tenetur reprehenderit maxime repellendus numquam quas praesentium sed perferendis, magnam quam aut a hic placeat laudantium nobis vero dolore quis.",
-            "linkedin": "https://www.linkedin.com/in/mounibec/"
-          }
-        ],
-        "questions": [
-          {
-            "id": "q-1",
-            "question": "",
-            "seekTo": "00:00:00"
-          }
-        ]
+        "participants": ["uKjACmjLYd", "PPMDvi0Wg0"]
       }
     ]
   }
